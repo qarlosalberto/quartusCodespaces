@@ -1,0 +1,18 @@
+# system info qsys_top_s10_user_rst_clkgate_0 on 2023.11.06.09:04:26
+system_info:
+name,value
+DEVICE,AGFB014R24B2E2V
+DEVICE_FAMILY,Agilex 7
+GENERATION_ID,0
+#
+#
+# Files generated for qsys_top_s10_user_rst_clkgate_0 on 2023.11.06.09:04:26
+files:
+filepath,kind,attributes,module,is_top
+sim/qsys_top_s10_user_rst_clkgate_0.v,VERILOG,CONTAINS_INLINE_CONFIGURATION,qsys_top_s10_user_rst_clkgate_0,true
+altera_s10_user_rst_clkgate_1947/sim/altera_s10_user_rst_clkgate.sv,SYSTEM_VERILOG,,altera_s10_user_rst_clkgate,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+qsys_top_s10_user_rst_clkgate_0.s10_user_rst_clkgate_0,altera_s10_user_rst_clkgate

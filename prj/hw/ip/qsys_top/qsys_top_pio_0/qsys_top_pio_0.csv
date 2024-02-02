@@ -1,0 +1,18 @@
+# system info qsys_top_pio_0 on 2023.11.06.09:05:00
+system_info:
+name,value
+DEVICE,AGFB014R24B2E2V
+DEVICE_FAMILY,Agilex 7
+GENERATION_ID,0
+#
+#
+# Files generated for qsys_top_pio_0 on 2023.11.06.09:05:00
+files:
+filepath,kind,attributes,module,is_top
+sim/qsys_top_pio_0.v,VERILOG,CONTAINS_INLINE_CONFIGURATION,qsys_top_pio_0,true
+altera_avalon_pio_1923/sim/qsys_top_pio_0_altera_avalon_pio_1923_wzj3fvy.v,VERILOG,,qsys_top_pio_0_altera_avalon_pio_1923_wzj3fvy,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+qsys_top_pio_0.pio_0,qsys_top_pio_0_altera_avalon_pio_1923_wzj3fvy

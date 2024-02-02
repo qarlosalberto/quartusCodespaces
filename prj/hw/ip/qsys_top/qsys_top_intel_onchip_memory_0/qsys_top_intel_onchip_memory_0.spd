@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="intel_onchip_memory_147/sim/qsys_top_intel_onchip_memory_0_intel_onchip_memory_147_hqcwqki.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_onchip_memory_147" />
+ <file
+   path="intel_onchip_memory_147/sim/qsys_top_intel_onchip_memory_0_intel_onchip_memory_147_hqcwqki_axi_bursting_adapter.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_onchip_memory_147" />
+ <file
+   path="sim/qsys_top_intel_onchip_memory_0.v"
+   type="VERILOG"
+   library="qsys_top_intel_onchip_memory_0"
+   hasInlineConfiguration="true" />
+ <topLevel name="qsys_top_intel_onchip_memory_0.qsys_top_intel_onchip_memory_0" />
+ <deviceFamily name="agilex7" />
+ <device name="AGFB014R24B2E2V" />
+ <modelMap
+   controllerPath="qsys_top_intel_onchip_memory_0.intel_onchip_memory_0"
+   modelPath="qsys_top_intel_onchip_memory_0.intel_onchip_memory_0" />
+</simPackage>

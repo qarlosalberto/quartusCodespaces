@@ -1,0 +1,175 @@
+cmake_minimum_required(VERSION 3.13)
+
+include(toolchain.cmake)
+
+project(bsp)
+
+set(BspLibraryName "hal2_bsp" CACHE STRING "The BSP library name.")
+set(BspLinkerScript "${CMAKE_CURRENT_SOURCE_DIR}/linker.x" CACHE STRING
+    "The linker script an app should use.")
+
+# HAL library
+add_library("${BspLibraryName}" STATIC "")
+
+target_include_directories("${BspLibraryName}" PUBLIC
+    .
+    HAL/inc
+    drivers/inc
+)
+
+target_sources("${BspLibraryName}"
+    PRIVATE
+        HAL/src/alt_log_macro.S
+        HAL/src/alt_mcount.S
+        HAL/src/crt0.S
+        HAL/src/machine_trap.S
+        HAL/src/alt_alarm_start.c
+        HAL/src/alt_busy_sleep.c
+        HAL/src/alt_close.c
+        HAL/src/alt_dcache_flush.c
+        HAL/src/alt_dcache_flush_all.c
+        HAL/src/alt_dcache_flush_no_writeback.c
+        HAL/src/alt_dev.c
+        HAL/src/alt_dev_llist_insert.c
+        HAL/src/alt_dma_rxchan_open.c
+        HAL/src/alt_dma_txchan_open.c
+        HAL/src/alt_do_ctors.c
+        HAL/src/alt_do_dtors.c
+        HAL/src/alt_env_lock.c
+        HAL/src/alt_environ.c
+        HAL/src/alt_errno.c
+        HAL/src/alt_execve.c
+        HAL/src/alt_exit.c
+        HAL/src/alt_fcntl.c
+        HAL/src/alt_fd_lock.c
+        HAL/src/alt_fd_unlock.c
+        HAL/src/alt_find_dev.c
+        HAL/src/alt_find_file.c
+        HAL/src/alt_flash_dev.c
+        HAL/src/alt_fork.c
+        HAL/src/alt_fs_reg.c
+        HAL/src/alt_fstat.c
+        HAL/src/alt_get_fd.c
+        HAL/src/alt_getchar.c
+        HAL/src/alt_getpid.c
+        HAL/src/alt_gettod.c
+        HAL/src/alt_gmon.c
+        HAL/src/alt_icache_flush.c
+        HAL/src/alt_icache_flush_all.c
+        HAL/src/alt_iic.c
+        HAL/src/alt_iic_isr_register.c
+        HAL/src/alt_instruction_exception_register.c
+        HAL/src/alt_io_redirect.c
+        HAL/src/alt_ioctl.c
+        HAL/src/alt_irq_handler.c
+        HAL/src/alt_isatty.c
+        HAL/src/alt_kill.c
+        HAL/src/alt_link.c
+        HAL/src/alt_load.c
+        HAL/src/alt_log_printf.c
+        HAL/src/alt_lseek.c
+        HAL/src/alt_main.c
+        HAL/src/alt_malloc_lock.c
+        HAL/src/alt_open.c
+        HAL/src/alt_printf.c
+        HAL/src/alt_putchar.c
+        HAL/src/alt_putcharbuf.c
+        HAL/src/alt_putstr.c
+        HAL/src/alt_read.c
+        HAL/src/alt_release_fd.c
+        HAL/src/alt_remap_cached.c
+        HAL/src/alt_remap_uncached.c
+        HAL/src/alt_rename.c
+        HAL/src/alt_sbrk.c
+        HAL/src/alt_settod.c
+        HAL/src/alt_stat.c
+        HAL/src/alt_tick.c
+        HAL/src/alt_times.c
+        HAL/src/alt_tls.c
+        HAL/src/alt_uncached_free.c
+        HAL/src/alt_uncached_malloc.c
+        HAL/src/alt_unlink.c
+        HAL/src/alt_usleep.c
+        HAL/src/alt_wait.c
+        HAL/src/alt_write.c
+        HAL/src/intel_fpga_api_cmn_dfl.c
+        HAL/src/intel_fpga_api_cmn_inf.c
+        HAL/src/intel_fpga_api_cmn_msg.c
+        HAL/src/intel_fpga_api_niosv.c
+        HAL/src/intel_fpga_platform_api_niosv.c
+        HAL/src/intel_niosv_irq.c
+        HAL/src/mtimer.c
+        alt_sys_init.c
+        drivers/src/altera_avalon_jtag_uart_fd.c
+        drivers/src/altera_avalon_jtag_uart_init.c
+        drivers/src/altera_avalon_jtag_uart_ioctl.c
+        drivers/src/altera_avalon_jtag_uart_read.c
+        drivers/src/altera_avalon_jtag_uart_write.c
+        drivers/src/altera_avalon_sysid_qsys.c
+    PUBLIC
+        HAL/inc/alt_types.h
+        HAL/inc/intel_fpga_api.h
+        HAL/inc/intel_fpga_platform.h
+        HAL/inc/intel_fpga_platform_api.h
+        HAL/inc/intel_niosv.h
+        HAL/inc/intel_niosv_irq.h
+        HAL/inc/intel_niosv_m.h
+        HAL/inc/intel_niosv_m_irq.h
+        HAL/inc/io.h
+        HAL/inc/os/alt_flag.h
+        HAL/inc/os/alt_hooks.h
+        HAL/inc/os/alt_sem.h
+        HAL/inc/os/alt_syscall.h
+        HAL/inc/priv/alt_alarm.h
+        HAL/inc/priv/alt_busy_sleep.h
+        HAL/inc/priv/alt_dev_llist.h
+        HAL/inc/priv/alt_exception_handler_registry.h
+        HAL/inc/priv/alt_file.h
+        HAL/inc/priv/alt_iic_isr_register.h
+        HAL/inc/priv/alt_irq_table.h
+        HAL/inc/priv/alt_no_error.h
+        HAL/inc/priv/intel_niosv_gmon_data.h
+        HAL/inc/sys/alt_alarm.h
+        HAL/inc/sys/alt_cache.h
+        HAL/inc/sys/alt_debug.h
+        HAL/inc/sys/alt_dev.h
+        HAL/inc/sys/alt_dma.h
+        HAL/inc/sys/alt_dma_dev.h
+        HAL/inc/sys/alt_driver.h
+        HAL/inc/sys/alt_errno.h
+        HAL/inc/sys/alt_exceptions.h
+        HAL/inc/sys/alt_flash.h
+        HAL/inc/sys/alt_flash_dev.h
+        HAL/inc/sys/alt_flash_types.h
+        HAL/inc/sys/alt_irq.h
+        HAL/inc/sys/alt_llist.h
+        HAL/inc/sys/alt_load.h
+        HAL/inc/sys/alt_log_printf.h
+        HAL/inc/sys/alt_set_args.h
+        HAL/inc/sys/alt_sim.h
+        HAL/inc/sys/alt_stack.h
+        HAL/inc/sys/alt_stdio.h
+        HAL/inc/sys/alt_sys_init.h
+        HAL/inc/sys/alt_sys_wrappers.h
+        HAL/inc/sys/alt_timestamp.h
+        HAL/inc/sys/alt_tls.h
+        HAL/inc/sys/alt_warning.h
+        HAL/inc/sys/intel_fpga_api_cmn_dfl.h
+        HAL/inc/sys/intel_fpga_api_cmn_inf.h
+        HAL/inc/sys/intel_fpga_api_cmn_msg.h
+        HAL/inc/sys/intel_fpga_api_niosv.h
+        HAL/inc/sys/intel_fpga_platform_api_niosv.h
+        HAL/inc/sys/intel_fpga_platform_niosv.h
+        HAL/inc/sys/ioctl.h
+        HAL/inc/sys/msw_interrupt.h
+        HAL/inc/sys/termios.h
+        drivers/inc/altera_avalon_jtag_uart.h
+        drivers/inc/altera_avalon_jtag_uart_fd.h
+        drivers/inc/altera_avalon_jtag_uart_regs.h
+        drivers/inc/altera_avalon_pio_regs.h
+        drivers/inc/altera_avalon_sysid_qsys.h
+        drivers/inc/altera_avalon_sysid_qsys_regs.h
+        system.h
+)
+
+set(ExtraArchiveLibraries CACHE INTERNAL "")

@@ -1,0 +1,19 @@
+{
+    "id": "790647",
+    "group_id": "758711",
+    "revision": 1,
+    "title": "Nios® V/m PIO LED Toggle Design",
+    "source": "Design Store",
+    "family": "Intel Agilex® 7 FPGA",
+    "quartus_version": "23.4",
+    "devkit": "Intel Agilex® 7 FPGA F-Series Development Kit (Production 1 P-Tile & E-Tile) DK-DEV-AGF014EA",
+    "description": "This design demonstrates the transaction between the Nios® V processor and the PIO core for the Intel Agilex® 7 F-Series FPGA Development Kit.",
+    "rich_description": "<p>The PIO core is configured for output ports only and the outputs are connected to the LED on the development kit. The application,&nbsp;which runs atop this design,&nbsp;toggles these output registers of the PIO core. The application writes and reads back the content from the IP location.&nbsp;</p><p><br></p><p><img src=\"https://d1ikhsln0txzml.cloudfront.net/QA/images/837574/0EM2f0000006lyL.png\"></p>",
+    "documentations": [],
+    "ip_cores": [],
+    "url": "https://www.intel.com/content/www/us/en/design-example/790647/a.html",
+    "downloadUrl": "/nfs/site/disks/swuser_work_knithink/23.4/installer_designs/niosv_pio/top.par",
+    "eula_id": "",
+    "device_part": "AGFB014R24B2E2V",
+    "os": ""
+}

@@ -1,0 +1,16 @@
+# system info qsys_top_clock_in on 2023.11.06.09:05:08
+system_info:
+name,value
+DEVICE,AGFB014R24B2E2V
+DEVICE_FAMILY,Agilex 7
+GENERATION_ID,0
+#
+#
+# Files generated for qsys_top_clock_in on 2023.11.06.09:05:08
+files:
+filepath,kind,attributes,module,is_top
+sim/qsys_top_clock_in.v,VERILOG,CONTAINS_INLINE_CONFIGURATION,qsys_top_clock_in,true
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module

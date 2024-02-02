@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="altera_avalon_pio_1923/sim/qsys_top_pio_0_altera_avalon_pio_1923_wzj3fvy.v"
+   type="VERILOG"
+   library="altera_avalon_pio_1923" />
+ <file
+   path="sim/qsys_top_pio_0.v"
+   type="VERILOG"
+   library="qsys_top_pio_0"
+   hasInlineConfiguration="true" />
+ <topLevel name="qsys_top_pio_0.qsys_top_pio_0" />
+ <deviceFamily name="agilex7" />
+ <device name="AGFB014R24B2E2V" />
+</simPackage>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="altera_s10_user_rst_clkgate_1947/sim/altera_s10_user_rst_clkgate.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_s10_user_rst_clkgate_1947" />
+ <file
+   path="sim/qsys_top_s10_user_rst_clkgate_0.v"
+   type="VERILOG"
+   library="qsys_top_s10_user_rst_clkgate_0"
+   hasInlineConfiguration="true" />
+ <topLevel
+   name="qsys_top_s10_user_rst_clkgate_0.qsys_top_s10_user_rst_clkgate_0" />
+ <deviceFamily name="agilex7" />
+ <device name="AGFB014R24B2E2V" />
+</simPackage>

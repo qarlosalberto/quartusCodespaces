@@ -1,0 +1,114 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the Intel FPGA Software License Subscription Agreements 
+on the Quartus Prime software download page.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 336 368)
+	(text "qsys_top_pio_0" (rect 117 0 181 12)(font "SansSerif" (font_size 11)))
+	(text "inst" (rect 8 352 20 364)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "clk" (rect 0 0 10 12)(font "SansSerif" (font_size 8)))
+		(text "clk" (rect 4 65 22 76)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 0 120)
+		(input)
+		(text "reset_n" (rect 0 0 30 12)(font "SansSerif" (font_size 8)))
+		(text "reset_n" (rect 4 115 46 126)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "address[1..0]" (rect 0 0 50 12)(font "SansSerif" (font_size 8)))
+		(text "address[1..0]" (rect 4 165 82 176)(font "SansSerif" (font_size 8)))
+		(line (pt 0 176)(pt 136 176)(line_width 3))
+	)
+	(port
+		(pt 0 200)
+		(input)
+		(text "write_n" (rect 0 0 28 12)(font "SansSerif" (font_size 8)))
+		(text "write_n" (rect 4 190 46 201)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "writedata[31..0]" (rect 0 0 57 12)(font "SansSerif" (font_size 8)))
+		(text "writedata[31..0]" (rect 4 215 100 226)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 0 248)
+		(input)
+		(text "chipselect" (rect 0 0 37 12)(font "SansSerif" (font_size 8)))
+		(text "chipselect" (rect 4 240 64 251)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 0 272)
+		(output)
+		(text "readdata[31..0]" (rect 0 0 57 12)(font "SansSerif" (font_size 8)))
+		(text "readdata[31..0]" (rect 4 265 94 276)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 0 320)
+		(output)
+		(text "out_port[3..0]" (rect 0 0 53 12)(font "SansSerif" (font_size 8)))
+		(text "out_port[3..0]" (rect 4 315 88 326)(font "SansSerif" (font_size 8)))
+	)
+	(drawing
+		(text "clk" (rect 121 46 260 105)(font "SansSerif" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 141 71 300 152)(font "SansSerif" (color 0 0 0)))
+		(text "reset" (rect 107 96 244 205)(font "SansSerif" (color 128 0 0)(font_size 9)))
+		(text "reset_n" (rect 141 121 324 252)(font "SansSerif" (color 0 0 0)))
+		(text "s1" (rect 125 146 262 305)(font "SansSerif" (color 128 0 0)(font_size 9)))
+		(text "address" (rect 141 171 324 352)(font "SansSerif" (color 0 0 0)))
+		(text "write_n" (rect 141 196 324 402)(font "SansSerif" (color 0 0 0)))
+		(text "writedata" (rect 141 221 336 452)(font "SansSerif" (color 0 0 0)))
+		(text "chipselect" (rect 141 246 342 502)(font "SansSerif" (color 0 0 0)))
+		(text "readdata" (rect 141 271 330 552)(font "SansSerif" (color 0 0 0)))
+		(text "external_connection" (rect 22 296 158 605)(font "SansSerif" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 141 321 318 652)(font "SansSerif" (color 0 0 0)))
+		(text " qsys_top_pio_0 " (rect 268 351 632 712)(font "SansSerif" ))
+		(line (pt 136 34)(pt 204 34)(line_width 1))
+		(line (pt 204 34)(pt 204 351)(line_width 1))
+		(line (pt 136 351)(pt 204 351)(line_width 1))
+		(line (pt 136 34)(pt 136 351)(line_width 1))
+		(line (pt 0 76)(pt 136 76)(line_width 1))
+		(line (pt 137 55)(pt 137 80)(line_width 1))
+		(line (pt 138 55)(pt 138 80)(line_width 1))
+		(line (pt 0 126)(pt 136 126)(line_width 1))
+		(line (pt 137 105)(pt 137 130)(line_width 1))
+		(line (pt 138 105)(pt 138 130)(line_width 1))
+		(line (pt 0 201)(pt 136 201)(line_width 1))
+		(line (pt 0 226)(pt 136 226)(line_width 3))
+		(line (pt 0 251)(pt 136 251)(line_width 1))
+		(line (pt 0 276)(pt 136 276)(line_width 3))
+		(line (pt 137 155)(pt 137 280)(line_width 1))
+		(line (pt 138 155)(pt 138 280)(line_width 1))
+		(line (pt 0 326)(pt 136 326)(line_width 3))
+		(line (pt 137 305)(pt 137 330)(line_width 1))
+		(line (pt 138 305)(pt 138 330)(line_width 1))
+		(line (pt 0 0)(pt 340 0)(line_width 1))
+		(line (pt 340 0)(pt 340 368)(line_width 1))
+		(line (pt 0 368)(pt 340 368)(line_width 1))
+		(line (pt 0 0)(pt 0 368)(line_width 1))
+	)
+)

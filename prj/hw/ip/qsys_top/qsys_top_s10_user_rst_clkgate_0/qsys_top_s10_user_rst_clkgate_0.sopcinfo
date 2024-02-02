@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EnsembleReport
+ name="qsys_top_s10_user_rst_clkgate_0"
+ kind="qsys_top_s10_user_rst_clkgate_0"
+ version="1.0"
+ fabric="QSYS">
+ <!-- Format version 23.4 66 (Future versions may contain additional information.) -->
+ <!-- 2023.11.06.09:04:26 -->
+ <!-- A collection of modules and connections -->
+ <parameter name="AUTO_GENERATION_ID">
+  <type>java.lang.Integer</type>
+  <value>0</value>
+  <derived>false</derived>
+  <enabled>true</enabled>
+  <visible>false</visible>
+  <valid>true</valid>
+  <sysinfo_type>GENERATION_ID</sysinfo_type>
+ </parameter>
+ <parameter name="AUTO_UNIQUE_ID">
+  <type>java.lang.String</type>
+  <value></value>
+  <derived>false</derived>
+  <enabled>true</enabled>
+  <visible>false</visible>
+  <valid>true</valid>
+  <sysinfo_type>UNIQUE_ID</sysinfo_type>
+ </parameter>
+ <parameter name="AUTO_DEVICE_FAMILY">
+  <type>java.lang.String</type>
+  <value>Agilex 7</value>
+  <derived>false</derived>
+  <enabled>true</enabled>
+  <visible>false</visible>
+  <valid>true</valid>
+  <sysinfo_type>DEVICE_FAMILY</sysinfo_type>
+ </parameter>
+ <parameter name="AUTO_DEVICE">
+  <type>java.lang.String</type>
+  <value>AGFB014R24B2E2V</value>
+  <derived>false</derived>
+  <enabled>true</enabled>
+  <visible>false</visible>
+  <valid>true</valid>
+  <sysinfo_type>DEVICE</sysinfo_type>
+ </parameter>
+ <parameter name="AUTO_DEVICE_SPEEDGRADE">
+  <type>java.lang.String</type>
+  <value>2</value>
+  <derived>false</derived>
+  <enabled>true</enabled>
+  <visible>false</visible>
+  <valid>true</valid>
+  <sysinfo_type>DEVICE_SPEEDGRADE</sysinfo_type>
+ </parameter>
+ <parameter name="AUTO_BOARD">
+  <type>java.lang.String</type>
+  <value>Intel Agilex 7 F-Series FPGA Development Kit DK-DEV-AGF014EA</value>
+  <derived>false</derived>
+  <enabled>true</enabled>
+  <visible>false</visible>
+  <valid>true</valid>
+  <sysinfo_type>BOARD</sysinfo_type>
+ </parameter>
+ <parameter name="deviceFamily">
+  <type>java.lang.String</type>
+  <value>Agilex 7</value>
+  <derived>false</derived>
+  <enabled>true</enabled>
+  <visible>false</visible>
+  <valid>true</valid>
+  <sysinfo_type>DEVICE_FAMILY</sysinfo_type>
+ </parameter>
+ <parameter name="generateLegacySim">
+  <type>boolean</type>
+  <value>false</value>
+  <derived>false</derived>
+  <enabled>true</enabled>
+  <visible>true</visible>
+  <valid>true</valid>
+ </parameter>
+ <module
+   name="s10_user_rst_clkgate_0"
+   kind="altera_s10_user_rst_clkgate"
+   version="19.4.7"
+   entity="altera_s10_user_rst_clkgate"
+   library="altera_s10_user_rst_clkgate_1947"
+   path="s10_user_rst_clkgate_0"
+   hpath="s10_user_rst_clkgate_0"
+   className="altera_s10_user_rst_clkgate">
+  <!-- Describes a single module. Module parameters are
+the requested settings for a module instance. -->
+  <parameter name="outputType">
+   <type>java.lang.String</type>
+   <value>Reset Interface</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="DEVICE_FAMILY">
+   <type>java.lang.String</type>
+   <value>Agilex 7</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>false</visible>
+   <valid>true</valid>
+   <sysinfo_type>DEVICE_FAMILY</sysinfo_type>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <interface name="ninit_done" kind="reset_source" version="23.4">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedDirectReset">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedResetSinks">
+    <type>[Ljava.lang.String;</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="synchronousEdges">
+    <type>com.altera.sopcmodel.reset.Reset$Edges</type>
+    <value>NONE</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>reset</type>
+   <isStart>true</isStart>
+   <port>
+    <name>ninit_done</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>reset</role>
+   </port>
+  </interface>
+ </module>
+ <plugin>
+  <instanceCount>1</instanceCount>
+  <name>altera_s10_user_rst_clkgate</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IModule</subtype>
+  <displayName>Reset Release Intel FPGA IP</displayName>
+  <version>19.4.7</version>
+ </plugin>
+ <plugin>
+  <instanceCount>1</instanceCount>
+  <name>reset_source</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
+  <displayName>Reset Output</displayName>
+  <version>23.4</version>
+ </plugin>
+ <reportVersion>23.4 66</reportVersion>
+ <uniqueIdentifier></uniqueIdentifier>
+</EnsembleReport>

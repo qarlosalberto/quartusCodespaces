@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="sim/qsys_top_clock_in.v"
+   type="VERILOG"
+   library="qsys_top_clock_in"
+   hasInlineConfiguration="true" />
+ <topLevel name="qsys_top_clock_in.qsys_top_clock_in" />
+ <deviceFamily name="agilex7" />
+ <device name="AGFB014R24B2E2V" />
+</simPackage>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2023.11.06.08:32:13"
+ outputDirectory="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_s10_user_rst_clkgate_0/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Agilex 7"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="AGFB014R24B2E2V"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="2"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_BOARD"
+     type="String"
+     defaultValue="Intel Agilex 7 F-Series FPGA Development Kit DK-DEV-AGF014EA"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="ninit_done" kind="reset" start="1">
+   <property name="associatedClock" value="" />
+   <property name="associatedDirectReset" value="" />
+   <property name="associatedResetSinks" value="none" />
+   <property name="synchronousEdges" value="NONE" />
+   <port name="ninit_done" direction="output" role="reset" width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   kind="qsys_top_s10_user_rst_clkgate_0"
+   version="1.0"
+   name="qsys_top_s10_user_rst_clkgate_0">
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_DEVICE" value="AGFB014R24B2E2V" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Agilex 7" />
+  <parameter
+     name="AUTO_BOARD"
+     value="Intel Agilex 7 F-Series FPGA Development Kit DK-DEV-AGF014EA" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="2" />
+  <generatedFiles>
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_s10_user_rst_clkgate_0/synth/qsys_top_s10_user_rst_clkgate_0.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_s10_user_rst_clkgate_0/synth/qsys_top_s10_user_rst_clkgate_0.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_s10_user_rst_clkgate_0.ip" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="/nfs/site/disks/swbld_releases_6/acds/23.4/66/linux64/ip/altera/pgm/altera_s10_user_rst_clkgate/altera_s10_user_rst_clkgate_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Info" culprit="qsys_top_s10_user_rst_clkgate_0">"Generating: qsys_top_s10_user_rst_clkgate_0"</message>
+   <message level="Info" culprit="qsys_top_s10_user_rst_clkgate_0">"Generating: altera_s10_user_rst_clkgate"</message>
+   <message level="Info" culprit="s10_user_rst_clkgate_0">generating top-level entity altera_s10_user_rst_clkgate</message>
+  </messages>
+ </entity>
+ <entity
+   kind="altera_s10_user_rst_clkgate"
+   version="19.4.7"
+   name="altera_s10_user_rst_clkgate">
+  <parameter name="DEVICE_FAMILY" value="Agilex 7" />
+  <parameter name="outputType" value="Reset Interface" />
+  <generatedFiles>
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_s10_user_rst_clkgate_0/altera_s10_user_rst_clkgate_1947/synth/altera_s10_user_rst_clkgate.sv"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_s10_user_rst_clkgate_0/altera_s10_user_rst_clkgate_1947/synth/altera_s10_user_rst_clkgate_fm.sdc"
+       attributes="NO_AUTO_INSTANCE_DISCOVERY NO_SDC_PROMOTION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_s10_user_rst_clkgate_0/altera_s10_user_rst_clkgate_1947/synth/altera_s10_user_rst_clkgate.sv"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_s10_user_rst_clkgate_0/altera_s10_user_rst_clkgate_1947/synth/altera_s10_user_rst_clkgate_fm.sdc"
+       attributes="NO_AUTO_INSTANCE_DISCOVERY NO_SDC_PROMOTION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/nfs/site/disks/swbld_releases_6/acds/23.4/66/linux64/ip/altera/pgm/altera_s10_user_rst_clkgate/altera_s10_user_rst_clkgate_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="qsys_top_s10_user_rst_clkgate_0"
+     as="s10_user_rst_clkgate_0" />
+  <messages>
+   <message level="Info" culprit="qsys_top_s10_user_rst_clkgate_0">"Generating: altera_s10_user_rst_clkgate"</message>
+   <message level="Info" culprit="s10_user_rst_clkgate_0">generating top-level entity altera_s10_user_rst_clkgate</message>
+  </messages>
+ </entity>
+</deploy>

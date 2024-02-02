@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="altera_avalon_sysid_qsys_1915/sim/altera_avalon_sysid_qsys.v"
+   type="VERILOG"
+   library="altera_avalon_sysid_qsys_1915" />
+ <file
+   path="sim/qsys_top_sysid_qsys_0.v"
+   type="VERILOG"
+   library="qsys_top_sysid_qsys_0"
+   hasInlineConfiguration="true" />
+ <topLevel name="qsys_top_sysid_qsys_0.qsys_top_sysid_qsys_0" />
+ <deviceFamily name="agilex7" />
+ <device name="AGFB014R24B2E2V" />
+</simPackage>

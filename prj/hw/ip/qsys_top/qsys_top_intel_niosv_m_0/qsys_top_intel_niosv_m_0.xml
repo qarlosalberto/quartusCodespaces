@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2023.11.06.08:32:36"
+ outputDirectory="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Agilex 7"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="AGFB014R24B2E2V"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="2"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_BOARD"
+     type="String"
+     defaultValue="Intel Agilex 7 F-Series FPGA Development Kit DK-DEV-AGF014EA"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_PLATFORM_IRQ_RX_INTERRUPTS_USED"
+     type="BigInteger"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_INSTRUCTION_MANAGER_ADDRESS_MAP"
+     type="AddressMap"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_INSTRUCTION_MANAGER_ADDRESS_WIDTH"
+     type="AddressWidthType"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DATA_MANAGER_ADDRESS_MAP"
+     type="AddressMap"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DATA_MANAGER_ADDRESS_WIDTH"
+     type="AddressWidthType"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="clk" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="reset" kind="reset" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="synchronousEdges" value="DEASSERT" />
+   <port name="reset_reset" direction="input" role="reset" width="1" />
+  </interface>
+  <interface name="platform_irq_rx" kind="interrupt" start="1">
+   <property name="associatedAddressablePoint" value="" />
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="reset" />
+   <property name="irqMap" value="" />
+   <property name="irqScheme" value="INDIVIDUAL_REQUESTS" />
+   <port name="platform_irq_rx_irq" direction="input" role="irq" width="16" />
+  </interface>
+  <interface name="instruction_manager" kind="axi4lite" start="1">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="reset" />
+   <property name="trustzoneAware" value="true" />
+   <property name="wakeupSignals" value="false" />
+   <property name="uniqueIdSupport" value="false" />
+   <property name="poison" value="false" />
+   <property name="traceSignals" value="false" />
+   <property name="maximumOutstandingReads" value="1" />
+   <property name="maximumOutstandingWrites" value="1" />
+   <property name="maximumOutstandingTransactions" value="1" />
+   <property name="readIssuingCapability" value="8" />
+   <property name="writeIssuingCapability" value="1" />
+   <property name="combinedIssuingCapability" value="8" />
+   <port
+       name="instruction_manager_awaddr"
+       direction="output"
+       role="awaddr"
+       width="32" />
+   <port
+       name="instruction_manager_awprot"
+       direction="output"
+       role="awprot"
+       width="3" />
+   <port
+       name="instruction_manager_awvalid"
+       direction="output"
+       role="awvalid"
+       width="1" />
+   <port
+       name="instruction_manager_awready"
+       direction="input"
+       role="awready"
+       width="1" />
+   <port
+       name="instruction_manager_wdata"
+       direction="output"
+       role="wdata"
+       width="32" />
+   <port
+       name="instruction_manager_wstrb"
+       direction="output"
+       role="wstrb"
+       width="4" />
+   <port
+       name="instruction_manager_wvalid"
+       direction="output"
+       role="wvalid"
+       width="1" />
+   <port
+       name="instruction_manager_wready"
+       direction="input"
+       role="wready"
+       width="1" />
+   <port
+       name="instruction_manager_bresp"
+       direction="input"
+       role="bresp"
+       width="2" />
+   <port
+       name="instruction_manager_bvalid"
+       direction="input"
+       role="bvalid"
+       width="1" />
+   <port
+       name="instruction_manager_bready"
+       direction="output"
+       role="bready"
+       width="1" />
+   <port
+       name="instruction_manager_araddr"
+       direction="output"
+       role="araddr"
+       width="32" />
+   <port
+       name="instruction_manager_arprot"
+       direction="output"
+       role="arprot"
+       width="3" />
+   <port
+       name="instruction_manager_arvalid"
+       direction="output"
+       role="arvalid"
+       width="1" />
+   <port
+       name="instruction_manager_arready"
+       direction="input"
+       role="arready"
+       width="1" />
+   <port
+       name="instruction_manager_rdata"
+       direction="input"
+       role="rdata"
+       width="32" />
+   <port
+       name="instruction_manager_rresp"
+       direction="input"
+       role="rresp"
+       width="2" />
+   <port
+       name="instruction_manager_rvalid"
+       direction="input"
+       role="rvalid"
+       width="1" />
+   <port
+       name="instruction_manager_rready"
+       direction="output"
+       role="rready"
+       width="1" />
+  </interface>
+  <interface name="data_manager" kind="axi4lite" start="1">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="reset" />
+   <property name="trustzoneAware" value="true" />
+   <property name="wakeupSignals" value="false" />
+   <property name="uniqueIdSupport" value="false" />
+   <property name="poison" value="false" />
+   <property name="traceSignals" value="false" />
+   <property name="maximumOutstandingReads" value="1" />
+   <property name="maximumOutstandingWrites" value="1" />
+   <property name="maximumOutstandingTransactions" value="1" />
+   <property name="readIssuingCapability" value="1" />
+   <property name="writeIssuingCapability" value="1" />
+   <property name="combinedIssuingCapability" value="1" />
+   <port
+       name="data_manager_awaddr"
+       direction="output"
+       role="awaddr"
+       width="32" />
+   <port name="data_manager_awprot" direction="output" role="awprot" width="3" />
+   <port
+       name="data_manager_awvalid"
+       direction="output"
+       role="awvalid"
+       width="1" />
+   <port
+       name="data_manager_awready"
+       direction="input"
+       role="awready"
+       width="1" />
+   <port name="data_manager_wdata" direction="output" role="wdata" width="32" />
+   <port name="data_manager_wstrb" direction="output" role="wstrb" width="4" />
+   <port name="data_manager_wvalid" direction="output" role="wvalid" width="1" />
+   <port name="data_manager_wready" direction="input" role="wready" width="1" />
+   <port name="data_manager_bresp" direction="input" role="bresp" width="2" />
+   <port name="data_manager_bvalid" direction="input" role="bvalid" width="1" />
+   <port name="data_manager_bready" direction="output" role="bready" width="1" />
+   <port
+       name="data_manager_araddr"
+       direction="output"
+       role="araddr"
+       width="32" />
+   <port name="data_manager_arprot" direction="output" role="arprot" width="3" />
+   <port
+       name="data_manager_arvalid"
+       direction="output"
+       role="arvalid"
+       width="1" />
+   <port
+       name="data_manager_arready"
+       direction="input"
+       role="arready"
+       width="1" />
+   <port name="data_manager_rdata" direction="input" role="rdata" width="32" />
+   <port name="data_manager_rresp" direction="input" role="rresp" width="2" />
+   <port name="data_manager_rvalid" direction="input" role="rvalid" width="1" />
+   <port name="data_manager_rready" direction="output" role="rready" width="1" />
+  </interface>
+  <interface name="timer_sw_agent" kind="avalon" start="0">
+   <property name="addressAlignment" value="DYNAMIC" />
+   <property name="addressGroup" value="0" />
+   <property name="addressSpan" value="64" />
+   <property name="addressUnits" value="SYMBOLS" />
+   <property name="alwaysBurstMaxBurst" value="false" />
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="reset" />
+   <property name="bitsPerSymbol" value="8" />
+   <property name="bridgedAddressOffset" value="0" />
+   <property name="bridgesToMaster" value="" />
+   <property name="burstOnBurstBoundariesOnly" value="false" />
+   <property name="burstcountUnits" value="WORDS" />
+   <property name="constantBurstBehavior" value="false" />
+   <property name="explicitAddressSpan" value="0" />
+   <property name="holdTime" value="0" />
+   <property name="interleaveBursts" value="false" />
+   <property name="isBigEndian" value="false" />
+   <property name="isFlash" value="false" />
+   <property name="isMemoryDevice" value="false" />
+   <property name="isNonVolatileStorage" value="false" />
+   <property name="linewrapBursts" value="false" />
+   <property name="maximumPendingReadTransactions" value="2" />
+   <property name="maximumPendingWriteTransactions" value="0" />
+   <property name="minimumReadLatency" value="1" />
+   <property name="minimumResponseLatency" value="1" />
+   <property name="minimumUninterruptedRunLength" value="1" />
+   <property name="prSafe" value="false" />
+   <property name="printableDevice" value="false" />
+   <property name="readLatency" value="0" />
+   <property name="readWaitStates" value="1" />
+   <property name="readWaitTime" value="1" />
+   <property name="registerIncomingSignals" value="false" />
+   <property name="registerOutgoingSignals" value="false" />
+   <property name="setupTime" value="0" />
+   <property name="timingUnits" value="Cycles" />
+   <property name="transparentBridge" value="false" />
+   <property name="waitrequestAllowance" value="0" />
+   <property name="wellBehavedWaitrequest" value="false" />
+   <property name="writeLatency" value="0" />
+   <property name="writeWaitStates" value="0" />
+   <property name="writeWaitTime" value="0" />
+   <property name="dfhFeatureGuid" value="0" />
+   <property name="dfhGroupId" value="0" />
+   <property name="dfhParameterId" value="" />
+   <property name="dfhParameterName" value="" />
+   <property name="dfhParameterVersion" value="" />
+   <property name="dfhParameterData" value="" />
+   <property name="dfhParameterDataLength" value="" />
+   <property name="dfhFeatureMajorVersion" value="0" />
+   <property name="dfhFeatureMinorVersion" value="0" />
+   <property name="dfhFeatureId" value="35" />
+   <port name="timer_sw_agent_write" direction="input" role="write" width="1" />
+   <port
+       name="timer_sw_agent_writedata"
+       direction="input"
+       role="writedata"
+       width="32" />
+   <port
+       name="timer_sw_agent_byteenable"
+       direction="input"
+       role="byteenable"
+       width="4" />
+   <port
+       name="timer_sw_agent_address"
+       direction="input"
+       role="address"
+       width="6" />
+   <port name="timer_sw_agent_read" direction="input" role="read" width="1" />
+   <port
+       name="timer_sw_agent_readdata"
+       direction="output"
+       role="readdata"
+       width="32" />
+   <port
+       name="timer_sw_agent_readdatavalid"
+       direction="output"
+       role="readdatavalid"
+       width="1" />
+   <port
+       name="timer_sw_agent_waitrequest"
+       direction="output"
+       role="waitrequest"
+       width="1" />
+  </interface>
+  <interface name="dm_agent" kind="avalon" start="0">
+   <property name="addressAlignment" value="DYNAMIC" />
+   <property name="addressGroup" value="0" />
+   <property name="addressSpan" value="65536" />
+   <property name="addressUnits" value="SYMBOLS" />
+   <property name="alwaysBurstMaxBurst" value="false" />
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="reset" />
+   <property name="bitsPerSymbol" value="8" />
+   <property name="bridgedAddressOffset" value="0" />
+   <property name="bridgesToMaster" value="" />
+   <property name="burstOnBurstBoundariesOnly" value="false" />
+   <property name="burstcountUnits" value="WORDS" />
+   <property name="constantBurstBehavior" value="false" />
+   <property name="explicitAddressSpan" value="0" />
+   <property name="holdTime" value="0" />
+   <property name="interleaveBursts" value="false" />
+   <property name="isBigEndian" value="false" />
+   <property name="isFlash" value="false" />
+   <property name="isMemoryDevice" value="false" />
+   <property name="isNonVolatileStorage" value="false" />
+   <property name="linewrapBursts" value="false" />
+   <property name="maximumPendingReadTransactions" value="2" />
+   <property name="maximumPendingWriteTransactions" value="0" />
+   <property name="minimumReadLatency" value="1" />
+   <property name="minimumResponseLatency" value="1" />
+   <property name="minimumUninterruptedRunLength" value="1" />
+   <property name="prSafe" value="false" />
+   <property name="printableDevice" value="false" />
+   <property name="readLatency" value="0" />
+   <property name="readWaitStates" value="1" />
+   <property name="readWaitTime" value="1" />
+   <property name="registerIncomingSignals" value="false" />
+   <property name="registerOutgoingSignals" value="false" />
+   <property name="setupTime" value="0" />
+   <property name="timingUnits" value="Cycles" />
+   <property name="transparentBridge" value="false" />
+   <property name="waitrequestAllowance" value="0" />
+   <property name="wellBehavedWaitrequest" value="false" />
+   <property name="writeLatency" value="0" />
+   <property name="writeWaitStates" value="0" />
+   <property name="writeWaitTime" value="0" />
+   <property name="dfhFeatureGuid" value="0" />
+   <property name="dfhGroupId" value="0" />
+   <property name="dfhParameterId" value="" />
+   <property name="dfhParameterName" value="" />
+   <property name="dfhParameterVersion" value="" />
+   <property name="dfhParameterData" value="" />
+   <property name="dfhParameterDataLength" value="" />
+   <property name="dfhFeatureMajorVersion" value="0" />
+   <property name="dfhFeatureMinorVersion" value="0" />
+   <property name="dfhFeatureId" value="35" />
+   <port name="dm_agent_write" direction="input" role="write" width="1" />
+   <port
+       name="dm_agent_writedata"
+       direction="input"
+       role="writedata"
+       width="32" />
+   <port name="dm_agent_address" direction="input" role="address" width="16" />
+   <port name="dm_agent_read" direction="input" role="read" width="1" />
+   <port
+       name="dm_agent_readdata"
+       direction="output"
+       role="readdata"
+       width="32" />
+   <port
+       name="dm_agent_readdatavalid"
+       direction="output"
+       role="readdatavalid"
+       width="1" />
+   <port
+       name="dm_agent_waitrequest"
+       direction="output"
+       role="waitrequest"
+       width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   kind="qsys_top_intel_niosv_m_0"
+   version="1.0"
+   name="qsys_top_intel_niosv_m_0">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_DATA_MANAGER_ADDRESS_MAP" value="" />
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_PLATFORM_IRQ_RX_INTERRUPTS_USED" value="-1" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Agilex 7" />
+  <parameter
+     name="AUTO_BOARD"
+     value="Intel Agilex 7 F-Series FPGA Development Kit DK-DEV-AGF014EA" />
+  <parameter name="AUTO_DATA_MANAGER_ADDRESS_WIDTH" value="-1" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="2" />
+  <parameter name="AUTO_INSTRUCTION_MANAGER_ADDRESS_WIDTH" value="-1" />
+  <parameter name="AUTO_DEVICE" value="AGFB014R24B2E2V" />
+  <parameter name="AUTO_INSTRUCTION_MANAGER_ADDRESS_MAP" value="" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="-1" />
+  <generatedFiles>
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/synth/qsys_top_intel_niosv_m_0.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/synth/qsys_top_intel_niosv_m_0.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0.ip" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="/nfs/site/disks/swbld_releases_6/acds/23.4/66/linux64/ip/altera/soft_processor/intel_niosv_m/intel_niosv_m_hw.tcl" />
+   <file
+       path="/nfs/site/disks/swbld_releases_6/acds/23.4/66/linux64/ip/altera/soft_processor/intel_niosv_m/intel_niosv_m_unit_hw.tcl" />
+   <file
+       path="/nfs/site/disks/swbld_releases_6/acds/23.4/66/linux64/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
+   <file
+       path="/nfs/site/disks/swbld_releases_6/acds/23.4/66/linux64/ip/altera/soft_processor/intel_niosv_common/intel_niosv_timer_msip_hw.tcl" />
+   <file
+       path="/nfs/site/disks/swbld_releases_6/acds/23.4/66/linux64/ip/altera/soft_processor/intel_niosv_common/intel_niosv_dbg_mod_hw.tcl" />
+   <file
+       path="/nfs/site/disks/swbld_releases_6/acds/23.4/66/linux64/ip/altera/merlin/altera_irq_mapper/altera_irq_mapper_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Info" culprit="qsys_top_intel_niosv_m_0">"Generating: qsys_top_intel_niosv_m_0"</message>
+   <message level="Info" culprit="qsys_top_intel_niosv_m_0">"Generating: qsys_top_intel_niosv_m_0_intel_niosv_m_2310_dxns7li"</message>
+   <message level="Info" culprit="qsys_top_intel_niosv_m_0">"Generating: niosv_m_top"</message>
+   <message level="Info" culprit="niosv_reset_controller">"Generating: niosv_reset_controller"</message>
+   <message level="Info" culprit="qsys_top_intel_niosv_m_0">"Generating: niosv_reset_controller"</message>
+   <message level="Info" culprit="qsys_top_intel_niosv_m_0">"Generating: altera_reset_controller"</message>
+   <message level="Info" culprit="qsys_top_intel_niosv_m_0">"Generating: niosv_timer_msip"</message>
+   <message level="Info" culprit="qsys_top_intel_niosv_m_0">"Generating: niosv_dm_top"</message>
+   <message level="Info" culprit="qsys_top_intel_niosv_m_0">"Generating: qsys_top_intel_niosv_m_0_altera_irq_mapper_2001_3jqx4ly"</message>
+  </messages>
+ </entity>
+ <entity
+   kind="intel_niosv_m"
+   version="23.1.0"
+   name="qsys_top_intel_niosv_m_0_intel_niosv_m_2310_dxns7li">
+  <parameter
+     name="instSlaveMapParam"
+     value="&lt;address-map&gt;&lt;slave name=&apos;intel_onchip_memory_0.axi_s1&apos; start=&apos;0x0&apos; end=&apos;0x100000&apos; datawidth=&apos;32&apos; /&gt;&lt;slave name=&apos;intel_niosv_m_0.dm_agent&apos; start=&apos;0x100000&apos; end=&apos;0x110000&apos; datawidth=&apos;32&apos; /&gt;&lt;/address-map&gt;" />
+  <parameter name="enableDebug" value="true" />
+  <parameter name="AUTO_PLATFORM_IRQ_RX_INTERRUPTS_USED" value="1" />
+  <parameter
+     name="AUTO_BOARD"
+     value="Intel Agilex 7 F-Series FPGA Development Kit DK-DEV-AGF014EA" />
+  <parameter name="enableECCLite" value="false" />
+  <parameter name="enableDebugReset" value="false" />
+  <parameter name="deviceFamily" value="Agilex 7" />
+  <parameter name="useResetReq" value="false" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="2" />
+  <parameter name="resetSlave" value="intel_onchip_memory_0.axi_s1" />
+  <parameter name="pipelineArch" value="true" />
+  <parameter
+     name="dataSlaveMapParam"
+     value="&lt;address-map&gt;&lt;slave name=&apos;intel_onchip_memory_0.axi_s1&apos; start=&apos;0x0&apos; end=&apos;0x100000&apos; datawidth=&apos;32&apos; /&gt;&lt;slave name=&apos;intel_niosv_m_0.dm_agent&apos; start=&apos;0x100000&apos; end=&apos;0x110000&apos; datawidth=&apos;32&apos; /&gt;&lt;slave name=&apos;intel_niosv_m_0.timer_sw_agent&apos; start=&apos;0x110000&apos; end=&apos;0x110040&apos; datawidth=&apos;32&apos; /&gt;&lt;slave name=&apos;pio_0.s1&apos; start=&apos;0x110040&apos; end=&apos;0x110050&apos; datawidth=&apos;32&apos; /&gt;&lt;slave name=&apos;jtag_uart_0.avalon_jtag_slave&apos; start=&apos;0x110050&apos; end=&apos;0x110058&apos; datawidth=&apos;32&apos; /&gt;&lt;slave name=&apos;sysid_qsys_0.control_slave&apos; start=&apos;0x110058&apos; end=&apos;0x110060&apos; datawidth=&apos;32&apos; /&gt;&lt;/address-map&gt;" />
+  <parameter name="clockFrequency" value="100000000" />
+  <parameter name="AUTO_DEVICE" value="AGFB014R24B2E2V" />
+  <parameter name="resetOffset" value="0" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="3" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="3" />
+  <parameter name="numGpr" value="32" />
+  <generatedFiles>
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_2310/synth/qsys_top_intel_niosv_m_0_intel_niosv_m_2310_dxns7li.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_2310/synth/qsys_top_intel_niosv_m_0_intel_niosv_m_2310_dxns7li.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/nfs/site/disks/swbld_releases_6/acds/23.4/66/linux64/ip/altera/soft_processor/intel_niosv_m/intel_niosv_m_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="/nfs/site/disks/swbld_releases_6/acds/23.4/66/linux64/ip/altera/soft_processor/intel_niosv_m/intel_niosv_m_unit_hw.tcl" />
+   <file
+       path="/nfs/site/disks/swbld_releases_6/acds/23.4/66/linux64/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
+   <file
+       path="/nfs/site/disks/swbld_releases_6/acds/23.4/66/linux64/ip/altera/soft_processor/intel_niosv_common/intel_niosv_timer_msip_hw.tcl" />
+   <file
+       path="/nfs/site/disks/swbld_releases_6/acds/23.4/66/linux64/ip/altera/soft_processor/intel_niosv_common/intel_niosv_dbg_mod_hw.tcl" />
+   <file
+       path="/nfs/site/disks/swbld_releases_6/acds/23.4/66/linux64/ip/altera/merlin/altera_irq_mapper/altera_irq_mapper_hw.tcl" />
+  </childSourceFiles>
+  <instantiator instantiator="qsys_top_intel_niosv_m_0" as="intel_niosv_m_0" />
+  <messages>
+   <message level="Info" culprit="qsys_top_intel_niosv_m_0">"Generating: qsys_top_intel_niosv_m_0_intel_niosv_m_2310_dxns7li"</message>
+   <message level="Info" culprit="qsys_top_intel_niosv_m_0">"Generating: niosv_m_top"</message>
+   <message level="Info" culprit="niosv_reset_controller">"Generating: niosv_reset_controller"</message>
+   <message level="Info" culprit="qsys_top_intel_niosv_m_0">"Generating: niosv_reset_controller"</message>
+   <message level="Info" culprit="qsys_top_intel_niosv_m_0">"Generating: altera_reset_controller"</message>
+   <message level="Info" culprit="qsys_top_intel_niosv_m_0">"Generating: niosv_timer_msip"</message>
+   <message level="Info" culprit="qsys_top_intel_niosv_m_0">"Generating: niosv_dm_top"</message>
+   <message level="Info" culprit="qsys_top_intel_niosv_m_0">"Generating: qsys_top_intel_niosv_m_0_altera_irq_mapper_2001_3jqx4ly"</message>
+  </messages>
+ </entity>
+ <entity kind="intel_niosv_m_unit" version="22.1.0" name="niosv_m_top">
+  <parameter name="AUTO_DEBUG_IRQ_RX_INTERRUPTS_USED" value="1" />
+  <parameter name="AUTO_EXT_IRQ_RX_INTERRUPTS_USED" value="-1" />
+  <parameter name="SMALL_CORE" value="0" />
+  <parameter name="AUTO_PLATFORM_IRQ_RX_INTERRUPTS_USED" value="1" />
+  <parameter name="DEVICE_FAMILY" value="Agilex 7" />
+  <parameter name="AUTO_TIMER_IRQ_RX_INTERRUPTS_USED" value="1" />
+  <parameter name="DBG_EXPN_VECTOR" value="1048576" />
+  <parameter name="ECC_EN" value="0" />
+  <parameter name="AUTO_SW_IRQ_RX_INTERRUPTS_USED" value="1" />
+  <parameter name="CORE_EXTN" value="256" />
+  <parameter name="DEBUG_ENABLED" value="1" />
+  <parameter name="USE_RESET_REQ" value="0" />
+  <parameter name="RESET_VECTOR" value="0" />
+  <generatedFiles>
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_opcode_def.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_mem_op_state.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_ram.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_reg_file.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_csr.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_interrupt_handler.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_instr_buffer.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_bus_req.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_shift.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_c_alu.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_c_decoder.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_c_lsu.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_c_core.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_c_csr.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_m_top.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_m_alu.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_m_decoder.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_m_lsu.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_m_core.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_m_instr_prefetch.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_m_shift_module.sv"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_opcode_def.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_mem_op_state.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_ram.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_reg_file.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_csr.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_interrupt_handler.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_instr_buffer.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_bus_req.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_shift.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_c_alu.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_c_decoder.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_c_lsu.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_c_core.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_c_csr.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_m_top.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_m_alu.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_m_decoder.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_m_lsu.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_m_core.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_m_instr_prefetch.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_m_shift_module.sv"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/nfs/site/disks/swbld_releases_6/acds/23.4/66/linux64/ip/altera/soft_processor/intel_niosv_m/intel_niosv_m_unit_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="/nfs/site/disks/swbld_releases_6/acds/23.4/66/linux64/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
+  </childSourceFiles>
+  <instantiator
+     instantiator="qsys_top_intel_niosv_m_0_intel_niosv_m_2310_dxns7li"
+     as="hart" />
+  <messages>
+   <message level="Info" culprit="qsys_top_intel_niosv_m_0">"Generating: niosv_m_top"</message>
+   <message level="Info" culprit="niosv_reset_controller">"Generating: niosv_reset_controller"</message>
+   <message level="Info" culprit="qsys_top_intel_niosv_m_0">"Generating: niosv_reset_controller"</message>
+   <message level="Info" culprit="qsys_top_intel_niosv_m_0">"Generating: altera_reset_controller"</message>
+  </messages>
+ </entity>
+ <entity kind="intel_niosv_timer_msip" version="1.2.0" name="niosv_timer_msip">
+  <parameter name="ADDR_WIDTH" value="6" />
+  <parameter name="IRQ_EN" value="1" />
+  <parameter name="NIOS_VARIANT" value="m" />
+  <generatedFiles>
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_timer_msip_120/synth/niosv_timer_msip.sv"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_timer_msip_120/synth/niosv_timer_msip.sv"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/nfs/site/disks/swbld_releases_6/acds/23.4/66/linux64/ip/altera/soft_processor/intel_niosv_common/intel_niosv_timer_msip_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="qsys_top_intel_niosv_m_0_intel_niosv_m_2310_dxns7li"
+     as="timer_module" />
+  <messages>
+   <message level="Info" culprit="qsys_top_intel_niosv_m_0">"Generating: niosv_timer_msip"</message>
+  </messages>
+ </entity>
+ <entity kind="intel_niosv_dbg_mod" version="2.1.0" name="niosv_dm_top">
+  <parameter name="DEVICE_FAMILY" value="Agilex 7" />
+  <parameter name="DEBUG_RESET_EN" value="0" />
+  <parameter name="NIOS_VARIANT" value="m" />
+  <parameter name="FPU_EN" value="0" />
+  <generatedFiles>
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/csr_mlab.mif"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/debug_rom.mif"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/niosv_dm_def.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/niosv_ram.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/niosv_dm_jtag2mm.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/niosv_dm_top.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/niosv_debug_module.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/altera_std_synchronizer_bundle.v"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/altera_std_synchronizer_nocut.v"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/altera_std_synchronizer.v"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/altera_avalon_st_clock_crosser.v"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/altera_avalon_st_handshake_clock_crosser.v"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/altera_avalon_st_pipeline_base.v"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/altera_avalon_st_pipeline_stage.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/altera_avalon_st_handshake_clock_crosser.sdc"
+       attributes="NO_AUTO_INSTANCE_DISCOVERY NO_SDC_PROMOTION" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/altera_reset_synchronizer.v"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/altera_reset_controller.v"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/altera_reset_controller.sdc"
+       attributes="NO_AUTO_INSTANCE_DISCOVERY NO_SDC_PROMOTION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/csr_mlab.mif"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/debug_rom.mif"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/niosv_dm_def.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/niosv_ram.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/niosv_dm_jtag2mm.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/niosv_dm_top.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/niosv_debug_module.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/altera_std_synchronizer_bundle.v"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/altera_std_synchronizer_nocut.v"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/altera_std_synchronizer.v"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/altera_avalon_st_clock_crosser.v"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/altera_avalon_st_handshake_clock_crosser.v"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/altera_avalon_st_pipeline_base.v"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/altera_avalon_st_pipeline_stage.sv"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/altera_avalon_st_handshake_clock_crosser.sdc"
+       attributes="NO_AUTO_INSTANCE_DISCOVERY NO_SDC_PROMOTION" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/altera_reset_synchronizer.v"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/altera_reset_controller.v"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_dbg_mod_210/synth/altera_reset_controller.sdc"
+       attributes="NO_AUTO_INSTANCE_DISCOVERY NO_SDC_PROMOTION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/nfs/site/disks/swbld_releases_6/acds/23.4/66/linux64/ip/altera/soft_processor/intel_niosv_common/intel_niosv_dbg_mod_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="qsys_top_intel_niosv_m_0_intel_niosv_m_2310_dxns7li"
+     as="dbg_mod" />
+  <messages>
+   <message level="Info" culprit="qsys_top_intel_niosv_m_0">"Generating: niosv_dm_top"</message>
+  </messages>
+ </entity>
+ <entity
+   kind="altera_irq_mapper"
+   version="20.0.1"
+   name="qsys_top_intel_niosv_m_0_altera_irq_mapper_2001_3jqx4ly">
+  <parameter name="NUM_RCVRS" value="1" />
+  <parameter name="REMOVE_CLK_RST" value="0" />
+  <parameter name="IRQ_MAP" value="0:0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Agilex 7" />
+  <parameter name="SYNC_RESET" value="0" />
+  <parameter name="SENDER_IRQ_WIDTH" value="1" />
+  <generatedFiles>
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/altera_irq_mapper_2001/synth/qsys_top_intel_niosv_m_0_altera_irq_mapper_2001_3jqx4ly.sv"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/altera_irq_mapper_2001/synth/qsys_top_intel_niosv_m_0_altera_irq_mapper_2001_3jqx4ly.sv"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/nfs/site/disks/swbld_releases_6/acds/23.4/66/linux64/ip/altera/merlin/altera_irq_mapper/altera_irq_mapper_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="qsys_top_intel_niosv_m_0_intel_niosv_m_2310_dxns7li"
+     as="irq_mapper,irq_mapper_001,irq_mapper_002" />
+  <messages>
+   <message level="Info" culprit="qsys_top_intel_niosv_m_0">"Generating: qsys_top_intel_niosv_m_0_altera_irq_mapper_2001_3jqx4ly"</message>
+  </messages>
+ </entity>
+ <entity
+   kind="intel_niosv_m_unit_altera_reset_controller"
+   version="22.1.0"
+   name="niosv_reset_controller">
+  <generatedFiles>
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_reset_controller.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/intel_niosv_m_unit_2210/synth/niosv_reset_controller.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles/>
+  <childSourceFiles>
+   <file
+       path="/nfs/site/disks/swbld_releases_6/acds/23.4/66/linux64/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
+  </childSourceFiles>
+  <instantiator instantiator="niosv_m_top" as="niosv_reset_controller" />
+  <messages>
+   <message level="Info" culprit="qsys_top_intel_niosv_m_0">"Generating: niosv_reset_controller"</message>
+   <message level="Info" culprit="qsys_top_intel_niosv_m_0">"Generating: altera_reset_controller"</message>
+  </messages>
+ </entity>
+ <entity
+   kind="altera_reset_controller"
+   version="19.2.2"
+   name="altera_reset_controller">
+  <generatedFiles>
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/altera_reset_controller_1922/synth/altera_reset_controller.v"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/altera_reset_controller_1922/synth/altera_reset_synchronizer.v"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/altera_reset_controller_1922/synth/altera_reset_controller.sdc"
+       attributes="NO_SDC_PROMOTION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/altera_reset_controller_1922/synth/altera_reset_controller.v"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/altera_reset_controller_1922/synth/altera_reset_synchronizer.v"
+       attributes="" />
+   <file
+       path="/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/altera_reset_controller_1922/synth/altera_reset_controller.sdc"
+       attributes="NO_SDC_PROMOTION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/nfs/site/disks/swbld_releases_6/acds/23.4/66/linux64/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="niosv_reset_controller" as="niosv_reset_controller" />
+  <messages>
+   <message level="Info" culprit="qsys_top_intel_niosv_m_0">"Generating: altera_reset_controller"</message>
+  </messages>
+ </entity>
+</deploy>

@@ -1,0 +1,217 @@
+Assembler report for top
+Mon Nov  6 09:03:28 2023
+Quartus Prime Version 23.4.0 Internal Build 66 11/05/2023 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Assembler Summary
+  3. Assembler Settings
+  4. Parallel Compilation
+  5. Assembler Messages
+  6. Assembler Encrypted IP Cores Summary
+  7. Assembler Generated Files
+  8. Assembler Device Options: top.sof
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the Intel FPGA Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++---------------------------------------------------------------+
+; Assembler Summary                                             ;
++-----------------------+---------------------------------------+
+; Assembler Status      ; Successful - Mon Nov  6 09:03:28 2023 ;
+; Revision Name         ; top                                   ;
+; Top-level Entity Name ; qsys_top                              ;
+; Family                ; Agilex 7                              ;
+; Device                ; AGFB014R24B2E2V                       ;
+; Timing Models         ; Final                                 ;
+; Power Models          ; Final                                 ;
+; Device Status         ; Final                                 ;
++-----------------------+---------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Assembler Settings                                                                                         ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Enable Design Assistant in the compilation flow                  ; On                 ; On                 ;
+; Design Assistant include IP blocks                               ; Off                ; Off                ;
+; High fanout net threshold for RAM inference                      ; 15                 ; 15                 ;
+; Design Assistant limit on reported violations per rule           ; 5000               ; 5000               ;
+; PMBus device 0 slave address                                     ; 47                 ; 00                 ;
+; Voltage output format                                            ; Linear format      ; Auto discovery     ;
+; Direct format coefficient m                                      ; 1                  ; 0                  ;
+; Linear format N                                                  ; -13                ; 0                  ;
+; Generate compressed bitstreams                                   ; On                 ; On                 ;
+; Auto user code                                                   ; On                 ; On                 ;
+; Configuration device                                             ; Auto               ; Auto               ;
+; Voltage stable delay                                             ; 10                 ; 10                 ;
+; FPGA release delay                                               ; 10                 ; 10                 ;
+; Initial delay                                                    ; 0                  ; 0                  ;
+; Bus speed mode                                                   ; 100 KHz            ; 100 KHz            ;
+; Slave device type                                                ; LTM4677            ; LTM4677            ;
+; Device address in PMBus Slave mode                               ; 00                 ; 00                 ;
+; PMBus device 1 slave address                                     ; 00                 ; 00                 ;
+; PMBus device 2 slave address                                     ; 00                 ; 00                 ;
+; PMBus device 3 slave address                                     ; 00                 ; 00                 ;
+; PMBus device 4 slave address                                     ; 00                 ; 00                 ;
+; PMBus device 5 slave address                                     ; 00                 ; 00                 ;
+; PMBus device 6 slave address                                     ; 00                 ; 00                 ;
+; PMBus device 7 slave address                                     ; 00                 ; 00                 ;
+; Direct format coefficient b                                      ; 0                  ; 0                  ;
+; Direct format coefficient R                                      ; 0                  ; 0                  ;
+; Translated voltage value unit                                    ; Volts              ; Volts              ;
+; obsolete - Data setup time in nanoseconds                        ; 0                  ; 0                  ;
+; obsolete - Data hold time in nanoseconds                         ; 0                  ; 0                  ;
+; obsolete - Clock/data fall time in nanoseconds                   ; 0                  ; 0                  ;
+; obsolete - Clock/data rise time in nanoseconds                   ; 0                  ; 0                  ;
+; Enable PAGE command                                              ; Off                ; Off                ;
+; VOUT reading error margin index                                  ; 8                  ; 8                  ;
+; Configuration device auto user code                              ; Off                ; Off                ;
+; Generate Partial Reconfiguration Raw Binary File (.rbf)          ; On                 ; On                 ;
+; HPS/FPGA configuration order                                     ; After INIT_DONE    ; After INIT_DONE    ;
+; HPS debug access port (DAP)                                      ; Disabled           ; Disabled           ;
+; Enable configuration bitstream encryption                        ; Off                ; Off                ;
+; Encryption key storage location                                  ; Battery Backup RAM ; Battery Backup RAM ;
+; Encryption update ratio                                          ; 0                  ; 0                  ;
+; Enable scrambling                                                ; Off                ; Off                ;
+; Allow HPS debug without certificate                              ; Off                ; Off                ;
+; Remote system update max retry count                             ; 1                  ; 1                  ;
+; Disable JTAG                                                     ; Off                ; Off                ;
+; Force SDM clock to internal oscillator                           ; Off                ; Off                ;
+; Force encryption key update                                      ; Off                ; Off                ;
+; Disable virtual eFuses                                           ; Off                ; Off                ;
+; Lock security eFuses                                             ; Off                ; Off                ;
+; Disable HPS debug                                                ; Off                ; Off                ;
+; Disable encryption key in eFuses                                 ; Off                ; Off                ;
+; Disable encryption key in BBRAM                                  ; Off                ; Off                ;
+; Disable Intrinsic ID PUF-wrapped encryption key in Quad SPI      ; Off                ; Off                ;
+; Enable frequency tamper detection                                ; Off                ; Off                ;
+; Enable temperature tamper detection                              ; Off                ; Off                ;
+; Enable voltage tamper detection                                  ; Off                ; Off                ;
+; Anti-tamper response                                             ; Disabled           ; Disabled           ;
+; Frequency tamper detection range                                 ; 35                 ; 35                 ;
+; Temperature tamper upper bound                                   ; 110                ; 110                ;
+; Temperature tamper lower bound                                   ; -40                ; -40                ;
+; Enable VCCL voltage tamper detection                             ; Off                ; Off                ;
+; Enable VCCL SDM voltage tamper detection                         ; Off                ; Off                ;
+; Voltage tamper detection trigger                                 ; 15                 ; 15                 ;
+; VCCL voltage difference in percentage                            ; 0                  ; 0                  ;
+; VCCL_SDM voltage difference in percentage                        ; 0                  ; 0                  ;
+; Run configuration CPU from internal oscillator                   ; Off                ; Off                ;
+; Generate compressed sof                                          ; On                 ; On                 ;
+; PAGE command payload                                             ; 255                ; 255                ;
+; Enable partial reconfiguration bitstream encryption              ; Off                ; Off                ;
+; Enable AliasL1 certificate                                       ; Off                ; Off                ;
+; Enable multi-authority                                           ; Off                ; Off                ;
+; Enable device self-kill                                          ; Off                ; Off                ;
+; Enable device self-kill                                          ; Off                ; Off                ;
+; Enable device self-kill                                          ; Off                ; Off                ;
+; Enable device self-kill                                          ; Off                ; Off                ;
+; Generate programming files                                       ; Off                ; Off                ;
+; Enable status_byte for polling                                   ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 10     ;
+; Maximum allowed            ; 2      ;
++----------------------------+--------+
+
+
++--------------------+
+; Assembler Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Assembler
+    Info: Version 23.4.0 Internal Build 66 11/05/2023 SC Pro Edition
+    Info: Copyright (C) 2023  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the Intel FPGA Software License Subscription Agreements 
+    Info: on the Quartus Prime software download page.
+    Info: Processing started: Mon Nov  6 08:59:35 2023
+    Info: System process ID: 9369
+Info: Command: quartus_asm top.qpf
+Info: The application is running in 'DNI' mode.
+Info (16677): Loading final database.
+Info (16734): Loading "final" snapshot for partition "root_partition".
+Info (16734): Loading "final" snapshot for partition "auto_fab_0".
+Info (16678): Successfully loaded final database: elapsed time is 00:00:10.
+Info (22889): This design was generated using the DNI flow.
+Info (20553): Using CVP Hash 0123456789ABCDEF001122334455667788889999AAAABBBBCCCCDDDDEEEEFFFF
+Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4534 megabytes
+    Info: Processing ended: Mon Nov  6 09:03:28 2023
+    Info: Elapsed time: 00:03:53
+    Info: System process ID: 9369
+
+
++--------------------------------------------------------------------------------+
+; Assembler Encrypted IP Cores Summary                                           ;
++------------+----------------------------------------------------+--------------+
+; Vendor     ; IP Core Name                                       ; License Type ;
++------------+----------------------------------------------------+--------------+
+; Intel FPGA ; Signal Tap (6AF7 BCE1)                             ; Licensed     ;
+; Intel FPGA ; Signal Tap (6AF7 BCEC)                             ; Licensed     ;
+; Intel FPGA ; Nios V/m Microcontroller Intel FPGA IP (6AF7 D036) ; Licensed     ;
++------------+----------------------------------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                                         ;
++-------------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                         ;
++-------------------------------------------------------------------------------------------------------------------+
+; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/output_files/top.sof ;
++-------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Assembler Device Options: top.sof                                                  ;
++----------------+-------------------------------------------------------------------+
+; Option         ; Setting                                                           ;
++----------------+-------------------------------------------------------------------+
+; JTAG usercode  ; 0xFFFFFFFF                                                        ;
+; Checksum       ; 0x4038578D                                                        ;
+; Design hash    ; 96368BA8322361EE678B85C431EBAE2681BDD3179D2EA10F08E352A783B9DC57  ;
++----------------+-------------------------------------------------------------------+
+
+

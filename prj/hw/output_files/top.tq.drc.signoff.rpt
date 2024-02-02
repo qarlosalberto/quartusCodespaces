@@ -1,0 +1,1156 @@
+Design Assistant report for top
+Mon Nov  6 08:59:33 2023
+Quartus Prime Version 23.4.0 Internal Build 66 11/05/2023 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Design Assistant (Signoff) Results - 3 of 87 Rules Failed
+  3. TMC-20025 - Ignored or Overridden Constraints
+  4. TMC-20602 - Registers with High Timing Path Endpoint Tension
+  5. CLK-30032 - Improper Clock Targets
+  6. CDC-50001 - 1-Bit Asynchronous Transfer Not Synchronized
+  7. CDC-50002 - 1-Bit Asynchronous Transfer with Insufficient Constraints
+  8. CDC-50003 - CE-Type CDC Transfer with Insufficient Constraints
+  9. CDC-50004 - MUX-type CDC Transfer with Insufficient Constraints
+ 10. CDC-50005 - CDC Bus Constructed with Multi-bit Synchronizer Chains of Different Lengths
+ 11. CDC-50006 - CDC Bus Constructed with Unsynchronized Registers
+ 12. CDC-50007 - CDC Bus Constructed with Multi-bit Synchronizer Chains with Insufficient Constraints
+ 13. CDC-50011 - Combinational Logic Before Synchronizer Chain
+ 14. CDC-50012 - Multiple Clock Domains Driving a Synchronizer Chain
+ 15. CLK-30026 - Missing Clock Assignment
+ 16. CLK-30027 - Multiple Clock Assignments Found
+ 17. CLK-30028 - Invalid Generated Clock
+ 18. CLK-30029 - Invalid Clock Assignments
+ 19. CLK-30030 - PLL Setting Violation
+ 20. CLK-30033 - Invalid Clock Group Assignment
+ 21. CLK-30034 - Clock Pairs Missing Logically Exclusive Clock Group Assignment
+ 22. CLK-30035 - Clock Pairs Missing Physically Exclusive Clock Group Assignment
+ 23. CLK-30042 - Incorrect Clock Group Type
+ 24. RDC-50001 - Reconvergence of Multiple Asynchronous Reset Synchronizers in Different Reset Domains
+ 25. RDC-50002 - Reconvergence of Multiple Asynchronous Reset Synchronizers in a Common Reset Domain
+ 26. RES-50001 - Asynchronous Reset Is Not Synchronized
+ 27. RES-50002 - Asynchronous Reset is Insufficiently Synchronized
+ 28. RES-50003 - Asynchronous Reset with Insufficient Constraints
+ 29. RES-50004 - Multiple Asynchronous Resets within Reset Synchronizer Chain
+ 30. TMC-20011 - Missing Input Delay Constraint
+ 31. TMC-20012 - Missing Output Delay Constraint
+ 32. TMC-20013 - Partial Input Delay
+ 33. TMC-20014 - Partial Output Delay
+ 34. TMC-20015 - Inconsistent Min-Max Delay
+ 35. TMC-20016 - Invalid Reference Pin
+ 36. TMC-20017 - Loops Detected
+ 37. TMC-20019 - Partial Multicycle Assignment
+ 38. TMC-20022 - I/O Delay Assignment Missing Parameters
+ 39. TMC-20023 - Invalid Set Net Delay Assignment
+ 40. TMC-20027 - Collection Filter Matching Multiple Types
+ 41. TMC-30041 - Constraint with Invalid Clock Reference
+ 42. CDC-50103 - Unsynchronized Intra-Clock Forced Synchronizer
+ 43. CLK-30031 - Input Delay Assigned to Clock
+ 44. FLP-10000 - Physical RAM with Utilization Below Threshold
+ 45. LNT-30023 - Reset Nets with Polarity Conflict
+ 46. TMC-20018 - Unsupported Latches Detected
+ 47. TMC-20021 - Partial Min-Max Delay Assignment
+ 48. TMC-20024 - Synchronous Data Delay Assignment
+ 49. TMC-20026 - Empty Collection Due To Unmatched Filter
+ 50. TMC-20200 - Paths Failing Setup Analysis with Impossible Requirements
+ 51. TMC-20201 - Paths Failing Setup Analysis with High Clock Skew
+ 52. TMC-20202 - Paths Failing Setup Analysis with High Logic Delay
+ 53. TMC-20203 - Paths Failing Setup Analysis with High Fabric Interconnect Delay
+ 54. TMC-20204 - Endpoints of Paths Failing Setup Analysis with Retiming Restrictions
+ 55. TMC-20205 - Endpoints of Paths Failing Setup Analysis with Explicit Power-Up States that Restrict Retiming
+ 56. TMC-20206 - DSP Blocks with Unregistered Outputs that are the Source of Paths Failing Setup Analysis
+ 57. TMC-20207 - DSP Blocks with Unregistered Inputs that are the Destination of Paths Failing Setup Analysis
+ 58. TMC-20208 - RAM Blocks with Unregistered Outputs that are the Source of Paths Failing Setup Analysis
+ 59. TMC-20209 - Paths Failing Setup Analysis with High Routing Delay due to Congestion
+ 60. TMC-20210 - Paths Failing Setup Analysis with High Routing Delay Added for Hold
+ 61. TMC-20212 - Paths Failing Setup Analysis with Global Routing in Data Path
+ 62. TMC-20213 - Paths Failing Setup Analysis with Locally Routed Clock
+ 63. TMC-20214 - Buses with Incoming Paths Failing Setup Analysis with Multiple Sequential Adder Chains
+ 64. TMC-20215 - Buses with Incoming Paths Failing Setup Analysis with Multipliers Implemented in Logic
+ 65. TMC-20216 - Paths Failing Setup Analysis with Inferred-RAM Shift Register Endpoints
+ 66. TMC-20217 - Paths Failing Setup Analysis with Clock-As-Data
+ 67. TMC-20219 - DSP Blocks with Restricted Fmax below Required Fmax
+ 68. TMC-20220 - RAM Blocks with Restricted Fmax below Required Fmax
+ 69. TMC-20221 - Nodes Failing Minimum Pulse Width Due to Clock Pulse Collapse
+ 70. TMC-20312 - Paths Failing Hold Analysis with Global Routing in Data Path
+ 71. TMC-20313 - Paths Failing Hold Analysis with Locally Routed Clock
+ 72. TMC-20712 - Paths Failing Recovery Analysis with Global Routing in Data Path
+ 73. TMC-20713 - Paths Failing Recovery Analysis with Locally Routed Clock
+ 74. TMC-20812 - Paths Failing Removal Analysis with Global Routing in Data Path
+ 75. TMC-20813 - Paths Failing Removal Analysis with Locally Routed Clock
+ 76. CDC-50008 - CDC Bus Constructed with Multi-bit Synchronizer Chains
+ 77. CDC-50101 - Intra-Clock False Path Synchronizer
+ 78. CDC-50102 - Synchronizer after CDC Topology with Control Signal
+ 79. FLP-40006 - Pipelining Registers That Might Be Recoverable
+ 80. LNT-30010 - Nets Driving both Reset and Clock Enable Signals
+ 81. RES-50010 - Reset Synchronizer Chains with Constant Output
+ 82. RES-50101 - Intra-Clock False Path Reset Synchronizer
+ 83. TMC-20020 - Invalid Multicycle Assignment
+ 84. TMC-20550 - Automatically Selected Duplication Candidate Rejected for Placement Constraint
+ 85. TMC-20551 - Automatically Selected Duplication Candidate Likely Requires More Duplication
+ 86. TMC-20552 - User Selected Duplication Candidate was Rejected
+ 87. TMC-20601 - Registers with High Immediate Fan-Out Tension
+ 88. TMC-20603 - Registers with High Immediate Fan-Out Span
+ 89. TMC-20604 - Registers with High Timing Path Endpoint Span
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the Intel FPGA Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Design Assistant (Signoff) Results - 3 of 87 Rules Failed                                                                                                                                    ;
++------------------------------------------------------------------------------------------------------------+----------+------------+--------+------------------------------------------------+
+; Rule                                                                                                       ; Severity ; Violations ; Waived ; Tags                                           ;
++------------------------------------------------------------------------------------------------------------+----------+------------+--------+------------------------------------------------+
+; TMC-20025 - Ignored or Overridden Constraints                                                              ; Medium   ; 4          ; 0      ; sdc                                            ;
+; TMC-20602 - Registers with High Timing Path Endpoint Tension                                               ; Low      ; 44         ; 0      ; register-duplication, register-spread, place   ;
+; CLK-30032 - Improper Clock Targets                                                                         ; Low      ; 1          ; 0      ; sdc                                            ;
+; CDC-50001 - 1-Bit Asynchronous Transfer Not Synchronized                                                   ; High     ; 0          ; 0      ; synchronizer                                   ;
+; CDC-50002 - 1-Bit Asynchronous Transfer with Insufficient Constraints                                      ; High     ; 0          ; 0      ; synchronizer                                   ;
+; CDC-50003 - CE-Type CDC Transfer with Insufficient Constraints                                             ; High     ; 0          ; 0      ; cdc-bus                                        ;
+; CDC-50004 - MUX-type CDC Transfer with Insufficient Constraints                                            ; High     ; 0          ; 0      ; cdc-bus                                        ;
+; CDC-50005 - CDC Bus Constructed with Multi-bit Synchronizer Chains of Different Lengths                    ; High     ; 0          ; 0      ; synchronizer, cdc-bus                          ;
+; CDC-50006 - CDC Bus Constructed with Unsynchronized Registers                                              ; High     ; 0          ; 0      ; synchronizer, cdc-bus                          ;
+; CDC-50007 - CDC Bus Constructed with Multi-bit Synchronizer Chains with Insufficient Constraints           ; High     ; 0          ; 0      ; synchronizer, cdc-bus                          ;
+; CDC-50011 - Combinational Logic Before Synchronizer Chain                                                  ; High     ; 0          ; 0      ; synchronizer                                   ;
+; CDC-50012 - Multiple Clock Domains Driving a Synchronizer Chain                                            ; High     ; 0          ; 0      ; synchronizer                                   ;
+; CLK-30026 - Missing Clock Assignment                                                                       ; High     ; 0          ; 0      ; sdc                                            ;
+; CLK-30027 - Multiple Clock Assignments Found                                                               ; High     ; 0          ; 0      ; sdc                                            ;
+; CLK-30028 - Invalid Generated Clock                                                                        ; High     ; 0          ; 0      ; sdc                                            ;
+; CLK-30029 - Invalid Clock Assignments                                                                      ; High     ; 0          ; 0      ; sdc                                            ;
+; CLK-30030 - PLL Setting Violation                                                                          ; High     ; 0          ; 0      ; sdc                                            ;
+; CLK-30033 - Invalid Clock Group Assignment                                                                 ; High     ; 0          ; 0      ; sdc                                            ;
+; CLK-30034 - Clock Pairs Missing Logically Exclusive Clock Group Assignment                                 ; High     ; 0          ; 0      ; sdc                                            ;
+; CLK-30035 - Clock Pairs Missing Physically Exclusive Clock Group Assignment                                ; High     ; 0          ; 0      ; sdc                                            ;
+; CLK-30042 - Incorrect Clock Group Type                                                                     ; High     ; 0          ; 0      ; sdc                                            ;
+; RDC-50001 - Reconvergence of Multiple Asynchronous Reset Synchronizers in Different Reset Domains          ; High     ; 0          ; 0      ; reset-usage, reset-reachability                ;
+; RDC-50002 - Reconvergence of Multiple Asynchronous Reset Synchronizers in a Common Reset Domain            ; High     ; 0          ; 0      ; reset-usage, reset-reachability                ;
+; RES-50001 - Asynchronous Reset Is Not Synchronized                                                         ; High     ; 0          ; 0      ; synchronizer                                   ;
+; RES-50002 - Asynchronous Reset is Insufficiently Synchronized                                              ; High     ; 0          ; 0      ; synchronizer                                   ;
+; RES-50003 - Asynchronous Reset with Insufficient Constraints                                               ; High     ; 0          ; 0      ; synchronizer                                   ;
+; RES-50004 - Multiple Asynchronous Resets within Reset Synchronizer Chain                                   ; High     ; 0          ; 0      ; synchronizer                                   ;
+; TMC-20011 - Missing Input Delay Constraint                                                                 ; High     ; 0          ; 0      ; sdc, system                                    ;
+; TMC-20012 - Missing Output Delay Constraint                                                                ; High     ; 0          ; 0      ; sdc, system                                    ;
+; TMC-20013 - Partial Input Delay                                                                            ; High     ; 0          ; 0      ; sdc, system                                    ;
+; TMC-20014 - Partial Output Delay                                                                           ; High     ; 0          ; 0      ; sdc, system                                    ;
+; TMC-20015 - Inconsistent Min-Max Delay                                                                     ; High     ; 0          ; 0      ; sdc                                            ;
+; TMC-20016 - Invalid Reference Pin                                                                          ; High     ; 0          ; 0      ; sdc, system                                    ;
+; TMC-20017 - Loops Detected                                                                                 ; High     ; 0          ; 0      ; sdc                                            ;
+; TMC-20019 - Partial Multicycle Assignment                                                                  ; High     ; 0          ; 0      ; sdc                                            ;
+; TMC-20022 - I/O Delay Assignment Missing Parameters                                                        ; High     ; 0          ; 0      ; sdc, system                                    ;
+; TMC-20023 - Invalid Set Net Delay Assignment                                                               ; High     ; 0          ; 0      ; sdc                                            ;
+; TMC-20027 - Collection Filter Matching Multiple Types                                                      ; High     ; 0          ; 0      ; sdc                                            ;
+; TMC-30041 - Constraint with Invalid Clock Reference                                                        ; High     ; 0          ; 0      ; sdc                                            ;
+; CDC-50103 - Unsynchronized Intra-Clock Forced Synchronizer                                                 ; Medium   ; 0          ; 0      ; synchronizer                                   ;
+; CLK-30031 - Input Delay Assigned to Clock                                                                  ; Medium   ; 0          ; 0      ; sdc, system                                    ;
+; FLP-10000 - Physical RAM with Utilization Below Threshold                                                  ; Medium   ; 0          ; 0      ; ram, resource-usage                            ;
+; LNT-30023 - Reset Nets with Polarity Conflict                                                              ; Medium   ; 0          ; 0      ; reset-usage                                    ;
+; TMC-20018 - Unsupported Latches Detected                                                                   ; Medium   ; 0          ; 0      ; latch                                          ;
+; TMC-20021 - Partial Min-Max Delay Assignment                                                               ; Medium   ; 0          ; 0      ; sdc                                            ;
+; TMC-20024 - Synchronous Data Delay Assignment                                                              ; Medium   ; 0          ; 0      ; sdc                                            ;
+; TMC-20026 - Empty Collection Due To Unmatched Filter                                                       ; Medium   ; 0          ; 0      ; sdc                                            ;
+; TMC-20200 - Paths Failing Setup Analysis with Impossible Requirements                                      ; Medium   ; 0          ; 0      ; intrinsic-margin, impossible-requirements, sdc ;
+; TMC-20201 - Paths Failing Setup Analysis with High Clock Skew                                              ; Medium   ; 0          ; 0      ; intrinsic-margin                               ;
+; TMC-20202 - Paths Failing Setup Analysis with High Logic Delay                                             ; Medium   ; 0          ; 0      ; intrinsic-margin, logic-levels                 ;
+; TMC-20203 - Paths Failing Setup Analysis with High Fabric Interconnect Delay                               ; Medium   ; 0          ; 0      ; intrinsic-margin                               ;
+; TMC-20204 - Endpoints of Paths Failing Setup Analysis with Retiming Restrictions                           ; Medium   ; 0          ; 0      ; retime                                         ;
+; TMC-20205 - Endpoints of Paths Failing Setup Analysis with Explicit Power-Up States that Restrict Retiming ; Medium   ; 0          ; 0      ; retime                                         ;
+; TMC-20206 - DSP Blocks with Unregistered Outputs that are the Source of Paths Failing Setup Analysis       ; Medium   ; 0          ; 0      ; dsp                                            ;
+; TMC-20207 - DSP Blocks with Unregistered Inputs that are the Destination of Paths Failing Setup Analysis   ; Medium   ; 0          ; 0      ; dsp                                            ;
+; TMC-20208 - RAM Blocks with Unregistered Outputs that are the Source of Paths Failing Setup Analysis       ; Medium   ; 0          ; 0      ; ram                                            ;
+; TMC-20209 - Paths Failing Setup Analysis with High Routing Delay due to Congestion                         ; Medium   ; 0          ; 0      ; route                                          ;
+; TMC-20210 - Paths Failing Setup Analysis with High Routing Delay Added for Hold                            ; Medium   ; 0          ; 0      ; route                                          ;
+; TMC-20212 - Paths Failing Setup Analysis with Global Routing in Data Path                                  ; Medium   ; 0          ; 0      ; global-signal, route                           ;
+; TMC-20213 - Paths Failing Setup Analysis with Locally Routed Clock                                         ; Medium   ; 0          ; 0      ; global-signal, clock-skew                      ;
+; TMC-20214 - Buses with Incoming Paths Failing Setup Analysis with Multiple Sequential Adder Chains         ; Medium   ; 0          ; 0      ; logic-levels                                   ;
+; TMC-20215 - Buses with Incoming Paths Failing Setup Analysis with Multipliers Implemented in Logic         ; Medium   ; 0          ; 0      ; logic-levels, dsp                              ;
+; TMC-20216 - Paths Failing Setup Analysis with Inferred-RAM Shift Register Endpoints                        ; Medium   ; 0          ; 0      ; ram                                            ;
+; TMC-20217 - Paths Failing Setup Analysis with Clock-As-Data                                                ; Medium   ; 0          ; 0      ; nonstandard-timing                             ;
+; TMC-20219 - DSP Blocks with Restricted Fmax below Required Fmax                                            ; Medium   ; 0          ; 0      ; dsp, minimum-pulse-width                       ;
+; TMC-20220 - RAM Blocks with Restricted Fmax below Required Fmax                                            ; Medium   ; 0          ; 0      ; ram, minimum-pulse-width                       ;
+; TMC-20221 - Nodes Failing Minimum Pulse Width Due to Clock Pulse Collapse                                  ; Medium   ; 0          ; 0      ; minimum-pulse-width                            ;
+; TMC-20312 - Paths Failing Hold Analysis with Global Routing in Data Path                                   ; Medium   ; 0          ; 0      ; global-signal, route                           ;
+; TMC-20313 - Paths Failing Hold Analysis with Locally Routed Clock                                          ; Medium   ; 0          ; 0      ; global-signal, clock-skew                      ;
+; TMC-20712 - Paths Failing Recovery Analysis with Global Routing in Data Path                               ; Medium   ; 0          ; 0      ; global-signal, route                           ;
+; TMC-20713 - Paths Failing Recovery Analysis with Locally Routed Clock                                      ; Medium   ; 0          ; 0      ; global-signal, clock-skew                      ;
+; TMC-20812 - Paths Failing Removal Analysis with Global Routing in Data Path                                ; Medium   ; 0          ; 0      ; global-signal, route                           ;
+; TMC-20813 - Paths Failing Removal Analysis with Locally Routed Clock                                       ; Medium   ; 0          ; 0      ; global-signal, clock-skew                      ;
+; CDC-50008 - CDC Bus Constructed with Multi-bit Synchronizer Chains                                         ; Low      ; 0          ; 0      ; synchronizer, cdc-bus                          ;
+; CDC-50101 - Intra-Clock False Path Synchronizer                                                            ; Low      ; 0          ; 0      ; synchronizer, false-positive-synchronizer      ;
+; CDC-50102 - Synchronizer after CDC Topology with Control Signal                                            ; Low      ; 0          ; 0      ; synchronizer, false-positive-synchronizer      ;
+; FLP-40006 - Pipelining Registers That Might Be Recoverable                                                 ; Low      ; 0          ; 0      ; resource-usage                                 ;
+; LNT-30010 - Nets Driving both Reset and Clock Enable Signals                                               ; Low      ; 0          ; 0      ; reset-usage                                    ;
+; RES-50010 - Reset Synchronizer Chains with Constant Output                                                 ; Low      ; 0          ; 0      ; synchronizer                                   ;
+; RES-50101 - Intra-Clock False Path Reset Synchronizer                                                      ; Low      ; 0          ; 0      ; synchronizer, false-positive-synchronizer      ;
+; TMC-20020 - Invalid Multicycle Assignment                                                                  ; Low      ; 0          ; 0      ; sdc                                            ;
+; TMC-20550 - Automatically Selected Duplication Candidate Rejected for Placement Constraint                 ; Low      ; 0          ; 0      ; register-duplication, place                    ;
+; TMC-20551 - Automatically Selected Duplication Candidate Likely Requires More Duplication                  ; Low      ; 0          ; 0      ; register-duplication, place                    ;
+; TMC-20552 - User Selected Duplication Candidate was Rejected                                               ; Low      ; 0          ; 0      ; register-duplication, place                    ;
+; TMC-20601 - Registers with High Immediate Fan-Out Tension                                                  ; Low      ; 0          ; 0      ; register-duplication, register-spread, place   ;
+; TMC-20603 - Registers with High Immediate Fan-Out Span                                                     ; Low      ; 0          ; 0      ; register-duplication, register-spread, place   ;
+; TMC-20604 - Registers with High Timing Path Endpoint Span                                                  ; Low      ; 0          ; 0      ; register-duplication, register-spread, place   ;
++------------------------------------------------------------------------------------------------------------+----------+------------+--------+------------------------------------------------+
+
+
+Status:		FAIL
+Severity:		Medium
+Number of violations: 	4
+Rule Parameters:      	max_violations = 5000
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; TMC-20025 - Ignored or Overridden Constraints                                                                                                                                                                                                                                  ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------+-------------------------------+--------+
+; Ignored Constraint                                                                                                                                                        ; Location                                                  ; Reason                        ; Waived ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------+-------------------------------+--------+
+; set_max_delay -to [get_registers {rst_controller_001|*alt_rst_sync_uq1|altera_reset_synchronizer_int_chain[1]}] 100.000                                                   ; altera_reset_controller.sdc:31 (from IP)                  ; Exception is fully overridden ;        ;
+; set_min_delay -to [get_registers {rst_controller_001|*alt_rst_sync_uq1|altera_reset_synchronizer_int_chain[1]}] -100.000                                                  ; altera_reset_controller.sdc:32 (from IP)                  ; Exception is fully overridden ;        ;
+; set_max_delay -from [get_registers {*altera_avalon_st_clock_crosser:*|in_data_buffer*}] -to [get_registers {*altera_avalon_st_clock_crosser:*|out_data_buffer*}] 100.000  ; altera_avalon_st_handshake_clock_crosser.sdc:67 (from IP) ; Exception is fully overridden ;        ;
+; set_min_delay -from [get_registers {*altera_avalon_st_clock_crosser:*|in_data_buffer*}] -to [get_registers {*altera_avalon_st_clock_crosser:*|out_data_buffer*}] -100.000 ; altera_avalon_st_handshake_clock_crosser.sdc:68 (from IP) ; Exception is fully overridden ;        ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------+-------------------------------+--------+
+
+
+Status:		FAIL
+Severity:		Low
+Number of violations: 	44
+Rule Parameters:      	
+		max_violations = 5000
+		minimum_tension = 100000
+		ignore_high_fanout_tension = False
+		minimum_sinks = 2
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; TMC-20602 - Registers with High Timing Path Endpoint Tension                                                                                                                                                                                                                      ;
++------------------------------------------------------------------------------------------------------------+-------------------+---------------------+-------------------+-------------------------------------------+---------------------------------------------------+--------+
+; Register Name                                                                                              ; Register Location ; Number of Endpoints ; Endpoint Centroid ; Average Distance of Endpoints to Centroid ; Total Distance of Endpoints to Centroid (Tension) ; Waived ;
++------------------------------------------------------------------------------------------------------------+-------------------+---------------------+-------------------+-------------------------------------------+---------------------------------------------------+--------+
+; mm_interconnect_0|intel_niosv_m_0_data_manager_agent|araddr_q0[6]                                          ; (78, 120)         ; 4633                ; (60, 117)         ; 34                                        ; 159878                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_data_manager_agent|araddr_q0[7]                                          ; (78, 125)         ; 4633                ; (60, 117)         ; 34                                        ; 159869                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_data_manager_agent|araddr_q0[8]                                          ; (78, 123)         ; 4632                ; (60, 117)         ; 34                                        ; 159857                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_data_manager_agent|araddr_q0[18]                                         ; (78, 123)         ; 4630                ; (60, 117)         ; 34                                        ; 159837                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_data_manager_agent|araddr_q0[9]                                          ; (78, 123)         ; 4630                ; (60, 117)         ; 34                                        ; 159837                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_data_manager_agent|araddr_q0[11]                                         ; (78, 123)         ; 4630                ; (60, 117)         ; 34                                        ; 159837                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_data_manager_agent|araddr_q0[14]                                         ; (78, 123)         ; 4630                ; (60, 117)         ; 34                                        ; 159837                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_data_manager_agent|araddr_q0[19]                                         ; (78, 125)         ; 4630                ; (60, 117)         ; 34                                        ; 159835                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_data_manager_agent|araddr_q0[12]                                         ; (78, 125)         ; 4630                ; (60, 117)         ; 34                                        ; 159835                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_data_manager_agent|araddr_q0[13]                                         ; (78, 125)         ; 4630                ; (60, 117)         ; 34                                        ; 159835                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_data_manager_agent|araddr_q0[16]                                         ; (78, 125)         ; 4630                ; (60, 117)         ; 34                                        ; 159835                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_data_manager_agent|araddr_q0[15]                                         ; (78, 125)         ; 4630                ; (60, 117)         ; 34                                        ; 159835                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_data_manager_agent|araddr_q0[10]~DUPLICATE                               ; (78, 125)         ; 4630                ; (60, 117)         ; 34                                        ; 159835                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_data_manager_agent|araddr_q0[17]                                         ; (78, 125)         ; 4630                ; (60, 117)         ; 34                                        ; 159835                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_data_manager_agent|araddr_q0[20]                                         ; (78, 125)         ; 4630                ; (60, 117)         ; 34                                        ; 159835                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_data_manager_agent|arvalid_q0                                            ; (82, 122)         ; 4630                ; (60, 117)         ; 34                                        ; 159834                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_data_manager_agent|araddr_q0[4]                                          ; (78, 120)         ; 4557                ; (60, 117)         ; 34                                        ; 158488                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_data_manager_agent|araddr_q0[5]                                          ; (78, 125)         ; 4462                ; (59, 117)         ; 34                                        ; 155536                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_data_manager_agent|araddr_q0[2]~DUPLICATE                                ; (78, 120)         ; 4385                ; (59, 116)         ; 35                                        ; 154448                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_instruction_manager_rd_limiter|has_pending_responses                     ; (72, 128)         ; 4359                ; (58, 117)         ; 35                                        ; 153873                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_instruction_manager_agent|araddr_q0[16]                                  ; (77, 129)         ; 4359                ; (58, 117)         ; 35                                        ; 153868                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_instruction_manager_agent|araddr_q0[19]                                  ; (77, 129)         ; 4359                ; (58, 117)         ; 35                                        ; 153868                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_instruction_manager_agent|arvalid_q0                                     ; (78, 129)         ; 4359                ; (58, 117)         ; 35                                        ; 153867                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_instruction_manager_agent|araddr_q0[17]                                  ; (78, 130)         ; 4359                ; (58, 117)         ; 35                                        ; 153866                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_instruction_manager_agent|araddr_q0[18]                                  ; (78, 130)         ; 4359                ; (58, 117)         ; 35                                        ; 153866                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_instruction_manager_agent|araddr_q0[20]                                  ; (78, 130)         ; 4359                ; (58, 117)         ; 35                                        ; 153866                                            ;        ;
+; mm_interconnect_0|intel_onchip_memory_0_axi_s1_agent|read_rsp_fifo|my_altera_avalon_sc_fifo_wr|mem_used[0] ; (69, 129)         ; 4289                ; (58, 117)         ; 35                                        ; 153299                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_instruction_manager_rd_limiter|last_dest_id[1]                           ; (72, 128)         ; 4263                ; (58, 117)         ; 35                                        ; 152669                                            ;        ;
+; mm_interconnect_0|cmd_mux_002|saved_grant[1]                                                               ; (71, 128)         ; 4261                ; (58, 117)         ; 35                                        ; 152622                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_data_manager_agent|araddr_q0[17]~DUPLICATE                               ; (78, 125)         ; 4316                ; (58, 117)         ; 35                                        ; 152348                                            ;        ;
+; mm_interconnect_0|cmd_mux_002|saved_grant[0]                                                               ; (71, 128)         ; 4220                ; (58, 117)         ; 35                                        ; 151102                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_data_manager_agent|araddr_q0[3]~DUPLICATE                                ; (78, 120)         ; 4241                ; (58, 117)         ; 35                                        ; 150806                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_instruction_manager_agent|araddr_q0[3]                                   ; (78, 130)         ; 4195                ; (58, 116)         ; 35                                        ; 149707                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_instruction_manager_agent|araddr_q0[4]                                   ; (77, 129)         ; 4194                ; (58, 116)         ; 35                                        ; 149686                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_instruction_manager_agent|araddr_q0[5]                                   ; (77, 129)         ; 4194                ; (58, 116)         ; 35                                        ; 149685                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_instruction_manager_agent|araddr_q0[6]                                   ; (77, 129)         ; 4192                ; (58, 116)         ; 35                                        ; 149649                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_instruction_manager_agent|araddr_q0[8]                                   ; (77, 129)         ; 4188                ; (58, 116)         ; 35                                        ; 149567                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_instruction_manager_agent|araddr_q0[9]                                   ; (78, 130)         ; 4173                ; (58, 116)         ; 35                                        ; 149371                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_instruction_manager_agent|araddr_q0[10]                                  ; (77, 129)         ; 4172                ; (58, 116)         ; 35                                        ; 149350                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_instruction_manager_agent|araddr_q0[11]                                  ; (77, 129)         ; 4171                ; (58, 116)         ; 35                                        ; 149329                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_instruction_manager_agent|araddr_q0[2]                                   ; (78, 130)         ; 4161                ; (58, 116)         ; 35                                        ; 149207                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_data_manager_agent|araddr_q0[10]                                         ; (78, 125)         ; 4134                ; (58, 116)         ; 36                                        ; 149189                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_instruction_manager_agent|araddr_q0[12]                                  ; (78, 130)         ; 4143                ; (58, 116)         ; 35                                        ; 149016                                            ;        ;
+; mm_interconnect_0|intel_niosv_m_0_instruction_manager_agent|araddr_q0[7]~DUPLICATE                         ; (78, 130)         ; 4110                ; (58, 116)         ; 36                                        ; 148553                                            ;        ;
++------------------------------------------------------------------------------------------------------------+-------------------+---------------------+-------------------+-------------------------------------------+---------------------------------------------------+--------+
+
+
+Status:		FAIL
+Severity:		Low
+Number of violations: 	1
+Rule Parameters:      	max_violations = 5000
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; CLK-30032 - Improper Clock Targets                                                                                                                                                          ;
++-------------------------------------------------------------------------+--------------------------------------------------------+-------------------------------------------------+--------+
+; Assignment                                                              ; Reason                                                 ; Location                                        ; Waived ;
++-------------------------------------------------------------------------+--------------------------------------------------------+-------------------------------------------------+--------+
+; [get_nodes { auto_fab*|*|*sdm_gpo_out_user_reset~internal_ctrl_clock }] ; Target contains node other than top level input ports. ; altera_s10_user_rst_clkgate_fm.sdc:28 (from IP) ;        ;
++-------------------------------------------------------------------------+--------------------------------------------------------+-------------------------------------------------+--------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++----------------------------------------------------------+
+; CDC-50001 - 1-Bit Asynchronous Transfer Not Synchronized ;
++----------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++-----------------------------------------------------------------------+
+; CDC-50002 - 1-Bit Asynchronous Transfer with Insufficient Constraints ;
++-----------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++----------------------------------------------------------------+
+; CDC-50003 - CE-Type CDC Transfer with Insufficient Constraints ;
++----------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++-----------------------------------------------------------------+
+; CDC-50004 - MUX-type CDC Transfer with Insufficient Constraints ;
++-----------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++-----------------------------------------------------------------------------------------+
+; CDC-50005 - CDC Bus Constructed with Multi-bit Synchronizer Chains of Different Lengths ;
++-----------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++---------------------------------------------------------------+
+; CDC-50006 - CDC Bus Constructed with Unsynchronized Registers ;
++---------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++--------------------------------------------------------------------------------------------------+
+; CDC-50007 - CDC Bus Constructed with Multi-bit Synchronizer Chains with Insufficient Constraints ;
++--------------------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++-----------------------------------------------------------+
+; CDC-50011 - Combinational Logic Before Synchronizer Chain ;
++-----------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++-----------------------------------------------------------------+
+; CDC-50012 - Multiple Clock Domains Driving a Synchronizer Chain ;
++-----------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++--------------------------------------+
+; CLK-30026 - Missing Clock Assignment ;
++--------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++----------------------------------------------+
+; CLK-30027 - Multiple Clock Assignments Found ;
++----------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-------------------------------------+
+; CLK-30028 - Invalid Generated Clock ;
++-------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++---------------------------------------+
+; CLK-30029 - Invalid Clock Assignments ;
++---------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-----------------------------------+
+; CLK-30030 - PLL Setting Violation ;
++-----------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++--------------------------------------------+
+; CLK-30033 - Invalid Clock Group Assignment ;
++--------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++----------------------------------------------------------------------------+
+; CLK-30034 - Clock Pairs Missing Logically Exclusive Clock Group Assignment ;
++----------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-----------------------------------------------------------------------------+
+; CLK-30035 - Clock Pairs Missing Physically Exclusive Clock Group Assignment ;
++-----------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++----------------------------------------+
+; CLK-30042 - Incorrect Clock Group Type ;
++----------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++---------------------------------------------------------------------------------------------------+
+; RDC-50001 - Reconvergence of Multiple Asynchronous Reset Synchronizers in Different Reset Domains ;
++---------------------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-------------------------------------------------------------------------------------------------+
+; RDC-50002 - Reconvergence of Multiple Asynchronous Reset Synchronizers in a Common Reset Domain ;
++-------------------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++----------------------------------------------------+
+; RES-50001 - Asynchronous Reset Is Not Synchronized ;
++----------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++---------------------------------------------------------------+
+; RES-50002 - Asynchronous Reset is Insufficiently Synchronized ;
++---------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++--------------------------------------------------------------+
+; RES-50003 - Asynchronous Reset with Insufficient Constraints ;
++--------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++--------------------------------------------------------------------------+
+; RES-50004 - Multiple Asynchronous Resets within Reset Synchronizer Chain ;
++--------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++--------------------------------------------+
+; TMC-20011 - Missing Input Delay Constraint ;
++--------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++---------------------------------------------+
+; TMC-20012 - Missing Output Delay Constraint ;
++---------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++---------------------------------+
+; TMC-20013 - Partial Input Delay ;
++---------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++----------------------------------+
+; TMC-20014 - Partial Output Delay ;
++----------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++----------------------------------------+
+; TMC-20015 - Inconsistent Min-Max Delay ;
++----------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-----------------------------------+
+; TMC-20016 - Invalid Reference Pin ;
++-----------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++----------------------------+
+; TMC-20017 - Loops Detected ;
++----------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-------------------------------------------+
+; TMC-20019 - Partial Multicycle Assignment ;
++-------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-----------------------------------------------------+
+; TMC-20022 - I/O Delay Assignment Missing Parameters ;
++-----------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++----------------------------------------------+
+; TMC-20023 - Invalid Set Net Delay Assignment ;
++----------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-------------------------------------------------------+
+; TMC-20027 - Collection Filter Matching Multiple Types ;
++-------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-----------------------------------------------------+
+; TMC-30041 - Constraint with Invalid Clock Reference ;
++-----------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++------------------------------------------------------------+
+; CDC-50103 - Unsynchronized Intra-Clock Forced Synchronizer ;
++------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-------------------------------------------+
+; CLK-30031 - Input Delay Assigned to Clock ;
++-------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		device_ram_occupation = 80
+		low_utilization = 10
++-----------------------------------------------------------+
+; FLP-10000 - Physical RAM with Utilization Below Threshold ;
++-----------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-----------------------------------------------+
+; LNT-30023 - Reset Nets with Polarity Conflict ;
++-----------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++------------------------------------------+
+; TMC-20018 - Unsupported Latches Detected ;
++------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++----------------------------------------------+
+; TMC-20021 - Partial Min-Max Delay Assignment ;
++----------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-----------------------------------------------+
+; TMC-20024 - Synchronous Data Delay Assignment ;
++-----------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++------------------------------------------------------+
+; TMC-20026 - Empty Collection Due To Unmatched Filter ;
++------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++-----------------------------------------------------------------------+
+; TMC-20200 - Paths Failing Setup Analysis with Impossible Requirements ;
++-----------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++---------------------------------------------------------------+
+; TMC-20201 - Paths Failing Setup Analysis with High Clock Skew ;
++---------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++----------------------------------------------------------------+
+; TMC-20202 - Paths Failing Setup Analysis with High Logic Delay ;
++----------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++------------------------------------------------------------------------------+
+; TMC-20203 - Paths Failing Setup Analysis with High Fabric Interconnect Delay ;
++------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++----------------------------------------------------------------------------------+
+; TMC-20204 - Endpoints of Paths Failing Setup Analysis with Retiming Restrictions ;
++----------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++------------------------------------------------------------------------------------------------------------+
+; TMC-20205 - Endpoints of Paths Failing Setup Analysis with Explicit Power-Up States that Restrict Retiming ;
++------------------------------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++------------------------------------------------------------------------------------------------------+
+; TMC-20206 - DSP Blocks with Unregistered Outputs that are the Source of Paths Failing Setup Analysis ;
++------------------------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++----------------------------------------------------------------------------------------------------------+
+; TMC-20207 - DSP Blocks with Unregistered Inputs that are the Destination of Paths Failing Setup Analysis ;
++----------------------------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++------------------------------------------------------------------------------------------------------+
+; TMC-20208 - RAM Blocks with Unregistered Outputs that are the Source of Paths Failing Setup Analysis ;
++------------------------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++------------------------------------------------------------------------------------+
+; TMC-20209 - Paths Failing Setup Analysis with High Routing Delay due to Congestion ;
++------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++---------------------------------------------------------------------------------+
+; TMC-20210 - Paths Failing Setup Analysis with High Routing Delay Added for Hold ;
++---------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++---------------------------------------------------------------------------+
+; TMC-20212 - Paths Failing Setup Analysis with Global Routing in Data Path ;
++---------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++--------------------------------------------------------------------+
+; TMC-20213 - Paths Failing Setup Analysis with Locally Routed Clock ;
++--------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
+		minimum_number_of_adders = 3
++----------------------------------------------------------------------------------------------------+
+; TMC-20214 - Buses with Incoming Paths Failing Setup Analysis with Multiple Sequential Adder Chains ;
++----------------------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
+		minimum_number_of_soft_mult_chains = 2
++----------------------------------------------------------------------------------------------------+
+; TMC-20215 - Buses with Incoming Paths Failing Setup Analysis with Multipliers Implemented in Logic ;
++----------------------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++-------------------------------------------------------------------------------------+
+; TMC-20216 - Paths Failing Setup Analysis with Inferred-RAM Shift Register Endpoints ;
++-------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++-------------------------------------------------------------+
+; TMC-20217 - Paths Failing Setup Analysis with Clock-As-Data ;
++-------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_pulse_width_slack = 0
++-----------------------------------------------------------------+
+; TMC-20219 - DSP Blocks with Restricted Fmax below Required Fmax ;
++-----------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_pulse_width_slack = 0
++-----------------------------------------------------------------+
+; TMC-20220 - RAM Blocks with Restricted Fmax below Required Fmax ;
++-----------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_pulse_width_slack = 0
++---------------------------------------------------------------------------+
+; TMC-20221 - Nodes Failing Minimum Pulse Width Due to Clock Pulse Collapse ;
++---------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_hold_slack = 0
+		to_clock_filter = "*"
++--------------------------------------------------------------------------+
+; TMC-20312 - Paths Failing Hold Analysis with Global Routing in Data Path ;
++--------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_hold_slack = 0
+		to_clock_filter = "*"
++-------------------------------------------------------------------+
+; TMC-20313 - Paths Failing Hold Analysis with Locally Routed Clock ;
++-------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_recovery_slack = 0
+		to_clock_filter = "*"
++------------------------------------------------------------------------------+
+; TMC-20712 - Paths Failing Recovery Analysis with Global Routing in Data Path ;
++------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_recovery_slack = 0
+		to_clock_filter = "*"
++-----------------------------------------------------------------------+
+; TMC-20713 - Paths Failing Recovery Analysis with Locally Routed Clock ;
++-----------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_removal_slack = 0
+		to_clock_filter = "*"
++-----------------------------------------------------------------------------+
+; TMC-20812 - Paths Failing Removal Analysis with Global Routing in Data Path ;
++-----------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_removal_slack = 0
+		to_clock_filter = "*"
++----------------------------------------------------------------------+
+; TMC-20813 - Paths Failing Removal Analysis with Locally Routed Clock ;
++----------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++--------------------------------------------------------------------+
+; CDC-50008 - CDC Bus Constructed with Multi-bit Synchronizer Chains ;
++--------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++-------------------------------------------------+
+; CDC-50101 - Intra-Clock False Path Synchronizer ;
++-------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++-----------------------------------------------------------------+
+; CDC-50102 - Synchronizer after CDC Topology with Control Signal ;
++-----------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		max_stage_adjustment = -1
+		min_width = 16
+		min_depth = 3
++------------------------------------------------------------+
+; FLP-40006 - Pipelining Registers That Might Be Recoverable ;
++------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++--------------------------------------------------------------+
+; LNT-30010 - Nets Driving both Reset and Clock Enable Signals ;
++--------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++------------------------------------------------------------+
+; RES-50010 - Reset Synchronizer Chains with Constant Output ;
++------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++-------------------------------------------------------+
+; RES-50101 - Intra-Clock False Path Reset Synchronizer ;
++-------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-------------------------------------------+
+; TMC-20020 - Invalid Multicycle Assignment ;
++-------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++--------------------------------------------------------------------------------------------+
+; TMC-20550 - Automatically Selected Duplication Candidate Rejected for Placement Constraint ;
++--------------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		avg_dup_fanout = 1000
++-------------------------------------------------------------------------------------------+
+; TMC-20551 - Automatically Selected Duplication Candidate Likely Requires More Duplication ;
++-------------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++--------------------------------------------------------------+
+; TMC-20552 - User Selected Duplication Candidate was Rejected ;
++--------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		minimum_tension = 100000
+		minimum_sinks = 2
++-----------------------------------------------------------+
+; TMC-20601 - Registers with High Immediate Fan-Out Tension ;
++-----------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		minimum_span = 250
+		minimum_sinks = 2
++--------------------------------------------------------+
+; TMC-20603 - Registers with High Immediate Fan-Out Span ;
++--------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		minimum_span = 250
+		ignore_high_fanout_span = False
+		minimum_sinks = 2
++-----------------------------------------------------------+
+; TMC-20604 - Registers with High Timing Path Endpoint Span ;
++-----------------------------------------------------------+
+
+

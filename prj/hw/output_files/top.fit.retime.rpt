@@ -1,0 +1,193 @@
+Fitter Retime Stage Report for top
+Mon Nov  6 08:55:58 2023
+Quartus Prime Version 23.4.0 Internal Build 66 11/05/2023 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Hyper-Retimer Settings
+  3. Reset Sequence Requirement
+  4. Retiming Limit Summary
+  5. Clock Domain iopll_0|iopll_0_outclk0 (Meets timing requirements: No further analysis performed.)
+  6. Clock Domain altera_reserved_tck (Meets timing requirements: No further analysis performed.)
+  7. Internal Retiming Statistics (Developer License only)
+  8. Retime Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the Intel FPGA Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++--------------------------------------------------+
+; Hyper-Retimer Settings                           ;
++------------------------+---------+---------------+
+; Option                 ; Setting ; Default Value ;
++------------------------+---------+---------------+
+; Enable Auto-Pipelining ; On      ; On            ;
++------------------------+---------+---------------+
+
+
++---------------------------------------------------------+
+; Reset Sequence Requirement                              ;
++---------------------------+-----------------------------+
+; Clock Name                ; Number of additional cycles ;
++---------------------------+-----------------------------+
+; altera_reserved_tck       ; 0                           ;
+; clk_clk                   ; 0                           ;
+; internal_clk              ; 0                           ;
+; iopll_0|iopll_0_n_cnt_clk ; 0                           ;
+; iopll_0|iopll_0_m_cnt_clk ; 0                           ;
+; iopll_0|iopll_0_outclk0   ; 2                           ;
++---------------------------+-----------------------------+
+Note: Due to retiming optimizations, a clock domain may require a longer reset sequence to ensure correct functionality.  The table above indicates the minimum number of additional reset sequence cycles needed for each clock domain.
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Retiming Limit Summary                                                                                            ;
++--------------------------------------+-----------------------------------------------------------+----------------+
+; Clock Transfer                       ; Limiting Reason                                           ; Recommendation ;
++--------------------------------------+-----------------------------------------------------------+----------------+
+; Clock Domain iopll_0|iopll_0_outclk0 ; Meets timing requirements: No further analysis performed. ; None           ;
+; Clock Domain altera_reserved_tck     ; Meets timing requirements: No further analysis performed. ; None           ;
++--------------------------------------+-----------------------------------------------------------+----------------+
+
+
+Clock Domain iopll_0|iopll_0_outclk0 (Meets timing requirements: No further analysis performed.)
+===============================================================================
+
+
+Clock Domain altera_reserved_tck (Meets timing requirements: No further analysis performed.)
+===============================================================================
+
+
++-----------------------------------------------------------------------------------------+
+; Internal Retiming Statistics (Developer License only)                                   ;
++------------------------------------------------------------------------------+----------+
+; Statistic                                                                    ; Value    ;
++------------------------------------------------------------------------------+----------+
+; Number of iterations                                                         ; 1        ;
+; Number of BF clock transfers                                                 ; 2        ;
+; Number of all-clock-transfer BF calls                                        ; 0        ;
+; Number of single-clock-transfer BF calls                                     ; 0        ;
+; Number of BF iterations                                                      ; 0        ;
+; Number of dual graph edges                                                   ; 80095    ;
+; Number of dual graph nodes                                                   ; 37622    ;
+; Number of dual graph nodes that failed EA                                    ; 0        ;
+; Number of register moves                                                     ; 0        ;
+; Number of backward register moves attempted                                  ; 0        ;
+; Number of failed register moves due to initial condition                     ; 0        ;
+; Number of failed register moves due to backward reconvergent                 ; 0        ;
+; Number of failed register moves due to incompatibility                       ; 0        ;
+; Number of failed register moves due to unsupported high power-ups on ALM FFs ; 0        ;
+; Number of failed register moves due to power-up unknown buried slots         ; 0        ;
+; Number of cumulative register moves                                          ; 0        ;
+; Number of clock pairs with new timing paths                                  ; 0        ;
+; Number of dont_touch nodes                                                   ; 6010     ;
+; Number of dont_touch useless nodes                                           ; 0        ;
+; Number of traversed subdomains                                               ; 0        ;
+; Number of negative cycles found                                              ; 0        ;
+; Number of BF edges checked                                                   ; 0        ;
+; Number of constraints in the constraint graph                                ; 172071   ;
+; Number of locations disabled due to clock overuse                            ; 0        ;
+; Number of dont_touch nodes to prevent self clock transfers                   ; 0        ;
+; Number of cut edges extended for variable latency by zero                    ; 220      ;
+; Number of cut edges extended for variable latency by one                     ; 94       ;
+; Number of cut edges extended for variable latency by two                     ; 3        ;
+; Number of cut edges extended for variable latency by three                   ; 7        ;
+; Number of cut edges extended for variable latency by four or more            ; 4        ;
+; Number of cut edges extended for variable latency already used               ; 0        ;
+; Number of sclr/ena slots that can't be used because only one retimable       ; 0        ;
+; Number of sclr/ena slots that must be retimed together                       ; 0        ;
+; Number of dynamic hold constraint calls made                                 ; 1        ;
+; Number of dynamic hold constraint call failures                              ; 0        ;
+; Number of dynamic hold constraints added                                     ; 0        ;
+; Number of dynamic duplicate hold constraints skipped                         ; 0        ;
+; Number of dynamic hold clock conflict                                        ; 0        ;
+; Number of dynamic hold setup slack too small                                 ; 0        ;
+; Number of dynamic hold should already be fixed                               ; 0        ;
+; Number of dynamic hold fixed                                                 ; 0        ;
+; Number of setup constraints updated by setup constraints                     ; 0        ;
+; Number of setup constraints updated by heuristic constraints                 ; 0        ;
+; Number of heuristic constraints updated by setup constraints                 ; 0        ;
+; Number of heuristic constraints updated by heuristic constraints             ; 0        ;
+; Number of setup constraints not updated by setup constraints                 ; 0        ;
+; Number of setup constraints not updated by heuristic constraints             ; 0        ;
+; Number of heuristic constraints not updated by setup constraints             ; 0        ;
+; Number of heuristic constraints not updated by heuristic constraints         ; 0        ;
+; Number of heuristic constraints looser than setup constraints                ; 0        ;
+; Number of heuristic constraints tighter than setup constraints               ; 0        ;
+; Number of failing heuristic constraints that appear on final critical chains ; 0        ;
+; Number of clock legality calls                                               ; 1        ;
+; Number of clock legality call failures                                       ; 0        ;
+; Number of power-up legality calls                                            ; 0        ;
+; Number of power-up legality call failures                                    ; 0        ;
+; Number of ALM registers with power-up CARE                                   ; 191      ;
+; Maximum number of forward register moves over a dual graph node              ; 0        ;
+; Maximum number of backward register moves over a dual graph node             ; 0        ;
+; Fraction of relaxed nodes in BF                                              ; 0.000000 ;
+; RTM report generation time (seconds)                                         ; 0.501255 ;
+; Average retiming depth                                                       ; 0.000000 ;
+; Total retimer cpu time                                                       ; 0.530000 ;
+; Total retimer wall-clock time                                                ; 0.528517 ;
+; Total retimer giga instructions                                              ; 3.244365 ;
++------------------------------------------------------------------------------+----------+
+
+
++-----------------+
+; Retime Messages ;
++-----------------+
+Info (20032): Parallel compilation is enabled and will use up to 2 processors
+Info: *******************************************************************
+Info: Running Quartus Prime Fitter
+    Info: Version 23.4.0 Internal Build 66 11/05/2023 SC Pro Edition
+    Info: Copyright (C) 2023  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the Intel FPGA Software License Subscription Agreements 
+    Info: on the Quartus Prime software download page.
+    Info: Processing started: Mon Nov  6 08:35:20 2023
+    Info: System process ID: 26485
+Info: Command: quartus_fit top.qpf
+Info: The application is running in 'DNI' mode.
+Info: qfit2_default_script.tcl version: #1
+Info: Project  = top
+Info: Revision = top
+Info (17966): Starting Hyper-Retimer operations.
+Info (18914): The Hyper-Retimer was unable to optimize the design due to retiming restrictions. Run Fast Forward Timing Closure Recommendations to see step-by-step suggestions for design changes and show the estimated performance improvement from making these changes.
+Info (17968): Completed Hyper-Retimer operations.
+Info (18821): Fitter Hyper-Retimer operations ending: elapsed time is 00:00:09
+Info: Following instance found in the design -  rst_controller|*
+Info: Following instance found in the design -  rst_controller_001|*
+Info: Following instance found in the design -  rst_controller|*
+Info: Following instance found in the design -  rst_controller_001|*
+Info: Following instance found in the design -  
+
+

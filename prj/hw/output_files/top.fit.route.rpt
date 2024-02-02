@@ -1,0 +1,517 @@
+Fitter Route Stage Report for top
+Mon Nov  6 08:54:51 2023
+Quartus Prime Version 23.4.0 Internal Build 66 11/05/2023 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Nets with Highest Wire Count
+  3. Delay Chain Summary
+  4. Routing Usage Summary
+  5. Route Messages
+  6. Estimated Delay Added for Hold Timing Summary
+  7. Estimated Delay Added for Hold Timing Details
+  8. Global Router Congestion Hotspot Summary
+  9. Global Router Wire Utilization Map
+ 10. Peak Wire Demand Summary
+ 11. Peak Wire Demand Details
+ 12. Peak Total Grid Crossings
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the Intel FPGA Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Nets with Highest Wire Count                                                                                                   ;
++------------------------------------------------------------------------------------------------+----------------------+--------+
+; Net                                                                                            ; Number of Wires Used ; Fanout ;
++------------------------------------------------------------------------------------------------+----------------------+--------+
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~2xsyn  ; 1203                 ; 4097   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~7      ; 1188                 ; 4097   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~5      ; 1170                 ; 4097   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~9xsyn  ; 1164                 ; 4097   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~8xsyn  ; 1162                 ; 4097   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~6      ; 1149                 ; 4097   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~3      ; 1147                 ; 4097   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~11xsyn ; 1125                 ; 4097   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~12xsyn ; 1099                 ; 4097   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~4      ; 1085                 ; 4097   ;
++------------------------------------------------------------------------------------------------+----------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Delay Chain Summary                                                                                                                                                                  ;
++-------------------------------------+----------+---------------------+--------------------+----------------+-----------------------------------+-------------------------------------+
+; Name                                ; Pin Type ; Input Delay Chain 0 ; Output Delay Chain ; OE Delay Chain ; IO_12_LANE Input Data Delay Chain ; IO_12_LANE Input Strobe Delay Chain ;
++-------------------------------------+----------+---------------------+--------------------+----------------+-----------------------------------+-------------------------------------+
+; pio_0_external_connection_export[0] ; Output   ; --                  ; 0                  ; --             ; --                                ; --                                  ;
+; pio_0_external_connection_export[1] ; Output   ; --                  ; 0                  ; --             ; --                                ; --                                  ;
+; pio_0_external_connection_export[2] ; Output   ; --                  ; 0                  ; --             ; --                                ; --                                  ;
+; pio_0_external_connection_export[3] ; Output   ; --                  ; 0                  ; --             ; --                                ; --                                  ;
+; clk_clk                             ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
+; clk_clk(n)                          ; Input    ; 0                   ; --                 ; --             ; --                                ; --                                  ;
++-------------------------------------+----------+---------------------+--------------------+----------------+-----------------------------------+-------------------------------------+
+
+
++------------------------------------------------------------+
+; Routing Usage Summary                                      ;
++-----------------------------+------------------------------+
+; Routing Resource Type       ; Usage                        ;
++-----------------------------+------------------------------+
+; Block Input Mux Wrapbacks   ; 27 / 516,600 ( < 1 % )       ;
+; Block Input Muxes           ; 49,703 / 5,658,000 ( < 1 % ) ;
+; Block interconnects         ; 40,225 / 6,625,600 ( < 1 % ) ;
+; C1 interconnects            ; 25,326 / 2,769,200 ( < 1 % ) ;
+; C4 interconnects            ; 12,533 / 2,640,400 ( < 1 % ) ;
+; C8 interconnects            ; 94 / 264,040 ( < 1 % )       ;
+; DCM_muxes                   ; 1 / 824 ( < 1 % )            ;
+; DELAY_CHAINs                ; 0 / 17,290 ( 0 % )           ;
+; Direct links                ; 2,334 / 6,625,600 ( < 1 % )  ;
+; HIO Buffers                 ; 0 / 45,920 ( 0 % )           ;
+; Programmable Invert Buffers ; 0 / 480 ( 0 % )              ;
+; Programmable Invert Inputs  ; 1,006 / 513,810 ( < 1 % )    ;
+; Programmable Inverts        ; 1,006 / 513,810 ( < 1 % )    ;
+; R0 interconnects            ; 22,994 / 4,620,700 ( < 1 % ) ;
+; R1 interconnects            ; 15,345 / 2,640,400 ( < 1 % ) ;
+; R12 interconnects           ; 99 / 396,060 ( < 1 % )       ;
+; R2 interconnects            ; 5,756 / 1,324,300 ( < 1 % )  ;
+; R4 interconnects            ; 5,597 / 1,332,500 ( < 1 % )  ;
+; R6 interconnects            ; 8,178 / 1,336,600 ( < 1 % )  ;
+; Redundancy Muxes            ; 1 / 90,920 ( < 1 % )         ;
+; Row Clock Tap-Offs          ; 870 / 396,060 ( < 1 % )      ;
+; Switchbox_clock_muxes       ; 36 / 13,440 ( < 1 % )        ;
+; VIO Buffers                 ; 6 / 19,200 ( < 1 % )         ;
+; Vertical_seam_tap_muxes     ; 31 / 6,720 ( < 1 % )         ;
++-----------------------------+------------------------------+
+
+
++----------------+
+; Route Messages ;
++----------------+
+Info (20032): Parallel compilation is enabled and will use up to 2 processors
+Info: *******************************************************************
+Info: Running Quartus Prime Fitter
+    Info: Version 23.4.0 Internal Build 66 11/05/2023 SC Pro Edition
+    Info: Copyright (C) 2023  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the Intel FPGA Software License Subscription Agreements 
+    Info: on the Quartus Prime software download page.
+    Info: Processing started: Mon Nov  6 08:35:20 2023
+    Info: System process ID: 26485
+Info: Command: quartus_fit top.qpf
+Info: The application is running in 'DNI' mode.
+Info: qfit2_default_script.tcl version: #1
+Info: Project  = top
+Info: Revision = top
+Info (22300): Design uses Placement Effort Multiplier = 1.0.
+Info (170193): Fitter routing operations beginning
+Info (20215): Router estimated peak short interconnect demand : 29% of up directional wire in region X84_Y120 to X95_Y127
+    Info (20265): Estimated peak short right directional wire demand : 0% in region X156_Y200 to X167_Y207
+    Info (20265): Estimated peak short left directional wire demand : 0% in region X0_Y0 to X11_Y7
+    Info (20265): Estimated peak short up directional wire demand : 29% in region X84_Y120 to X95_Y127
+    Info (20265): Estimated peak short down directional wire demand : 5% in region X60_Y104 to X71_Y111
+Info (20215): Router estimated peak long high speed interconnect demand : 95% of up directional wire in region X72_Y112 to X83_Y119
+    Info (20265): Estimated peak long high speed right directional wire demand : 84% in region X60_Y112 to X71_Y119
+    Info (20265): Estimated peak long high speed left directional wire demand : 73% in region X60_Y112 to X71_Y119
+    Info (20265): Estimated peak long high speed up directional wire demand : 95% in region X72_Y112 to X83_Y119
+    Info (20265): Estimated peak long high speed down directional wire demand : 93% in region X84_Y128 to X95_Y135
+    Info (20315): Note that the router may use short wires to implement long connections at higher delay
+Info (170239): Router is attempting to preserve 0.03 percent of routes from an earlier compilation, a user specified Routing Constraints File, or internal routing requirements.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 100 degrees C
+Info (11888): Total time spent on timing analysis during Routing is 38.32 seconds.
+Info: Following instance found in the design -  rst_controller|*
+Info: Following instance found in the design -  rst_controller_001|*
+Info: Following instance found in the design -  rst_controller|*
+Info: Following instance found in the design -  rst_controller_001|*
+Info: Following instance found in the design -  
+Info (16607): Fitter routing operations ending: elapsed time is 00:08:37
+
+
++-----------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary                         ;
++-------------------------+-------------------------+-------------------+
+; Source Clock(s)         ; Destination Clock(s)    ; Delay Added in ns ;
++-------------------------+-------------------------+-------------------+
+; iopll_0|iopll_0_outclk0 ; iopll_0|iopll_0_outclk0 ; 278.9             ;
+; altera_reserved_tck     ; iopll_0|iopll_0_outclk0 ; 6.9               ;
++-------------------------+-------------------------+-------------------+
+Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
+This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                                                                                                                                                                                                                                                             ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
+; Source Register                                                                                                                                                   ; Destination Register                                                                                                                                              ; Delay Added in ns ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~8                                                               ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[7]                                                                                     ; 0.449             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~34                                                              ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[0]                                                                                     ; 0.441             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~98                                                              ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[31]                                                                                    ; 0.434             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~41                                                              ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[7]                                                                                     ; 0.432             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~131                                                             ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[31]                                                                                    ; 0.431             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~65                                                              ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[31]                                                                                    ; 0.423             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~74                                                              ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[7]                                                                                     ; 0.420             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~107                                                             ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[7]                                                                                     ; 0.418             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~1                                                               ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[0]                                                                                     ; 0.418             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~100                                                             ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[0]                                                                                     ; 0.417             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~35                                                              ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[1]                                                                                     ; 0.409             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~32                                                              ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[31]                                                                                    ; 0.404             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~2                                                               ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[1]                                                                                     ; 0.399             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~101                                                             ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[1]                                                                                     ; 0.387             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~67                                                              ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[0]                                                                                     ; 0.387             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~68                                                              ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[1]                                                                                     ; 0.370             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|reg_file_inst|reg_file_a|ram_no_ecc.data_ram|auto_generated|altera_syncram_impl1|ram_block2a0~reg0  ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_exe_s1[0]                                                                                         ; 0.368             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|reg_file_inst|reg_file_b|ram_no_ecc.data_ram|auto_generated|altera_syncram_impl1|ram_block2a0~reg0  ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_exe_s2[0]                                                                                         ; 0.334             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|W_exe_result[28]                                                                                    ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_exe_s1[28]                                                                                        ; 0.334             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|reg_file_inst|reg_file_a|ram_no_ecc.data_ram|auto_generated|altera_syncram_impl1|ram_block2a25~reg0 ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_exe_s1[25]                                                                                        ; 0.334             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~103                                                             ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[3]                                                                                     ; 0.315             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~104                                                             ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[4]                                                                                     ; 0.314             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~102                                                             ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[2]                                                                                     ; 0.314             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|reg_file_inst|reg_file_a|ram_no_ecc.data_ram|auto_generated|altera_syncram_impl1|ram_block2a24~reg0 ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_exe_s1[24]                                                                                        ; 0.307             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~37                                                              ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[3]                                                                                     ; 0.304             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|reg_file_inst|reg_file_b|ram_no_ecc.data_ram|auto_generated|altera_syncram_impl1|ram_block2a19~reg0 ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_exe_s2[19]                                                                                        ; 0.302             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|W_exe_result[19]                                                                                    ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_exe_s2[19]                                                                                        ; 0.302             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|W_exe_result[9]                                                                                     ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_exe_s2[9]                                                                                         ; 0.300             ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|pre_bresp[1]                                                                                  ; mm_interconnect_0|intel_onchip_memory_0_axi_s1_agent|previous_response[1]                                                                                         ; 0.298             ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_incr_rdaddr[2]                                                                              ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_incr_rdaddr[2]                                                                              ; 0.296             ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_arburstsize_lat[2]                                                                          ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_incr_rdaddr[2]                                                                              ; 0.296             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|W_exe_result[18]                                                                                    ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_exe_s1[18]                                                                                        ; 0.296             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~5                                                               ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[4]                                                                                     ; 0.294             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~70                                                              ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[3]                                                                                     ; 0.293             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~128                                                             ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[28]                                                                                    ; 0.292             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~71                                                              ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[4]                                                                                     ; 0.290             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~62                                                              ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[28]                                                                                    ; 0.290             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|reg_file_inst|reg_file_a|ram_no_ecc.data_ram|auto_generated|altera_syncram_impl1|ram_block2a16~reg0 ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_exe_s1[16]                                                                                        ; 0.284             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|W_exe_result[10]                                                                                    ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_rs2_gpr_val[10]                                                                                   ; 0.283             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|reg_file_inst|reg_file_a|ram_no_ecc.data_ram|auto_generated|altera_syncram_impl1|ram_block2a11~reg0 ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_exe_s1[11]                                                                                        ; 0.281             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~95                                                              ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[28]                                                                                    ; 0.280             ;
+; intel_niosv_m_0|intel_niosv_m_0|dbg_mod|dm_inst|cmd_buf[0][5]                                                                                                     ; intel_niosv_m_0|intel_niosv_m_0|dbg_mod|dm_inst|cmdbuf_instr[5]                                                                                                   ; 0.278             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~29                                                              ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[28]                                                                                    ; 0.278             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~69                                                              ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[2]                                                                                     ; 0.277             ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_rdaddr_lat[15]                                                                              ; intel_onchip_memory_0|intel_onchip_memory_0|altera_syncram_component|auto_generated|altera_syncram_impl1|address_reg_b[2]                                         ; 0.276             ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_rdaddr_count[15]                                                                            ; intel_onchip_memory_0|intel_onchip_memory_0|altera_syncram_component|auto_generated|altera_syncram_impl1|address_reg_b[2]                                         ; 0.276             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~36                                                              ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[2]                                                                                     ; 0.274             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~9                                                               ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[8]                                                                                     ; 0.272             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|reg_file_inst|reg_file_a|ram_no_ecc.data_ram|auto_generated|altera_syncram_impl1|ram_block2a4~reg0  ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_exe_s1[4]                                                                                         ; 0.271             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|lsu_inst|load_data[27]                                                                              ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|W_exe_result[27]                                                                                    ; 0.269             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|shift_inst|sh_right_q1[27]                                                                          ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|W_exe_result[27]                                                                                    ; 0.269             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|shift_inst|sh_right_arith_q1[27]                                                                    ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|W_exe_result[27]                                                                                    ; 0.269             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|shift_inst|sh_left_q1[27]                                                                           ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|W_exe_result[27]                                                                                    ; 0.269             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~4                                                               ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[3]                                                                                     ; 0.269             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|reg_file_inst|reg_file_a|ram_no_ecc.data_ram|auto_generated|altera_syncram_impl1|ram_block2a15~reg0 ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_exe_s1[15]                                                                                        ; 0.265             ;
+; intel_niosv_m_0|intel_niosv_m_0|dbg_mod|dm_inst|cmd_buf[2][20]                                                                                                    ; intel_niosv_m_0|intel_niosv_m_0|dbg_mod|dm_inst|cmdbuf_instr[20]                                                                                                  ; 0.264             ;
+; intel_niosv_m_0|intel_niosv_m_0|dbg_mod|dm_inst|cmd_buf[1][20]                                                                                                    ; intel_niosv_m_0|intel_niosv_m_0|dbg_mod|dm_inst|cmdbuf_instr[20]                                                                                                  ; 0.264             ;
+; intel_niosv_m_0|intel_niosv_m_0|dbg_mod|dm_inst|cmd_buf[0][20]                                                                                                    ; intel_niosv_m_0|intel_niosv_m_0|dbg_mod|dm_inst|cmdbuf_instr[20]                                                                                                  ; 0.264             ;
+; intel_niosv_m_0|intel_niosv_m_0|dbg_mod|dm_inst|cmd_buf[0][4]                                                                                                     ; intel_niosv_m_0|intel_niosv_m_0|dbg_mod|dm_inst|cmdbuf_instr[4]                                                                                                   ; 0.263             ;
+; intel_niosv_m_0|intel_niosv_m_0|dbg_mod|dm_inst|cmd_buf[2][4]                                                                                                     ; intel_niosv_m_0|intel_niosv_m_0|dbg_mod|dm_inst|cmdbuf_instr[4]                                                                                                   ; 0.263             ;
+; intel_niosv_m_0|intel_niosv_m_0|dbg_mod|dm_inst|cmd_buf[1][4]                                                                                                     ; intel_niosv_m_0|intel_niosv_m_0|dbg_mod|dm_inst|cmdbuf_instr[4]                                                                                                   ; 0.263             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|reg_file_inst|reg_file_b|ram_no_ecc.data_ram|auto_generated|altera_syncram_impl1|ram_block2a15~reg0 ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_rs2_gpr_val[15]                                                                                   ; 0.262             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|W_exe_result[15]                                                                                    ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_rs2_gpr_val[15]                                                                                   ; 0.262             ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_rdaddr_count[13]                                                                            ; intel_onchip_memory_0|intel_onchip_memory_0|altera_syncram_component|auto_generated|altera_syncram_impl1|address_reg_b[0]                                         ; 0.262             ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_rdaddr_lat[13]                                                                              ; intel_onchip_memory_0|intel_onchip_memory_0|altera_syncram_component|auto_generated|altera_syncram_impl1|address_reg_b[0]                                         ; 0.262             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|lsu_inst|load_data[28]                                                                              ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|W_exe_result[28]                                                                                    ; 0.258             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|shift_inst|sh_left_q1[28]                                                                           ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|W_exe_result[28]                                                                                    ; 0.258             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|shift_inst|sh_right_q1[28]                                                                          ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|W_exe_result[28]                                                                                    ; 0.258             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|shift_inst|sh_right_arith_q1[28]                                                                    ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|W_exe_result[28]                                                                                    ; 0.258             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|reg_file_inst|reg_file_b|ram_no_ecc.data_ram|auto_generated|altera_syncram_impl1|ram_block2a25~reg0 ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_exe_s2[25]                                                                                        ; 0.257             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|W_exe_result[25]                                                                                    ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_exe_s2[25]                                                                                        ; 0.257             ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_rdaddr_count[19]                                                                            ; intel_onchip_memory_0|intel_onchip_memory_0|altera_syncram_component|auto_generated|altera_syncram_impl1|address_reg_b[6]                                         ; 0.255             ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_rdaddr_lat[19]                                                                              ; intel_onchip_memory_0|intel_onchip_memory_0|altera_syncram_component|auto_generated|altera_syncram_impl1|address_reg_b[6]                                         ; 0.255             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|reg_file_inst|reg_file_b|ram_no_ecc.data_ram|auto_generated|altera_syncram_impl1|ram_block2a28~reg0 ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_rs2_gpr_val[28]                                                                                   ; 0.254             ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_rdaddr_count[17]                                                                            ; intel_onchip_memory_0|intel_onchip_memory_0|altera_syncram_component|auto_generated|altera_syncram_impl1|address_reg_b[4]                                         ; 0.253             ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_rdaddr_lat[17]                                                                              ; intel_onchip_memory_0|intel_onchip_memory_0|altera_syncram_component|auto_generated|altera_syncram_impl1|address_reg_b[4]                                         ; 0.253             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~108                                                             ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[8]                                                                                     ; 0.253             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~38                                                              ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[4]                                                                                     ; 0.249             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|reg_file_inst|reg_file_a|ram_no_ecc.data_ram|auto_generated|altera_syncram_impl1|ram_block2a3~reg0  ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_exe_s1[3]                                                                                         ; 0.249             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~75                                                              ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[8]                                                                                     ; 0.248             ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_rdaddr_count[14]                                                                            ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_rdaddr_count[14]                                                                            ; 0.242             ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_rdaddr_lat[14]                                                                              ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_rdaddr_count[14]                                                                            ; 0.242             ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_incr_rdaddr[0]                                                                              ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_incr_rdaddr[0]                                                                              ; 0.239             ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_rdaddr_count[0]                                                                             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_rdaddr_count[0]                                                                             ; 0.239             ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_rdaddr_lat[0]                                                                               ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_rdaddr_count[0]                                                                             ; 0.239             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|reg_file_inst|reg_file_b|ram_no_ecc.data_ram|auto_generated|altera_syncram_impl1|ram_block2a31~reg0 ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_rs2_gpr_val[31]                                                                                   ; 0.238             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|W_exe_result[31]                                                                                    ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_rs2_gpr_val[31]                                                                                   ; 0.238             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~42                                                              ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[8]                                                                                     ; 0.237             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|W_exe_result[0]                                                                                     ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_exe_s1[0]                                                                                         ; 0.236             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|reg_file_inst|reg_file_b|ram_no_ecc.data_ram|auto_generated|altera_syncram_impl1|ram_block2a21~reg0 ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_rs2_gpr_val[21]                                                                                   ; 0.236             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|W_exe_result[21]                                                                                    ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_rs2_gpr_val[21]                                                                                   ; 0.236             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~43                                                              ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[9]                                                                                     ; 0.235             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~16                                                              ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[15]                                                                                    ; 0.235             ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_rdaddr_lat[1]                                                                               ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_rdaddr_count[1]                                                                             ; 0.235             ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_rdaddr_count[1]                                                                             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_rdaddr_count[1]                                                                             ; 0.235             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~49                                                              ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[15]                                                                                    ; 0.234             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|shift_inst|sh_left_q1[22]                                                                           ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|W_exe_result[22]                                                                                    ; 0.233             ;
+; mm_interconnect_0|intel_onchip_memory_0_axi_s1_agent|read_rsp_fifo|my_altera_avalon_sc_fifo_wr|mem_used[0]                                                        ; mm_interconnect_0|intel_onchip_memory_0_axi_s1_agent|read_rsp_fifo|my_altera_avalon_sc_fifo_wr|mem_used[0]                                                        ; 0.232             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~3                                                               ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|D_instr_word[2]                                                                                     ; 0.231             ;
+; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|prefetch_inst|buffer_inst|queue_mem~118                                                             ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|reg_file_inst|reg_file_a|ram_no_ecc.data_ram|auto_generated|altera_syncram_impl1|ram_block2a22~reg0 ; 0.231             ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
+Note: This table only shows the top 100 path(s) that have the largest delay added for hold.
+
+
+--------------------------------------------
+; Global Router Congestion Hotspot Summary ;
+--------------------------------------------
+No congestion hotspots found where global router short wire usage exceeded 100%.
+If the design is hard to route, use other techniques to analyze congestion. Refer to the Estimated Delay Added for Hold Timing section in the Fitter report and routing utilization in the Chip Planner.
+
+
+--------------------------------------
+; Global Router Wire Utilization Map ;
+--------------------------------------
+This report is unavailable in plain text report export.
+
+
++-------------------------------------------------------------------------------+
+; Peak Wire Demand Summary                                                      ;
++-----------------+-----------+-----------------------------------+-------------+
+; Wire            ; Direction ; Grid [(Xmin, Ymin), (Xmax, Ymax)] ; Peak Demand ;
++-----------------+-----------+-----------------------------------+-------------+
+; short           ; right     ; [(156, 200), (167, 207)]          ; 0.417 %     ;
+; short           ; up        ; [(84, 120), (95, 127)]            ; 29.444 %    ;
+; short           ; down      ; [(60, 104), (71, 111)]            ; 5.278 %     ;
+; long high speed ; right     ; [(60, 112), (71, 119)]            ; 84.722 %    ;
+; long high speed ; left      ; [(60, 112), (71, 119)]            ; 73.264 %    ;
+; long high speed ; up        ; [(72, 112), (83, 119)]            ; 95.238 %    ;
+; long high speed ; down      ; [(84, 128), (95, 135)]            ; 93.452 %    ;
++-----------------+-----------+-----------------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Peak Wire Demand Details                                                                                                                                                                                  ;
++-----------------+-----------+-----------------------------------+-------------+---------------------------------------------------------------------------------------------------------------------------+
+; Wire            ; Direction ; Grid [(Xmin, Ymin), (Xmax, Ymax)] ; Peak Demand ; Net Names                                                                                                                 ;
++-----------------+-----------+-----------------------------------+-------------+---------------------------------------------------------------------------------------------------------------------------+
+; short           ; right     ; [(156, 200), (167, 207)]          ; 0.417 %     ;    High Routing Fan-Out                                                                                                   ;
+;     --          ;           ;                                   ;             ; pio_0|pio_0|data_out[0]                                                                                                   ;
+;     --          ;           ;                                   ;             ; pio_0|pio_0|data_out[1]                                                                                                   ;
+;     --          ;           ;                                   ;             ; pio_0|pio_0|data_out[2]                                                                                                   ;
+;     --          ;           ;                                   ;             ; pio_0|pio_0|data_out[3]                                                                                                   ;
+; short           ; right     ; [(156, 200), (167, 207)]          ; 0.417 %     ;    Long Distance                                                                                                          ;
+;     --          ;           ;                                   ;             ; pio_0|pio_0|data_out[0]                                                                                                   ;
+;     --          ;           ;                                   ;             ; pio_0|pio_0|data_out[1]                                                                                                   ;
+;     --          ;           ;                                   ;             ; pio_0|pio_0|data_out[2]                                                                                                   ;
+;     --          ;           ;                                   ;             ; pio_0|pio_0|data_out[3]                                                                                                   ;
+; short           ; up        ; [(84, 120), (95, 127)]            ; 29.444 %    ;    High Routing Fan-Out                                                                                                   ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_byteen[2]~_Duplicate_6                          ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[12]~_Duplicate_32                        ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[8]~_Duplicate_20                         ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wrdata[18]                                      ;
+;     --          ;           ;                                   ;             ; rst_controller|r_sync_rst                                                                                                 ;
+;     --          ;           ;                                   ;             ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|csr_inst|debug_pc_nxt[0]~0                                  ;
+;     --          ;           ;                                   ;             ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_exe_op[1]                                                 ;
+;     --          ;           ;                                   ;             ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|C_read                                                      ;
+;     --          ;           ;                                   ;             ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|csr_inst|reduce_or_0                                        ;
+;     --          ;           ;                                   ;             ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_exe_op[0]                                                 ;
+; short           ; up        ; [(84, 120), (95, 127)]            ; 29.444 %    ;    Long Distance                                                                                                          ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[8]~_Duplicate_20                         ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wrdata[18]                                      ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[12]~_Duplicate_32                        ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_byteen[2]~_Duplicate_6                          ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|altera_syncram_component|auto_generated|altera_syncram_impl1|decode3|rtl~451  ;
+;     --          ;           ;                                   ;             ; rst_controller|r_sync_rst                                                                                                 ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|altera_syncram_component|auto_generated|altera_syncram_impl1|decode3|rtl~475  ;
+;     --          ;           ;                                   ;             ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|C_read                                                      ;
+;     --          ;           ;                                   ;             ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|csr_inst|reduce_or_0                                        ;
+;     --          ;           ;                                   ;             ; intel_niosv_m_0|intel_niosv_m_0|hart|m_core.niosv_m_full_inst|E_exe_s1[24]                                                ;
+; short           ; down      ; [(60, 104), (71, 111)]            ; 5.278 %     ;    High Routing Fan-Out                                                                                                   ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[3]~_Duplicate_5                          ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[4]~_Duplicate_8                          ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[5]~_Duplicate_11                         ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[6]~_Duplicate_14                         ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[9]~_Duplicate_23                         ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[10]~_Duplicate_26                        ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[11]~_Duplicate_29                        ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[2]~_Duplicate_2                          ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[4]                                       ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[6]                                       ;
+; short           ; down      ; [(60, 104), (71, 111)]            ; 5.278 %     ;    Long Distance                                                                                                          ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[3]~_Duplicate_5                          ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[2]~_Duplicate                            ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[3]~_Duplicate                            ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[4]~_Duplicate                            ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[5]~_Duplicate                            ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[6]~_Duplicate                            ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[7]~_Duplicate                            ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[8]~_Duplicate                            ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[9]~_Duplicate                            ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[10]~_Duplicate                           ;
+; long high speed ; right     ; [(60, 112), (71, 119)]            ; 84.722 %    ;    High Routing Fan-Out                                                                                                   ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_ram_rden~0xsyn                                      ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~11xsyn                            ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~9xsyn                             ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~8xsyn                             ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~7                                 ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~6                                 ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~5                                 ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~4                                 ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~3                                 ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~2xsyn                             ;
+; long high speed ; right     ; [(60, 112), (71, 119)]            ; 84.722 %    ;    Long Distance                                                                                                          ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|altera_syncram_component|auto_generated|altera_syncram_impl1|address_reg_b[4] ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_ram_rden~0xsyn                                      ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[3]~_Duplicate_5                          ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~3                                 ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~4                                 ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~5                                 ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|altera_syncram_component|auto_generated|altera_syncram_impl1|address_reg_b[2] ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~7                                 ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|altera_syncram_component|auto_generated|altera_syncram_impl1|address_reg_b[3] ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|altera_syncram_component|auto_generated|altera_syncram_impl1|address_reg_b[1] ;
+; long high speed ; left      ; [(60, 112), (71, 119)]            ; 73.264 %    ;    High Routing Fan-Out                                                                                                   ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_ram_rden~0xsyn                                      ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~4                                 ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~12xsyn                            ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~11xsyn                            ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~10xsyn                            ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~9xsyn                             ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~8xsyn                             ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~7                                 ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~6                                 ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~5                                 ;
+; long high speed ; left      ; [(60, 112), (71, 119)]            ; 73.264 %    ;    Long Distance                                                                                                          ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[10]~_Duplicate_27                        ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[8]~_Duplicate_21                         ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[2]~_Duplicate_3                          ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[3]~_Duplicate_6                          ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[4]~_Duplicate_9                          ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[12]~_Duplicate_33                        ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[11]~_Duplicate_30                        ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[9]~_Duplicate_24                         ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[7]~_Duplicate_18                         ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[6]~_Duplicate_15                         ;
+; long high speed ; up        ; [(72, 112), (83, 119)]            ; 95.238 %    ;    High Routing Fan-Out                                                                                                   ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_byteen[2]~_Duplicate_6                          ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_byteen[3]~_Duplicate                            ;
+;     --          ;           ;                                   ;             ; rst_controller|r_early_rst~_Duplicate_2                                                                                   ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[3]~_Duplicate_5                          ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[7]~_Duplicate_17                         ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[8]~_Duplicate_20                         ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[12]~_Duplicate_32                        ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_byteen[2]~_Duplicate                            ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[3]~_Duplicate_4                          ;
+;     --          ;           ;                                   ;             ; rst_controller|r_early_rst~_Duplicate_1                                                                                   ;
+; long high speed ; up        ; [(72, 112), (83, 119)]            ; 95.238 %    ;    Long Distance                                                                                                          ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wrdata[31]                                      ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wrdata[25]                                      ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wrdata[24]                                      ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wrdata[29]                                      ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wrdata[28]                                      ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wrdata[27]                                      ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wrdata[30]                                      ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wrdata[26]                                      ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[3]~_Duplicate_5                          ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[8]~_Duplicate_20                         ;
+; long high speed ; down      ; [(84, 128), (95, 135)]            ; 93.452 %    ;    High Routing Fan-Out                                                                                                   ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_ram_rden~0xsyn                                      ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~5                                 ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~7                                 ;
+;     --          ;           ;                                   ;             ; rst_controller|r_early_rst~_Duplicate_2                                                                                   ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[2]~_Duplicate_2                          ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[4]~_Duplicate_8                          ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[5]~_Duplicate_11                         ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[6]~_Duplicate_14                         ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[7]~_Duplicate_17                         ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[9]~_Duplicate_23                         ;
+; long high speed ; down      ; [(84, 128), (95, 135)]            ; 93.452 %    ;    Long Distance                                                                                                          ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~5                                 ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~7                                 ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_ram_rden~0xsyn                                      ;
+;     --          ;           ;                                   ;             ; rst_controller|r_early_rst~_Duplicate_2                                                                                   ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[2]~_Duplicate_2                          ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[4]~_Duplicate_8                          ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[5]~_Duplicate_11                         ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[6]~_Duplicate_14                         ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[9]~_Duplicate_23                         ;
+;     --          ;           ;                                   ;             ; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[10]~_Duplicate_26                        ;
++-----------------+-----------+-----------------------------------+-------------+---------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Peak Total Grid Crossings                                                                                                                        ;
++---------------------------------------------------------------------------------------------------------------------------+----------------------+
+; Net Name                                                                                                                  ; Total Grid Crossings ;
++---------------------------------------------------------------------------------------------------------------------------+----------------------+
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~12xsyn                            ; 64                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~10xsyn                            ; 62                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~9xsyn                             ; 62                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~11xsyn                            ; 60                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~8xsyn                             ; 60                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~2xsyn                             ; 60                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~4                                 ; 59                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_ram_rden~0xsyn                                      ; 59                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~3                                 ; 58                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~7                                 ; 57                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~5                                 ; 57                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|w_current_rdaddr[0]~6                                 ; 56                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|altera_syncram_component|auto_generated|altera_syncram_impl1|address_reg_b[4] ; 41                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|altera_syncram_component|auto_generated|altera_syncram_impl1|address_reg_b[3] ; 40                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|altera_syncram_component|auto_generated|altera_syncram_impl1|address_reg_b[2] ; 39                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|altera_syncram_component|auto_generated|altera_syncram_impl1|address_reg_b[0] ; 39                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|altera_syncram_component|auto_generated|altera_syncram_impl1|address_reg_b[5] ; 36                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|altera_syncram_component|auto_generated|altera_syncram_impl1|address_reg_b[1] ; 33                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[12]~_Duplicate_32                        ; 27                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[8]~_Duplicate_20                         ; 27                   ;
+; rst_controller|r_early_rst~_Duplicate_2                                                                                   ; 26                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[12]~_Duplicate_31                        ; 26                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[8]~_Duplicate_19                         ; 26                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[5]~_Duplicate_10                         ; 26                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[3]~_Duplicate_4                          ; 26                   ;
+; rst_controller|r_early_rst~_Duplicate_1                                                                                   ; 26                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wrdata[18]                                      ; 25                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[7]~_Duplicate_17                         ; 25                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[3]~_Duplicate_5                          ; 25                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[11]~_Duplicate_28                        ; 25                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[10]~_Duplicate_25                        ; 25                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[9]~_Duplicate_22                         ; 25                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[7]~_Duplicate_16                         ; 25                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[6]~_Duplicate_13                         ; 25                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[4]~_Duplicate_7                          ; 25                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wraddr[2]~_Duplicate_1                          ; 25                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wrdata[16]                                      ; 24                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wrdata[22]                                      ; 24                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wrdata[21]                                      ; 24                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wrdata[20]                                      ; 24                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wrdata[19]                                      ; 24                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wrdata[17]                                      ; 24                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wrdata[25]                                      ; 24                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wrdata[24]                                      ; 24                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wrdata[28]                                      ; 24                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wrdata[27]                                      ; 24                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wrdata[26]                                      ; 24                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wrdata[30]                                      ; 24                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wrdata[31]                                      ; 24                   ;
+; intel_onchip_memory_0|intel_onchip_memory_0|s1_axi_bursting_adapter|r_ram_wrdata[23]                                      ; 24                   ;
++---------------------------------------------------------------------------------------------------------------------------+----------------------+
+
+

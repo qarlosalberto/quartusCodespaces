@@ -1,0 +1,89 @@
+// (C) 2001-2023 Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions and other 
+// software and tools, and its AMPP partner logic functions, and any output 
+// files from any of the foregoing (including device programming or simulation 
+// files), and any associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License Subscription 
+// Agreement, Intel FPGA IP License Agreement, or other applicable 
+// license agreement, including, without limitation, that your use is for the 
+// sole purpose of programming logic devices manufactured by Intel and sold by 
+// Intel or its authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+
+// $Id: //acds/rel/23.4/ip/iconnect/merlin/altera_reset_controller/altera_reset_synchronizer.v#1 $
+// $Revision: #1 $
+// $Date: 2023/10/12 $
+
+// -----------------------------------------------
+// Reset Synchronizer
+// -----------------------------------------------
+`timescale 1 ns / 1 ns
+
+module altera_reset_synchronizer
+#(
+    parameter ASYNC_RESET = 1,
+    parameter DEPTH       = 2
+)
+(
+    input   reset_in /* synthesis ALTERA_ATTRIBUTE = "SUPPRESS_DA_RULE_INTERNAL=R101" */,
+
+    input   clk,
+    output  reset_out
+);
+
+    // -----------------------------------------------
+    // Synchronizer register chain. We cannot reuse the
+    // standard synchronizer in this implementation 
+    // because our timing constraints are different.
+    //
+    // Instead of cutting the timing path to the d-input 
+    // on the first flop we need to cut the aclr input.
+    // 
+    // We omit the "preserve" attribute on the final
+    // output register, so that the synthesis tool can
+    // duplicate it where needed.
+    // -----------------------------------------------
+    (*preserve*) reg [DEPTH-1:0] altera_reset_synchronizer_int_chain;
+    reg altera_reset_synchronizer_int_chain_out;
+
+    generate if (ASYNC_RESET) begin
+
+        // -----------------------------------------------
+        // Assert asynchronously, deassert synchronously.
+        // -----------------------------------------------
+        always @(posedge clk or posedge reset_in) begin
+            if (reset_in) begin
+                altera_reset_synchronizer_int_chain <= {DEPTH{1'b1}};
+                altera_reset_synchronizer_int_chain_out <= 1'b1;
+            end
+            else begin
+                altera_reset_synchronizer_int_chain[DEPTH-2:0] <= altera_reset_synchronizer_int_chain[DEPTH-1:1];
+                altera_reset_synchronizer_int_chain[DEPTH-1] <= 0;
+                altera_reset_synchronizer_int_chain_out <= altera_reset_synchronizer_int_chain[0];
+            end
+        end
+
+        assign reset_out = altera_reset_synchronizer_int_chain_out;
+     
+    end else begin
+
+        // -----------------------------------------------
+        // Assert synchronously, deassert synchronously.
+        // -----------------------------------------------
+        always @(posedge clk) begin
+            altera_reset_synchronizer_int_chain[DEPTH-2:0] <= altera_reset_synchronizer_int_chain[DEPTH-1:1];
+            altera_reset_synchronizer_int_chain[DEPTH-1] <= reset_in;
+            altera_reset_synchronizer_int_chain_out <= altera_reset_synchronizer_int_chain[0];
+        end
+
+        assign reset_out = altera_reset_synchronizer_int_chain_out;
+ 
+    end
+    endgenerate
+
+endmodule
+
+`ifdef QUESTA_INTEL_OEM
+`pragma questa_oem_00 "Fxa9eAwhQKyO7BU1/7bjPmgblZpHoz21mtM7rIFgCFhck45imyhj1aygbIZX4iOJ9XcC7PKfIH6legSE8rrIUjTLPqMpgY+fQIC16h3M6ixbDYqXaW0ZKpowYwc7rqii1SA7ng/CPytWN5BMekAHsa2v8bs5vJW8nkIB7dPVcFMAmC8nM8o+LY9Axe3OJFJP51uvRhIHEWU0Opo70NaOx3ZsYwzEUl1jLKHqa0OWzwUGV+xTz6WBn7W9JCOt1Hx09AlDCjmqvC7Fph/d+3435LemHFhRCmtcqDBH1rCTlpN7VdcJ/wZbOvfVexeSbNCEZsuERPPnge8lSrk22b+RdA7ATmbzYRcTG5OeGDZ4evPHsIgpLo8op1M2yf3UhG85PzgGxIWLoPmihsnKkcaoorBHEjAJxFCs45t/QifeyKQR7AJ7mfmHGjWhsf642/i6vJHFBJ9HbBZigcXdhJsEO5REXKCCv9JQ3Xs5Zc+PIkqcBn0s330VnB+fumgyCNilrzrxmt4YzqwDL3osa8U9plztPyR9GRDDqtG+OCIVYcoWj9tuuDRT4G/e5opgYZtfPb9E+eH6s9APyisHurYKDYKrM1D8KLMGa/FzU05kAdsvgr+laAME3EbnmsMeM3MJ4R+zFmaiRx0s5sv8qNMxdnW7B27ax9c28lkLChxLfoasc7qIuTkEOxWP9UNmlSub+v51wRan0rWB+wf+bGmt3CLfeP2fe+OUCR8z6GDDTk/bqbZslcrWwq/IG//+Pcq5VGO/RGWHQ4LCSp2ijma+QxX6mHuTOXmNNMQSHfQiBmC8zwrMwUkaVtVy/vOABEa8s+dhp045+CPeI34OXA6ah0Uo8VeXhljMBgLrYspw/2VB8m6piRvbl8MTrqg5YMlYyuzD0MugpD0Q2GeNW5UK7PNNoPbMyeEVxEgNUbjOp0WjfU2SkniyJVu+zndY5KWm3RZgxlECvIwIFMyP+VWMttLnJ8waoSbEEHMyCvMxML2guaejYfs06J1XiCKB3CX/"
+`endif

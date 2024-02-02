@@ -1,0 +1,161 @@
+Flow report for top
+Mon Nov  6 09:03:28 2023
+Quartus Prime Version 23.4.0 Internal Build 66 11/05/2023 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the Intel FPGA Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++--------------------------------------------------------------------------------------+
+; Flow Summary                                                                         ;
++---------------------------------+----------------------------------------------------+
+; Flow Status                     ; Successful - Mon Nov  6 09:03:27 2023              ;
+; Quartus Prime Version           ; 23.4.0 Internal Build 66 11/05/2023 SC Pro Edition ;
+; Revision Name                   ; top                                                ;
+; Top-level Entity Name           ; qsys_top                                           ;
+; Family                          ; Agilex 7                                           ;
+; Device                          ; AGFB014R24B2E2V                                    ;
+; Timing Models                   ; Final                                              ;
+; Power Models                    ; Final                                              ;
+; Device Status                   ; Final                                              ;
+; Logic utilization (in ALMs)     ; 4,082 / 487,200 ( < 1 % )                          ;
+; Total dedicated logic registers ; 3724                                               ;
+; Total pins                      ; 6 / 924 ( < 1 % )                                  ;
+; Total block memory bits         ; 8,391,680 / 145,612,800 ( 6 % )                    ;
+; Total RAM Blocks                ; 516 / 7,110 ( 7 % )                                ;
+; Total DSP Blocks                ; 0 / 4,510 ( 0 % )                                  ;
+; Total eSRAMs                    ; 0 / 2 ( 0 % )                                      ;
+; Total HSSI P-Tiles              ; 0 / 1 ( 0 % )                                      ;
+; Total HSSI E-Tile Channels      ; 0 / 24 ( 0 % )                                     ;
+; Total HSSI HPS                  ; 0 / 1 ( 0 % )                                      ;
+; Total HSSI EHIPs                ; 0 / 4 ( 0 % )                                      ;
+; Total PLLs                      ; 1 / 24 ( 4 % )                                     ;
++---------------------------------+----------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 11/06/2023 08:33:04 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; top                 ;
++-------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                                                                                                           ;
++-----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                         ; Value                                                                                                                                                                             ; Default Value ; Entity Name ; Section Id     ;
++-----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                   ; 161341848875.169928847409680                                                                                                                                                      ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT                  ; Verilog Hdl                                                                                                                                                                       ; --            ; --          ; eda_simulation ;
+; EDA_TIME_SCALE                          ; 1 ps                                                                                                                                                                              ; --            ; --          ; eda_simulation ;
+; FLOW_ENABLE_INTERACTIVE_TIMING_ANALYZER ; Off                                                                                                                                                                               ; On            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP                  ; 100                                                                                                                                                                               ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP                  ; 0                                                                                                                                                                                 ; --            ; --          ; --             ;
+; MISC_FILE                               ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_clock_in/qsys_top_clock_in.cmp                                  ; --            ; --          ; --             ;
+; MISC_FILE                               ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_clock_in.ip                                                     ; --            ; --          ; --             ;
+; MISC_FILE                               ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/qsys_top_intel_niosv_m_0.cmp                    ; --            ; --          ; --             ;
+; MISC_FILE                               ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0.ip                                              ; --            ; --          ; --             ;
+; MISC_FILE                               ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_onchip_memory_0/qsys_top_intel_onchip_memory_0.cmp        ; --            ; --          ; --             ;
+; MISC_FILE                               ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_onchip_memory_0.ip                                        ; --            ; --          ; --             ;
+; MISC_FILE                               ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_iopll_0/qsys_top_iopll_0.cmp                                    ; --            ; --          ; --             ;
+; MISC_FILE                               ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_iopll_0.ip                                                      ; --            ; --          ; --             ;
+; MISC_FILE                               ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_jtag_uart_0/qsys_top_jtag_uart_0.cmp                            ; --            ; --          ; --             ;
+; MISC_FILE                               ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_jtag_uart_0.ip                                                  ; --            ; --          ; --             ;
+; MISC_FILE                               ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_pio_0/qsys_top_pio_0.cmp                                        ; --            ; --          ; --             ;
+; MISC_FILE                               ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_pio_0.ip                                                        ; --            ; --          ; --             ;
+; MISC_FILE                               ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_s10_user_rst_clkgate_0/qsys_top_s10_user_rst_clkgate_0.cmp      ; --            ; --          ; --             ;
+; MISC_FILE                               ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_s10_user_rst_clkgate_0.ip                                       ; --            ; --          ; --             ;
+; MISC_FILE                               ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_sysid_qsys_0/qsys_top_sysid_qsys_0.cmp                          ; --            ; --          ; --             ;
+; MISC_FILE                               ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_sysid_qsys_0.ip                                                 ; --            ; --          ; --             ;
+; MISC_FILE                               ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/qsys_top/qsys_top.cmp                                                                ; --            ; --          ; --             ;
+; MISC_FILE                               ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/qsys_top.qsys                                                                        ; --            ; --          ; --             ;
+; MISC_FILE                               ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/sandboxes/9680_0/sld/ipgen/alt_sld_fab_0/alt_sld_fab_0.cmp                           ; --            ; --          ; --             ;
+; MISC_FILE                               ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/sandboxes/9680_0/sld/ipgen/alt_sld_fab_0.ip                                          ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY                ; output_files                                                                                                                                                                      ; --            ; --          ; --             ;
+; SLD_FILE                                ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_jtag_uart_0/qsys_top_jtag_uart_0.regmap                         ; --            ; --          ; --             ;
+; SLD_FILE                                ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_pio_0/qsys_top_pio_0.regmap                                     ; --            ; --          ; --             ;
+; SLD_FILE                                ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_sysid_qsys_0/qsys_top_sysid_qsys_0.regmap                       ; --            ; --          ; --             ;
+; SLD_FILE                                ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/qsys_top/qsys_top.regmap                                                             ; --            ; --          ; --             ;
+; SOPCINFO_FILE                           ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_clock_in/qsys_top_clock_in.sopcinfo                             ; --            ; --          ; --             ;
+; SOPCINFO_FILE                           ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_niosv_m_0/qsys_top_intel_niosv_m_0.sopcinfo               ; --            ; --          ; --             ;
+; SOPCINFO_FILE                           ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_intel_onchip_memory_0/qsys_top_intel_onchip_memory_0.sopcinfo   ; --            ; --          ; --             ;
+; SOPCINFO_FILE                           ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_iopll_0/qsys_top_iopll_0.sopcinfo                               ; --            ; --          ; --             ;
+; SOPCINFO_FILE                           ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_jtag_uart_0/qsys_top_jtag_uart_0.sopcinfo                       ; --            ; --          ; --             ;
+; SOPCINFO_FILE                           ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_pio_0/qsys_top_pio_0.sopcinfo                                   ; --            ; --          ; --             ;
+; SOPCINFO_FILE                           ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_s10_user_rst_clkgate_0/qsys_top_s10_user_rst_clkgate_0.sopcinfo ; --            ; --          ; --             ;
+; SOPCINFO_FILE                           ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/ip/qsys_top/qsys_top_sysid_qsys_0/qsys_top_sysid_qsys_0.sopcinfo                     ; --            ; --          ; --             ;
+; SOPCINFO_FILE                           ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/qsys_top/qsys_top.sopcinfo                                                           ; --            ; --          ; --             ;
+; SOPCINFO_FILE                           ; /tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/hw/sandboxes/9680_0/sld/ipgen/alt_sld_fab_0/alt_sld_fab_0.sopcinfo                      ; --            ; --          ; --             ;
+; TOP_LEVEL_ENTITY                        ; qsys_top                                                                                                                                                                          ; top           ; --          ; --             ;
++-----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
+
+
++------------------------------------------------------+
+; Flow Elapsed Time                                    ;
++-----------------+--------------+---------------------+
+; Module Name     ; Elapsed Time ; Peak Virtual Memory ;
++-----------------+--------------+---------------------+
+; Synthesis       ; 00:02:18     ; 3171 MB             ;
+; Fitter          ; 00:23:28     ; 11447 MB            ;
+; Timing Analyzer ; 00:00:36     ; 3421 MB             ;
+; Assembler       ; 00:03:52     ; 4534 MB             ;
+; Total           ; 00:30:14     ; --                  ;
++-----------------+--------------+---------------------+
+
+
++-------------------------------------------------------------------------------+
+; Flow OS Summary                                                               ;
++-----------------+------------------+------------+------------+----------------+
+; Module Name     ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++-----------------+------------------+------------+------------+----------------+
+; Synthesis       ; scc923024        ; SUSE LINUX ; 12         ; x86_64         ;
+; Fitter          ; scc923024        ; SUSE LINUX ; 12         ; x86_64         ;
+; Timing Analyzer ; scc923024        ; SUSE LINUX ; 12         ; x86_64         ;
+; Assembler       ; scc923024        ; SUSE LINUX ; 12         ; x86_64         ;
++-----------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_syn top.qpf
+quartus_fit top.qpf
+quartus_sta top -c top --mode=finalize
+quartus_asm top.qpf
+
+
+

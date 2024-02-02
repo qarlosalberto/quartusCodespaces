@@ -1,0 +1,20 @@
+{
+  "image": "docker.io/qarlosalberto/quartus:quartus-agilex7-v23.4",
+  "runArgs": [
+    "--network=host",
+    "-e", "LM_LICENSE_FILE=/workspaces/quartusDemo/license.dat"
+  ],
+  "postCreateCommand": "bash ./postCreateCommand.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "teros-technology.teroshdl@6.0.0"
+      ]
+    }
+  },
+  "hostRequirements": {
+    "cpus": 16,
+    "memory": "32gb",
+    "storage": "100gb"
+  }
+}

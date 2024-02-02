@@ -1,0 +1,19 @@
+# system info qsys_top_intel_onchip_memory_0 on 2023.11.06.09:04:50
+system_info:
+name,value
+DEVICE,AGFB014R24B2E2V
+DEVICE_FAMILY,Agilex 7
+GENERATION_ID,0
+#
+#
+# Files generated for qsys_top_intel_onchip_memory_0 on 2023.11.06.09:04:50
+files:
+filepath,kind,attributes,module,is_top
+sim/qsys_top_intel_onchip_memory_0.v,VERILOG,CONTAINS_INLINE_CONFIGURATION,qsys_top_intel_onchip_memory_0,true
+intel_onchip_memory_147/sim/qsys_top_intel_onchip_memory_0_intel_onchip_memory_147_hqcwqki.sv,SYSTEM_VERILOG,,qsys_top_intel_onchip_memory_0_intel_onchip_memory_147_hqcwqki,false
+intel_onchip_memory_147/sim/qsys_top_intel_onchip_memory_0_intel_onchip_memory_147_hqcwqki_axi_bursting_adapter.sv,SYSTEM_VERILOG,,qsys_top_intel_onchip_memory_0_intel_onchip_memory_147_hqcwqki,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+qsys_top_intel_onchip_memory_0.intel_onchip_memory_0,qsys_top_intel_onchip_memory_0_intel_onchip_memory_147_hqcwqki

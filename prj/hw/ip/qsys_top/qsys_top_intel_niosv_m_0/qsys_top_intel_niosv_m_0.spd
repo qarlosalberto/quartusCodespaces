@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="altera_reset_controller_1922/sim/altera_reset_controller.v"
+   type="VERILOG"
+   library="altera_reset_controller_1922" />
+ <file
+   path="altera_reset_controller_1922/sim/altera_reset_synchronizer.v"
+   type="VERILOG"
+   library="altera_reset_controller_1922" />
+ <file
+   path="altera_reset_controller_1922/sim/altera_reset_controller.sdc"
+   type="SDC_ENTITY"
+   library="altera_reset_controller_1922" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/niosv_reset_controller.v"
+   type="VERILOG"
+   library="intel_niosv_m_unit_2210"
+   hasInlineConfiguration="true" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/aldec/niosv_opcode_def.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/aldec/niosv_mem_op_state.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/aldec/niosv_ram.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/aldec/niosv_reg_file.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/aldec/niosv_csr.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/aldec/niosv_interrupt_handler.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/aldec/niosv_instr_buffer.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/aldec/niosv_bus_req.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/aldec/niosv_shift.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/aldec/niosv_c_alu.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/aldec/niosv_c_decoder.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/aldec/niosv_c_lsu.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/aldec/niosv_c_core.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/aldec/niosv_c_csr.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/aldec/niosv_m_top.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/aldec/niosv_m_alu.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/aldec/niosv_m_decoder.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/aldec/niosv_m_lsu.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/aldec/niosv_m_core.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/aldec/niosv_m_instr_prefetch.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/aldec/niosv_m_shift_module.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/cadence/niosv_opcode_def.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/cadence/niosv_mem_op_state.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/cadence/niosv_ram.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/cadence/niosv_reg_file.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/cadence/niosv_csr.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/cadence/niosv_interrupt_handler.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/cadence/niosv_instr_buffer.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/cadence/niosv_bus_req.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/cadence/niosv_shift.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/cadence/niosv_c_alu.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/cadence/niosv_c_decoder.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/cadence/niosv_c_lsu.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/cadence/niosv_c_core.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/cadence/niosv_c_csr.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/cadence/niosv_m_top.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/cadence/niosv_m_alu.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/cadence/niosv_m_decoder.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/cadence/niosv_m_lsu.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/cadence/niosv_m_core.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/cadence/niosv_m_instr_prefetch.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/cadence/niosv_m_shift_module.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/mentor/niosv_opcode_def.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/mentor/niosv_mem_op_state.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/mentor/niosv_ram.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/mentor/niosv_reg_file.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/mentor/niosv_csr.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/mentor/niosv_interrupt_handler.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/mentor/niosv_instr_buffer.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/mentor/niosv_bus_req.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/mentor/niosv_shift.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/mentor/niosv_c_alu.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/mentor/niosv_c_decoder.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/mentor/niosv_c_lsu.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/mentor/niosv_c_core.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/mentor/niosv_c_csr.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/mentor/niosv_m_top.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/mentor/niosv_m_alu.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/mentor/niosv_m_decoder.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/mentor/niosv_m_lsu.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/mentor/niosv_m_core.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/mentor/niosv_m_instr_prefetch.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/mentor/niosv_m_shift_module.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/synopsys/niosv_opcode_def.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/synopsys/niosv_mem_op_state.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/synopsys/niosv_ram.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/synopsys/niosv_reg_file.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/synopsys/niosv_csr.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/synopsys/niosv_interrupt_handler.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/synopsys/niosv_instr_buffer.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/synopsys/niosv_bus_req.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/synopsys/niosv_shift.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/synopsys/niosv_c_alu.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/synopsys/niosv_c_decoder.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/synopsys/niosv_c_lsu.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/synopsys/niosv_c_core.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/synopsys/niosv_c_csr.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/synopsys/niosv_m_top.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/synopsys/niosv_m_alu.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/synopsys/niosv_m_decoder.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/synopsys/niosv_m_lsu.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/synopsys/niosv_m_core.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/synopsys/niosv_m_instr_prefetch.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_m_unit_2210/sim/synopsys/niosv_m_shift_module.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_m_unit_2210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_timer_msip_120/sim/aldec/niosv_timer_msip.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_timer_msip_120"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_timer_msip_120/sim/cadence/niosv_timer_msip.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_timer_msip_120"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_timer_msip_120/sim/mentor/niosv_timer_msip.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_timer_msip_120"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_timer_msip_120/sim/synopsys/niosv_timer_msip.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_timer_msip_120"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/csr_mlab.mif"
+   type="MIF"
+   library="intel_niosv_dbg_mod_210" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/debug_rom.mif"
+   type="MIF"
+   library="intel_niosv_dbg_mod_210" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/aldec/niosv_dm_def.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/aldec/niosv_ram.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/aldec/niosv_dm_jtag2mm.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/aldec/niosv_dm_top.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/aldec/niosv_debug_module.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210"
+   simulator="riviera" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/cadence/niosv_dm_def.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/cadence/niosv_ram.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/cadence/niosv_dm_jtag2mm.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/cadence/niosv_dm_top.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/cadence/niosv_debug_module.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210"
+   simulator="ncsim" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/mentor/niosv_dm_def.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/mentor/niosv_ram.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/mentor/niosv_dm_jtag2mm.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/mentor/niosv_dm_top.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/mentor/niosv_debug_module.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210"
+   simulator="modelsim" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/synopsys/niosv_dm_def.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/synopsys/niosv_ram.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/synopsys/niosv_dm_jtag2mm.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/synopsys/niosv_dm_top.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/synopsys/niosv_debug_module.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210"
+   simulator="vcs, vcsmx" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/altera_std_synchronizer_bundle.v"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/altera_std_synchronizer_nocut.v"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/altera_std_synchronizer.v"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/altera_avalon_st_clock_crosser.v"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/altera_avalon_st_handshake_clock_crosser.v"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/altera_avalon_st_pipeline_base.v"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/altera_avalon_st_pipeline_stage.sv"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/altera_avalon_st_handshake_clock_crosser.sdc"
+   type="SDC_ENTITY"
+   library="intel_niosv_dbg_mod_210" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/altera_reset_synchronizer.v"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/altera_reset_controller.v"
+   type="SYSTEM_VERILOG"
+   library="intel_niosv_dbg_mod_210" />
+ <file
+   path="intel_niosv_dbg_mod_210/sim/altera_reset_controller.sdc"
+   type="SDC_ENTITY"
+   library="intel_niosv_dbg_mod_210" />
+ <file
+   path="altera_irq_mapper_2001/sim/qsys_top_intel_niosv_m_0_altera_irq_mapper_2001_3jqx4ly.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_irq_mapper_2001" />
+ <file
+   path="intel_niosv_m_2310/sim/qsys_top_intel_niosv_m_0_intel_niosv_m_2310_dxns7li.v"
+   type="VERILOG"
+   library="intel_niosv_m_2310"
+   hasInlineConfiguration="true" />
+ <file
+   path="sim/qsys_top_intel_niosv_m_0.v"
+   type="VERILOG"
+   library="qsys_top_intel_niosv_m_0"
+   hasInlineConfiguration="true" />
+ <topLevel name="qsys_top_intel_niosv_m_0.qsys_top_intel_niosv_m_0" />
+ <deviceFamily name="agilex7" />
+ <device name="AGFB014R24B2E2V" />
+</simPackage>

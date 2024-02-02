@@ -1,0 +1,79 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the Intel FPGA Software License Subscription Agreements 
+on the Quartus Prime software download page.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 232 240)
+	(text "qsys_top_sysid_qsys_0" (rect 38 0 139 12)(font "SansSerif" (font_size 11)))
+	(text "inst" (rect 8 224 20 236)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "clock" (rect 0 0 20 12)(font "SansSerif" (font_size 8)))
+		(text "clock" (rect 4 65 34 76)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 0 120)
+		(input)
+		(text "reset_n" (rect 0 0 30 12)(font "SansSerif" (font_size 8)))
+		(text "reset_n" (rect 4 115 46 126)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 0 200)
+		(input)
+		(text "address" (rect 0 0 31 12)(font "SansSerif" (font_size 8)))
+		(text "address" (rect 4 190 46 201)(font "SansSerif" (font_size 8)))
+	)
+	(port
+		(pt 0 176)
+		(output)
+		(text "readdata[31..0]" (rect 0 0 57 12)(font "SansSerif" (font_size 8)))
+		(text "readdata[31..0]" (rect 4 165 94 176)(font "SansSerif" (font_size 8)))
+		(line (pt 0 176)(pt 85 176)(line_width 3))
+	)
+	(drawing
+		(text "clk" (rect 70 46 158 105)(font "SansSerif" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 90 71 198 152)(font "SansSerif" (color 0 0 0)))
+		(text "reset" (rect 56 96 142 205)(font "SansSerif" (color 128 0 0)(font_size 9)))
+		(text "reset_n" (rect 90 121 222 252)(font "SansSerif" (color 0 0 0)))
+		(text "control_slave" (rect 9 146 96 305)(font "SansSerif" (color 128 0 0)(font_size 9)))
+		(text "readdata" (rect 90 171 228 352)(font "SansSerif" (color 0 0 0)))
+		(text "address" (rect 90 196 222 402)(font "SansSerif" (color 0 0 0)))
+		(text " qsys_top_sysid_qsys_0 " (rect 128 226 394 462)(font "SansSerif" ))
+		(line (pt 85 34)(pt 153 34)(line_width 1))
+		(line (pt 153 34)(pt 153 226)(line_width 1))
+		(line (pt 85 226)(pt 153 226)(line_width 1))
+		(line (pt 85 34)(pt 85 226)(line_width 1))
+		(line (pt 0 76)(pt 85 76)(line_width 1))
+		(line (pt 86 55)(pt 86 80)(line_width 1))
+		(line (pt 87 55)(pt 87 80)(line_width 1))
+		(line (pt 0 126)(pt 85 126)(line_width 1))
+		(line (pt 86 105)(pt 86 130)(line_width 1))
+		(line (pt 87 105)(pt 87 130)(line_width 1))
+		(line (pt 0 201)(pt 85 201)(line_width 1))
+		(line (pt 86 155)(pt 86 205)(line_width 1))
+		(line (pt 87 155)(pt 87 205)(line_width 1))
+		(line (pt 0 0)(pt 238 0)(line_width 1))
+		(line (pt 238 0)(pt 238 243)(line_width 1))
+		(line (pt 0 243)(pt 238 243)(line_width 1))
+		(line (pt 0 0)(pt 0 243)(line_width 1))
+	)
+)

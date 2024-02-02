@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="altera_avalon_jtag_uart_1924/sim/qsys_top_jtag_uart_0_altera_avalon_jtag_uart_1924_2abh6yy.v"
+   type="VERILOG"
+   library="altera_avalon_jtag_uart_1924" />
+ <file
+   path="sim/qsys_top_jtag_uart_0.v"
+   type="VERILOG"
+   library="qsys_top_jtag_uart_0"
+   hasInlineConfiguration="true" />
+ <topLevel name="qsys_top_jtag_uart_0.qsys_top_jtag_uart_0" />
+ <deviceFamily name="agilex7" />
+ <device name="AGFB014R24B2E2V" />
+</simPackage>

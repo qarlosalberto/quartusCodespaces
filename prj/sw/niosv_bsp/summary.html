@@ -1,0 +1,1417 @@
+<html xmlns:gen="http://www.altera.com/embeddedsw/bsp/schema">
+    <title>Altera Nios V BSP Summary</title>
+    <body>
+        <h3>BSP Description</h3>
+        <table border="1" bgcolor="#FFFFCC" width="90%">
+            <tr mode="wrap">
+                <td width="20%" bgcolor="#77BBFF">BSP Type:</td><td>hal2</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%" bgcolor="#77BBFF">SOPC Design File:</td><td></td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%" bgcolor="#77BBFF">Quartus JDI File:</td><td>default</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%" bgcolor="#77BBFF">CPU:</td><td>intel_niosv_m_0</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%" bgcolor="#77BBFF">BSP Settings File:</td><td>sw/niosv_bsp/settings.bsp</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%" bgcolor="#77BBFF">BSP Version:</td><td>default</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%" bgcolor="#77BBFF">BSP Generated On:</td><td>Nov 6, 2023 9:06:02 AM</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%" bgcolor="#77BBFF">BSP Generated Timestamp:</td><td>1699290362788</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%" bgcolor="#77BBFF">BSP Generated Location:</td><td>/tmp/arc_1559748900/_0/regtest/exampledesigns/quartus_installer_designs/niosv_m/niosv_pio/sw/niosv_bsp</td>
+            </tr>
+        </table>
+        <br>
+        <h3>Nios V Memory Map</h3>
+        <table border="1" bgcolor="#FFFFCC" width="90%">
+            <tr bgcolor="#77BBFF" mode="wrap">
+                <th align="left" width="20%">Slave Descriptor</th><th align="left" width="40%">Address Range</th><th align="left" width="20%">Size</th><th align="left" width="20%">Attributes</th>
+            </tr>
+            <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
+                <td>sysid_qsys_0</td><td>0x00110058 - 0x0011005F</td><td>8</td><td class="listing">&nbsp;</td>
+            </tr>
+            <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
+                <td>jtag_uart_0</td><td>0x00110050 - 0x00110057</td><td>8</td><td class="listing">printable</td>
+            </tr>
+            <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
+                <td>pio_0</td><td>0x00110040 - 0x0011004F</td><td>16</td><td class="listing">&nbsp;</td>
+            </tr>
+            <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
+                <td>intel_onchip_memory_0</td><td>0x00000000 - 0x000FFFFF</td><td>1048576</td><td class="listing">memory</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <h3>Linker Regions</h3>
+        <table border="1" bgcolor="#FFFFCC" width="90%">
+            <tr bgcolor="#77BBFF" mode="wrap">
+                <th align="left" width="15%">Region</th><th align="left" width="40%">Address Range</th><th align="left" width="15%">Size</th><th align="left" width="15%">Memory</th><th align="left" width="15%">Offset</th>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <h3>Linker Section Mappings</h3>
+        <table border="1" bgcolor="#FFFFCC" width="50%">
+            <tr bgcolor="#77BBFF" mode="wrap">
+                <th align="left" width="50%">Section</th><th align="left" width="50%">Region</th>
+            </tr>
+            <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
+                <td>.text</td><td>intel_onchip_memory_0</td>
+            </tr>
+            <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
+                <td>.exceptions</td><td>intel_onchip_memory_0</td>
+            </tr>
+            <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
+                <td>.rodata</td><td>intel_onchip_memory_0</td>
+            </tr>
+            <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
+                <td>.rwdata</td><td>intel_onchip_memory_0</td>
+            </tr>
+            <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
+                <td>.bss</td><td>intel_onchip_memory_0</td>
+            </tr>
+            <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
+                <td>.heap</td><td>intel_onchip_memory_0</td>
+            </tr>
+            <tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
+                <td>.stack</td><td>intel_onchip_memory_0</td>
+            </tr>
+        </table>
+        <h3>Settings</h3>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">altera_avalon_jtag_uart_driver.enable_jtag_uart_ignore_fifo_full_error</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>ALTERA_AVALON_JTAG_UART_IGNORE_FIFO_FULL_ERROR</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>false</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>false</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>BooleanDefineOnly</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>public_mk_define</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Enable JTAG UART driver to recover when host is inactive causing buffer to full without returning error. Printf will not fail with this recovery.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">altera_avalon_jtag_uart_driver.enable_small_driver</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>ALTERA_AVALON_JTAG_UART_SMALL</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>false</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>false</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>BooleanDefineOnly</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>public_mk_define</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Small-footprint (polled mode) driver</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.dfl_start_address</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>INTEL_FPGA_DFL_START_ADDRESS</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>-1</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>-1</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>DecimalNumber</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>system_h_define</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Start address of DFL for DFL walker to read.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>If hal.use_dfl_walker is false, this setting is ignored; If hal.use_dfl_walker is true, this setting must match the base address of the DFL ROM instance that specifies the system.</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.enable_c_plus_plus</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>1</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>1</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>Boolean</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Enable support for a subset of the C++ language. This option increases code footprint by adding support for C++ constructors. Certain features, such as multiple inheritance and exceptions are not supported. If false, adds -DALT_NO_C_PLUS_PLUS to ALT_CPPFLAGS in public.mk, and reduces code footprint.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.enable_clean_exit</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>1</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>1</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>Boolean</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>When your application exits, close file descriptors, call C++ destructors, etc. Code footprint can be reduced by disabling clean exit. If disabled, defines ALT_NO_CLEAN_EXIT and adds -D'exit(a)=_exit(a)' to compile options.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.enable_exit</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>1</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>1</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>Boolean</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Add exit() support. This option increases code footprint if your "main()" routine does "return" or call "exit()". If false, defines ALT_NO_EXIT and reduces footprint.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.enable_instruction_related_exceptions_api</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>ALT_INCLUDE_INSTRUCTION_RELATED_EXCEPTION_API</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>false</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>false</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>BooleanDefineOnly</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>system_h_define</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Enables API for registering handlers to service instruction-related exceptions. Enabling this setting increases the size of the exception entry code.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>These exception types can be generated if various processor options are enabled, such as the MMU, MPU, or other advanced exception types.</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.enable_lightweight_device_driver_api</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>ALT_USE_DIRECT_DRIVERS</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>false</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>false</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>BooleanDefineOnly</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>public_mk_define</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Enables lightweight device driver API. This reduces code and data footprint by removing the HAL layer that maps device names (e.g. /dev/uart0) to file descriptors. Instead, driver routines are called directly. The open(), close(), and lseek() routines will always fail if called. The read(), write(), fstat(), ioctl(), and isatty() routines only work for the stdio devices. If true, defines ALT_USE_DIRECT_DRIVERS.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>The Altera Host and read-only ZIP file systems can't be used if hal.enable_lightweight_device_driver_api is true.</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.enable_reduced_device_drivers</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>ALT_USE_SMALL_DRIVERS</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>false</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>false</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>BooleanDefineOnly</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>public_mk_define</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Certain drivers are compiled with reduced functionality to reduce code footprint. Not all drivers observe this setting. The altera_avalon_uart and altera_avalon_jtag_uart drivers switch from interrupt-driven to polled operation. CAUTION: Several device drivers are disabled entirely. These include the altera_avalon_cfi_flash, altera_avalon_epcs_flash_controller, and altera_avalon_lcd_16207 drivers. This can result in certain API (HAL flash access routines) to fail. You can define a symbol provided by each driver to prevent it from being removed. If true, defines ALT_USE_SMALL_DRIVERS.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.enable_runtime_stack_checking</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>ALT_STACK_CHECK</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>false</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>false</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>BooleanDefineOnly</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>public_mk_define</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Turns on HAL runtime stack checking feature. Enabling this setting causes heap memory allocation to check for potential stack collisions.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.enable_sim_optimize</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>ALT_SIM_OPTIMIZE</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>false</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>false</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>BooleanDefineOnly</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>public_mk_define</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>The BSP is compiled with optimizations to speedup HDL simulation such as initializing the cache, clearing the .bss section, and skipping long delay loops. If true, defines ALT_SIM_OPTIMIZE.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>When this setting is true, the BSP shouldn't be used to build applications that are expected to run real hardware.</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.linker.allow_code_at_reset</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>ALT_ALLOW_CODE_AT_RESET</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>0</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>1</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>Boolean</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Indicates if initialization code is allowed at the reset address. If true, defines the macro ALT_ALLOW_CODE_AT_RESET in linker.h.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>If true, defines the macro ALT_ALLOW_CODE_AT_RESET in linker.h. This setting is typically false if an external bootloader (e.g. flash bootloader) is present.</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.linker.enable_alt_load</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>0</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>1</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>Boolean</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Enables the alt_load() facility. The alt_load() facility copies data sections (.rodata, .rwdata, or .exceptions) from boot memory to RAM. If true, this setting sets up the VMA/LMA of sections in linker.x to allow them to be loaded into the .text memory.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>This setting is typically false if an external bootloader (e.g. flash bootloader) is present.</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.linker.enable_alt_load_copy_exceptions</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>0</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>0</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>Boolean</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Causes the alt_load() facility to copy the .exceptions section. If true, this setting defines the macro ALT_LOAD_COPY_EXCEPTIONS in linker.h.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.linker.enable_alt_load_copy_rodata</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>0</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>0</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>Boolean</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Causes the alt_load() facility to copy the .rodata section. If true, this setting defines the macro ALT_LOAD_COPY_RODATA in linker.h.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.linker.enable_alt_load_copy_rwdata</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>0</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>1</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>Boolean</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Causes the alt_load() facility to copy the .rwdata section. If true, this setting defines the macro ALT_LOAD_COPY_RWDATA in linker.h.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.linker.enable_exception_stack</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>0</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>0</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>Boolean</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Enables use of a separate exception stack. If true, defines the macro ALT_EXCEPTION_STACK in linker.h, adds a memory region called exception_stack to linker.x, and provides the symbols __alt_exception_stack_pointer and __alt_exception_stack_limit in linker.x.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>The hal.linker.exception_stack_size and hal.linker.exception_stack_memory_region_name settings must also be valid. This setting must be false for MicroC/OS-II BSPs. The exception stack can be used to improve interrupt and other exception performance if the EIC is *not* used.</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.linker.exception_stack_memory_region_name</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>intel_onchip_memory_0</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>UnquotedString</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Name of the existing memory region that will be divided up to create the 'exception_stack' memory region. The selected region name will be adjusted automatically when the BSP is generated to create the 'exception_stack' memory region.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>Only used if hal.linker.enable_exception_stack is true.</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.linker.exception_stack_size</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>1024</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>1024</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>DecimalNumber</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Size of the exception stack in bytes.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>Only used if hal.linker.enable_exception_stack is true.</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.linker.use_picolibc</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>0</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>0</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>Boolean</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Use Picolibc in place of Newlib to provide C library support</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.log_flags</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>ALT_LOG_FLAGS</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>0</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>0</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>DecimalNumber</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>public_mk_define</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>The value is assigned to ALT_LOG_FLAGS in the generated public.mk. See hal.log_port setting description. Values can be -1 through 3.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>hal.log_port must be set for this to be used.</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.log_port</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>ALT_LOG_ENABLE</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>UnquotedString</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>public_mk_define</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Slave descriptor of debug logging character-mode device. If defined, it enables extra debug messages in the HAL source. This setting is used by the ALT_LOG_PORT family of defines in system.h.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.make.asflags</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>ASFLAGS</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>-Wa,-gdwarf2</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>-Wa,-gdwarf2</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>UnquotedString</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>makefile_variable</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Custom flags only passed to the assembler.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.make.cflags_debug</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>-g</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>-g</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>UnquotedString</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>makefile_variable</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>This setting defines flags used by the compiler for when CMAKE_BUILD_TYPE=Debug, which is the default build type. '-g' provides the default set of debug symbols typically required to debug a typical application.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.make.cflags_defined_symbols</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>UnquotedString</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Preprocessor macros to define. A macro definition in this setting has the same effect as a "#define" in source code. Adding "-DALT_DEBUG" to this setting has the same effect as "#define ALT_DEBUG" in a souce file. Adding "-DFOO=1" to this setting is equivalent to the macro "#define FOO 1" in a source file. Macros defined with this setting are applied to all .S, .c, and C++ files.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.make.cflags_optimization</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>-O2</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>-O2</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>UnquotedString</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>makefile_variable</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>This setting defines the flags used by the compiler for CMAKE_BUILD_TYPE=Release. "-O0" = no optimization,"-O2" = "normal" optimization, etc. "-O0" is recommended for code that you want to debug since compiler optimization can remove variables and produce non-sequential execution of code while debugging.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.make.cflags_undefined_symbols</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>UnquotedString</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Preprocessor macros to undefine. Undefined macros are similar to defined macros, but replicate the "#undef" directive in source code. To undefine the macro FOO use the syntax "-u FOO" in this setting. This is equivalent to "#undef FOO" in a source file. Note: the syntax differs from macro definition (there is a space, i.e. "-u FOO" versus "-DFOO"). Macros defined with this setting are applied to all .S, .c, and C++ files.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.make.cflags_user_flags</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>UnquotedString</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Custom flags passed to the compiler when compiling C, C++, and .S files. This setting defines flags that are always used by the compiler.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.make.cflags_warnings</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>-Wall -Wformat-security</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>-Wall -Wformat-security</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>UnquotedString</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>C/C++ compiler warning level. "-Wall" is commonly used. "-Wformat-security" warns about calls to "printf" and "scanf" functions where the format string is not a string literal and there are no format arguments. This setting defines warn flags that are always used by the compiler.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.make.cxx_flags</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>CXXFLAGS</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>UnquotedString</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>makefile_variable</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Custom flags only passed to the C++ compiler.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.make.enable_cflag_fstack_protector_strong</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>1</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>1</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>Boolean</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Enable the fstack-protector-strong compiler flag.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.make.enable_cflag_wformat_security</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>1</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>1</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>Boolean</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Enable the Wformat and Wformat-security compiler flags.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.make.link_flags</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>UnquotedString</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Linker flags.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.make.objdump_flags</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>-Sdtx</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>-Sdtx</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>UnquotedString</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Objdump flags.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.max_file_descriptors</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>ALT_MAX_FD</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>32</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>32</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>DecimalNumber</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>system_h_define</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Determines the number of file descriptors statically allocated. This setting defines the value of ALT_MAX_FD in system.h.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>If hal.enable_lightweight_device_driver_api is true, there are no file descriptors so this setting is ignored. If hal.enable_lightweight_device_driver_api is false, this setting must be at least 4 because HAL needs a file descriptor for /dev/null, /dev/stdin, /dev/stdout, and /dev/stderr.</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.stderr</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>jtag_uart_0</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>UnquotedString</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>system_h_define</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Slave descriptor of STDERR character-mode device. This setting is used by the ALT_STDERR family of defines in system.h.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.stdin</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>jtag_uart_0</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>UnquotedString</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>system_h_define</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Slave descriptor of STDIN character-mode device. This setting is used by the ALT_STDIN family of defines in system.h.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.stdout</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>jtag_uart_0</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>UnquotedString</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>system_h_define</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Slave descriptor of STDOUT character-mode device. This setting is used by the ALT_STDOUT family of defines in system.h.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.sys_clk_timer</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>ALT_SYS_CLK</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>intel_niosv_m_0</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>UnquotedString</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>system_h_define</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Slave descriptor of the system clock timer device. This device provides a periodic interrupt ("tick") and is typically required for RTOS use. This setting defines the value of ALT_SYS_CLK in system.h.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.timestamp_timer</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>ALT_TIMESTAMP_CLK</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>intel_niosv_m_0</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>UnquotedString</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>system_h_define</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Slave descriptor of timestamp timer device. This device is used by Altera HAL timestamp drivers for high-resolution time measurement. This setting defines the value of ALT_TIMESTAMP_CLK in system.h.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.toolchain.ar</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>riscv32-unknown-elf-ar</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>riscv32-unknown-elf-ar</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>UnquotedString</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Archiver command. Creates library files from object files. If ${toolchain.enable_executable_overrides} is true, this setting's value will override the default value of ${toolchain.prefix}ar.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.toolchain.as</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>riscv32-unknown-elf-gcc</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>riscv32-unknown-elf-gcc</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>UnquotedString</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Assembler command. Note that GCC is used by default so that .S files are run through the C pre-processor. If ${toolchain.enable_executable_overrides} is true, this setting's value will override the default value of ${toolchain.prefix}gcc.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.toolchain.cc</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>riscv32-unknown-elf-gcc</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>riscv32-unknown-elf-gcc</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>UnquotedString</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>C compiler command. If ${toolchain.enable_executable_overrides} is true, this setting's value will override the default value of ${make.toolchain_prefix}gcc.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.toolchain.cxx</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>riscv32-unknown-elf-g++</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>riscv32-unknown-elf-g++</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>UnquotedString</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>C++ compiler command. If ${toolchain.enable_executable_overrides} is true, this setting's value will override the default value of ${toolchain.prefix}g++.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.toolchain.enable_executable_overrides</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>0</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>0</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>Boolean</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Enable custom values to be set for the toolchain executables - the settings toolchain.ar, toolchain.as, toolchain.cc, toolchain.cxx, and toolchain.objdump can be set to custom values.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.toolchain.objdump</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>riscv32-unknown-elf-objdump</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>riscv32-unknown-elf-objdump</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>UnquotedString</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Objdump command. If ${toolchain.enable_executable_overrides} is true, this setting's value will override the default value of ${toolchain.prefix}objdump.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.toolchain.prefix</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>none</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>riscv32-unknown-elf-</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>riscv32-unknown-elf-</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>UnquotedString</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>none</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Prefix to be used for toolchain executables. The value will affect the individual values of the archiver, assembler, compiler, and linker - specifically, it will affect the settings toolchain.ar, toolchain.as, toolchain.cc, toolchain.cxx, and toolchain.objdump. The value will be used like so: ${toolchain.prefix}gcc, ${toolchain.prefix}objdump, etc. However, if the override setting toolchain.enable_executable_overrides is enabled, the individual settings toolchain.ar, toolchain.as, toolchain.cc, toolchain.cxx, and toolchain.objdump may be set to custom values and will not be derived from this setting's value. The 'riscv32-unknown-elf' toolchain is available with the RiscFree IDE for Intel FPGAs. Users must install the RiscFree IDE for Intel FPGAs to use this toolchain.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">hal.use_dfl_walker</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>INTEL_FPGA_USE_DFL_WALKER</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>0</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>0</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>Boolean</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>system_h_define</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Determines whether to include the DFL walker code in fpga_platform_init() to discover interface information to use fpga_open() to obtain a handle.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" bgcolor="#FFFFCC" width="60%">
+            <tr bgcolor="#77BBFF">
+                <td align="left" width="15%">Setting Name:</td><td align="left">intel_niosv_m_hal_driver.internal_timer_ticks_per_sec</td>
+            </tr>
+            <tr>
+                <td width="20%">Identifier:</td><td>NIOSV_INTERNAL_TIMER_TICKS_PER_SECOND</td>
+            </tr>
+            <tr>
+                <td width="20%">Default Value:</td><td>1000</td>
+            </tr>
+            <tr>
+                <td width="20%">Value:</td><td>1000</td>
+            </tr>
+            <tr>
+                <td width="20%">Type:</td><td>DecimalNumber</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Destination:</td><td>system_h_define</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Description:</td><td>Sets the tick rate in ticks per second for the internal timer.</td>
+            </tr>
+            <tr mode="wrap">
+                <td width="20%">Restrictions:</td><td>none</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+    </body>
+</html>

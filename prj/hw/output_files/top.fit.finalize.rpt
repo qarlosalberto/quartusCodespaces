@@ -1,0 +1,104 @@
+Fitter Finalize Stage Report for top
+Mon Nov  6 08:58:39 2023
+Quartus Prime Version 23.4.0 Internal Build 66 11/05/2023 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Routing Usage Summary
+  3. Finalize Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the Intel FPGA Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++------------------------------------------------------------+
+; Routing Usage Summary                                      ;
++-----------------------------+------------------------------+
+; Routing Resource Type       ; Usage                        ;
++-----------------------------+------------------------------+
+; Block Input Mux Wrapbacks   ; 27 / 516,600 ( < 1 % )       ;
+; Block Input Muxes           ; 49,703 / 5,658,000 ( < 1 % ) ;
+; Block interconnects         ; 40,225 / 6,625,600 ( < 1 % ) ;
+; C1 interconnects            ; 25,326 / 2,769,200 ( < 1 % ) ;
+; C4 interconnects            ; 12,533 / 2,640,400 ( < 1 % ) ;
+; C8 interconnects            ; 94 / 264,040 ( < 1 % )       ;
+; DCM_muxes                   ; 1 / 824 ( < 1 % )            ;
+; DELAY_CHAINs                ; 0 / 17,290 ( 0 % )           ;
+; Direct links                ; 2,334 / 6,625,600 ( < 1 % )  ;
+; HIO Buffers                 ; 0 / 45,920 ( 0 % )           ;
+; Programmable Invert Buffers ; 0 / 480 ( 0 % )              ;
+; Programmable Invert Inputs  ; 1,006 / 513,810 ( < 1 % )    ;
+; Programmable Inverts        ; 1,006 / 513,810 ( < 1 % )    ;
+; R0 interconnects            ; 22,994 / 4,620,700 ( < 1 % ) ;
+; R1 interconnects            ; 15,345 / 2,640,400 ( < 1 % ) ;
+; R12 interconnects           ; 99 / 396,060 ( < 1 % )       ;
+; R2 interconnects            ; 5,756 / 1,324,300 ( < 1 % )  ;
+; R4 interconnects            ; 5,597 / 1,332,500 ( < 1 % )  ;
+; R6 interconnects            ; 8,178 / 1,336,600 ( < 1 % )  ;
+; Redundancy Muxes            ; 1 / 90,920 ( < 1 % )         ;
+; Row Clock Tap-Offs          ; 870 / 396,060 ( < 1 % )      ;
+; Switchbox_clock_muxes       ; 36 / 13,440 ( < 1 % )        ;
+; VIO Buffers                 ; 6 / 19,200 ( < 1 % )         ;
+; Vertical_seam_tap_muxes     ; 31 / 6,720 ( < 1 % )         ;
++-----------------------------+------------------------------+
+
+
++-------------------+
+; Finalize Messages ;
++-------------------+
+Info (20032): Parallel compilation is enabled and will use up to 2 processors
+Info: *******************************************************************
+Info: Running Quartus Prime Fitter
+    Info: Version 23.4.0 Internal Build 66 11/05/2023 SC Pro Edition
+    Info: Copyright (C) 2023  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the Intel FPGA Software License Subscription Agreements 
+    Info: on the Quartus Prime software download page.
+    Info: Processing started: Mon Nov  6 08:35:20 2023
+    Info: System process ID: 26485
+Info: Command: quartus_fit top.qpf
+Info: The application is running in 'DNI' mode.
+Info: qfit2_default_script.tcl version: #1
+Info: Project  = top
+Info: Revision = top
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 100 degrees C
+Info (18258): Fitter Physical Synthesis operations beginning
+Info (18259): Fitter Physical Synthesis operations ending: elapsed time is 00:00:06
+Critical Warning (19527): There are 44 unused RX channels and 44 unused TX channels in the design.
+    Info (19528): Add the QSF assignment 'set_instance_assignment -name PRESERVE_UNUSED_XCVR_CHANNEL ON -to <pin_name>' for each unused channel that will be used in future.
+    Info (19529): The above QSF assignment will preserve the performance of specified channels over time.
+Info (16557): Fitter post-fit operations ending: elapsed time is 00:02:40
+
+

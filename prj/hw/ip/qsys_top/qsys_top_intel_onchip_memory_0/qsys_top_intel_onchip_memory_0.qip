@@ -1,0 +1,40 @@
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0" -library "qsys_top_intel_onchip_memory_0" -name IP_TOOL_NAME "QsysPrimePro"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0" -library "qsys_top_intel_onchip_memory_0" -name IP_TOOL_VERSION "23.4"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0" -library "qsys_top_intel_onchip_memory_0" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0" -library "qsys_top_intel_onchip_memory_0" -name IP_TOOL_VENDOR_NAME "Intel Corporation"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0" -library "qsys_top_intel_onchip_memory_0" -name IP_TOP_LEVEL_COMPONENT_NAME "intel_onchip_memory"
+set_global_assignment -library "qsys_top_intel_onchip_memory_0" -name SOPCINFO_FILE [file join $::quartus(qip_path) "qsys_top_intel_onchip_memory_0.sopcinfo"]
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0" -library "qsys_top_intel_onchip_memory_0" -name SLD_INFO "QSYS_NAME qsys_top_intel_onchip_memory_0 HAS_SOPCINFO 1 GENERATION_ID 0"
+set_global_assignment -library "qsys_top_intel_onchip_memory_0" -name MISC_FILE [file join $::quartus(qip_path) "qsys_top_intel_onchip_memory_0.cmp"]
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0" -library "qsys_top_intel_onchip_memory_0" -name IP_TARGETED_DEVICE_FAMILY "Agilex 7"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0" -library "qsys_top_intel_onchip_memory_0" -name IP_GENERATED_DEVICE_FAMILY "{Agilex 7}"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0" -library "qsys_top_intel_onchip_memory_0" -name IP_QSYS_MODE "STANDALONE"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "qsys_top_intel_onchip_memory_0" -name MISC_FILE [file join $::quartus(qip_path) "../qsys_top_intel_onchip_memory_0.ip"]
+
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0_intel_onchip_memory_147_hqcwqki" -library "intel_onchip_memory_147" -name IP_COMPONENT_NAME "cXN5c190b3BfaW50ZWxfb25jaGlwX21lbW9yeV8wX2ludGVsX29uY2hpcF9tZW1vcnlfMTQ3X2hxY3dxa2k="
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0_intel_onchip_memory_147_hqcwqki" -library "intel_onchip_memory_147" -name IP_COMPONENT_DISPLAY_NAME "T24tQ2hpcCBNZW1vcnkgSUkgKFJBTSBvciBST00pIEludGVsIEZQR0EgSVA="
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0_intel_onchip_memory_147_hqcwqki" -library "intel_onchip_memory_147" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0_intel_onchip_memory_147_hqcwqki" -library "intel_onchip_memory_147" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0_intel_onchip_memory_147_hqcwqki" -library "intel_onchip_memory_147" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0_intel_onchip_memory_147_hqcwqki" -library "intel_onchip_memory_147" -name IP_COMPONENT_VERSION "MS40Ljc="
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0_intel_onchip_memory_147_hqcwqki" -library "intel_onchip_memory_147" -name IP_COMPONENT_GROUP "QmFzaWMgRnVuY3Rpb25zL09uIENoaXAgTWVtb3J5"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0_intel_onchip_memory_147_hqcwqki" -library "intel_onchip_memory_147" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzY4MzEzMC8="
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0_intel_onchip_memory_147_hqcwqki" -library "intel_onchip_memory_147" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL3Byb2dyYW1tYWJsZS9kb2N1bWVudGF0aW9uL2xybzE0NjU0MDc0NzQ4MzMuaHRtbCNoYnIxNTk5NzUxMDc0Mzgy"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0" -library "qsys_top_intel_onchip_memory_0" -name IP_COMPONENT_NAME "cXN5c190b3BfaW50ZWxfb25jaGlwX21lbW9yeV8w"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0" -library "qsys_top_intel_onchip_memory_0" -name IP_COMPONENT_DISPLAY_NAME "c3lzdGVt"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0" -library "qsys_top_intel_onchip_memory_0" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0" -library "qsys_top_intel_onchip_memory_0" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0" -library "qsys_top_intel_onchip_memory_0" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0" -library "qsys_top_intel_onchip_memory_0" -name IP_COMPONENT_VERSION "MS4w"
+
+
+set_global_assignment -library "intel_onchip_memory_147" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_onchip_memory_147/synth/qsys_top_intel_onchip_memory_0_intel_onchip_memory_147_hqcwqki.sv"]
+set_global_assignment -library "intel_onchip_memory_147" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_onchip_memory_147/synth/qsys_top_intel_onchip_memory_0_intel_onchip_memory_147_hqcwqki_axi_bursting_adapter.sv"]
+set_global_assignment -library "qsys_top_intel_onchip_memory_0" -name VERILOG_FILE [file join $::quartus(qip_path) "synth/qsys_top_intel_onchip_memory_0.v"]
+
+
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0_intel_onchip_memory_147_hqcwqki" -library "intel_onchip_memory_147" -name IP_TOOL_NAME "intel_onchip_memory"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0_intel_onchip_memory_147_hqcwqki" -library "intel_onchip_memory_147" -name IP_TOOL_VERSION "1.4.7"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_0_intel_onchip_memory_147_hqcwqki" -library "intel_onchip_memory_147" -name IP_TOOL_ENV "QsysPrimePro"
+

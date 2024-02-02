@@ -1,0 +1,21 @@
+Fitter Status : Successful - Mon Nov  6 08:58:54 2023
+Quartus Prime Version : 23.4.0 Internal Build 66 11/05/2023 SC Pro Edition
+Revision Name : top
+Top-level Entity Name : qsys_top
+Family : Agilex 7
+Device : AGFB014R24B2E2V
+Timing Models : Final
+Power Models : Final
+Device Status : Final
+Logic utilization (in ALMs) : 4,082 / 487,200 ( < 1 % )
+Total dedicated logic registers : 3724
+Total pins : 6 / 924 ( < 1 % )
+Total block memory bits : 8,391,680 / 145,612,800 ( 6 % )
+Total RAM Blocks : 516 / 7,110 ( 7 % )
+Total DSP Blocks : 0 / 4,510 ( 0 % )
+Total eSRAMs : 0 / 2 ( 0 % )
+Total HSSI P-Tiles : 0 / 1 ( 0 % )
+Total HSSI E-Tile Channels : 0 / 24 ( 0 % )
+Total HSSI HPS : 0 / 1 ( 0 % )
+Total HSSI EHIPs : 0 / 4 ( 0 % )
+Total PLLs : 1 / 24 ( 4 % )

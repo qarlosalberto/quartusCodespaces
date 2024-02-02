@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="altera_iopll_1931/sim/qsys_top_iopll_0_altera_iopll_1931_nie5y4y.vo"
+   type="VERILOG"
+   library="altera_iopll_1931" />
+ <file
+   path="sim/qsys_top_iopll_0.v"
+   type="VERILOG"
+   library="qsys_top_iopll_0"
+   hasInlineConfiguration="true" />
+ <topLevel name="qsys_top_iopll_0.qsys_top_iopll_0" />
+ <deviceFamily name="agilex7" />
+ <device name="AGFB014R24B2E2V" />
+</simPackage>

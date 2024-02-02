@@ -1,0 +1,123 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'iopll_0|iopll_0_outclk0'
+Slack : 4.171
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Setup 'altera_reserved_tck'
+Slack : 22.426
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Hold 'iopll_0|iopll_0_outclk0'
+Slack : 0.045
+TNS   : 0.000
+Corner: Fast vid2 100C Model
+
+Type  : Hold 'altera_reserved_tck'
+Slack : 0.091
+TNS   : 0.000
+Corner: Fast vid2a 0C Model
+
+Type  : Recovery 'iopll_0|iopll_0_outclk0'
+Slack : 7.711
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Recovery 'altera_reserved_tck'
+Slack : 61.585
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Removal 'altera_reserved_tck'
+Slack : 0.158
+TNS   : 0.000
+Corner: Fast vid2a 0C Model
+
+Type  : Removal 'iopll_0|iopll_0_outclk0'
+Slack : 0.171
+TNS   : 0.000
+Corner: Fast vid2a 0C Model
+
+Type  : Minimum Pulse Width 'internal_clk'
+Slack : 2.346
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Minimum Pulse Width 'iopll_0|iopll_0_outclk0'
+Slack : 4.403
+TNS   : 0.000
+Corner: Slow vid2b 100C Model
+
+Type  : Minimum Pulse Width 'clk_clk'
+Slack : 9.537
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Minimum Pulse Width 'iopll_0|iopll_0_n_cnt_clk'
+Slack : 9.934
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Minimum Pulse Width 'altera_reserved_tck'
+Slack : 28.401
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Minimum Pulse Width 'iopll_0|iopll_0_m_cnt_clk'
+Slack : 279.921
+TNS   : 0.000
+Corner: Slow vid2 100C Model
+
+Type  : Slow vid2 100C Model Max Skew 'set_max_skew'
+Slack : 7.608
+
+Type  : Slow vid2 100C Model Max Skew 'set_max_skew'
+Slack : 49.561
+
+Type  : Slow vid2b 100C Model Max Skew 'set_max_skew'
+Slack : 7.614
+
+Type  : Slow vid2b 100C Model Max Skew 'set_max_skew'
+Slack : 49.567
+
+Type  : Fast vid2a 0C Model Max Skew 'set_max_skew'
+Slack : 7.712
+
+Type  : Fast vid2a 0C Model Max Skew 'set_max_skew'
+Slack : 49.676
+
+Type  : Fast vid2a 100C Model Max Skew 'set_max_skew'
+Slack : 7.680
+
+Type  : Fast vid2a 100C Model Max Skew 'set_max_skew'
+Slack : 49.639
+
+Type  : Fast vid2 100C Model Max Skew 'set_max_skew'
+Slack : 7.677
+
+Type  : Fast vid2 100C Model Max Skew 'set_max_skew'
+Slack : 49.635
+
+Type  : Net Delay 'set_net_delay'
+Slack : 7.446
+
+Type  : Net Delay 'set_net_delay'
+Slack : 7.465
+
+Type  : Net Delay 'set_net_delay'
+Slack : 7.512
+
+Type  : Net Delay 'set_net_delay'
+Slack : 49.482
+
+Type  : Net Delay 'set_net_delay'
+Slack : 49.488
+
+Type  : Net Delay 'set_net_delay'
+Slack : 49.494
+
+------------------------------------------------------------
