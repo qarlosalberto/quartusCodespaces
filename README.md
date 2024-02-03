@@ -1,5 +1,9 @@
 # Quartus + TerosHDL demostration
 
+<center>
+    <img src="./doc/final.png">
+</center>
+
 1. Create a Github Codespaces ***(Quartus Docker image has about 17 GB. The first time it will take a while to download it, be patient...)***
 
 <center>
@@ -31,5 +35,13 @@
     <img src="./doc/project.png">
 </center>
 
-7. Enjoy Quartus in your browser :)
+7. If you want to open Quartus GUI (RTL Analyzer, IP configurator...). Go to `ports` panel and click in `Preview in Editor` (opens the GUI view in VSCode) or `Open in Browser` (opens the GUI in your browser):
+
+<center>
+    <img src="./doc/gui.png">
+</center>
+
+8. Click in connect and type the pass: `vscode`
+
+9. Enjoy Quartus in your browser :)
 

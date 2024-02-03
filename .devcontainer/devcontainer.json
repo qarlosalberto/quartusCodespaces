@@ -7,14 +7,24 @@
   "postCreateCommand": "bash ./postCreateCommand.sh",
   "customizations": {
     "vscode": {
-      "extensions": [
-        "teros-technology.teroshdl@6.0.0"
-      ]
+      "extensions": ["teros-technology.teroshdl@6.0.0"]
     }
   },
   "hostRequirements": {
     "cpus": 16,
     "memory": "32gb",
     "storage": "100gb"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/desktop-lite:1": {}
+  },
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": {
+      "label": "desktop"
+    }
   }
 }
